@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>try{if(sessionStorage.getItem('nk-seen')==='1')document.documentElement.classList.add('pre-seen')}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Meetsland — case study | Nodari Khomeriki</title>
+<meta name="description" content="An online dating platform — profiles, matching, chat and video — where the design work that mattered most was the part nobody screenshots.">
+<meta name="theme-color" content="#0a0a0b">
+<link rel="canonical" href="https://khomeriki.design/work/meetsland/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://khomeriki.design/work/meetsland/">
+<meta property="og:title" content="Meetsland — case study | Nodari Khomeriki">
+<meta property="og:description" content="An online dating platform — profiles, matching, chat and video — where the design work that mattered most was the part nobody screenshots.">
+<meta property="og:image" content="https://khomeriki.design/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/favicon.svg?v=221" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=221">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/assets/css/glass.css?v=221">
+</head>
+
+<body data-page="work">
+
+
+<div class="aurora" aria-hidden="true"><canvas id="fieldbg" class="fieldcv"></canvas><canvas id="nebula"></canvas><i class="a1"></i><i class="a2"></i><i class="a3"></i><i class="a4"></i><i class="a5"></i></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="marks" aria-hidden="true"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></div>
+<div id="cur" aria-hidden="true"></div>
+<div id="ring" aria-hidden="true"><b></b></div>
+<div id="trans" aria-hidden="true"><span></span></div>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="/" data-trans="Home"><span class="eye eye--brand" data-eye="d" data-reach="120" style="aspect-ratio:370/480" aria-hidden="true"></span>Nodari&nbsp;<span>Khomeriki</span></a>
+    <nav class="nav-links mono" aria-label="Primary">
+      <a href="/work/" aria-current="page" class="nav-hide" data-trans="Work"><span class="swap"><span>Work</span><span>Work</span></span></a>
+      <a href="/lab/" class="nav-hide" data-trans="AI Lab"><span class="swap"><span>AI Lab</span><span>AI Lab</span></span></a>
+      <a href="/experience/" class="nav-hide" data-trans="Experience"><span class="swap"><span>Experience</span><span>Experience</span></span></a>
+      <a href="/contact/" class="nav-cta mono nav-hide" data-mag=".25" data-trans="Contact">Let's create</a>
+      <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><i></i><i></i></button>
+    </nav>
+  </div>
+</header>
+
+<div id="menu" aria-hidden="true">
+  <div class="mlinks">
+    <a href="/" data-trans="Home">Home</a>
+    <a href="/work/" aria-current="page" data-trans="Work">Work</a>
+    <a href="/lab/" data-trans="AI Lab">AI Lab</a>
+    <a href="/experience/" data-trans="Experience">Experience</a>
+    <a href="/contact/" data-trans="Contact">Contact</a>
+  </div>
+  <div class="mfoot mono">
+    <span>contact@khomeriki.design</span>
+    <span>Tbilisi, Georgia</span>
+  </div>
+</div>
+
+<main>
+
+<section class="case-hero" id="overview">
+  <canvas class="fieldcv" aria-hidden="true"></canvas>
+  <div class="scrim" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="crumb mono">
+      <a href="/" data-trans="Home">Home</a> <span>/</span>
+      <a href="/work/" data-trans="Work" class="is-back">&larr;<span>Work</span></a> <span>/</span>
+      <span>Meetsland</span>
+    </div>
+    <h1><span data-chars style="display:block">A dating product is a safety product with a nice interface: Meetsland</span></h1>
+    <p class="lead case-sum" data-rise=".08">An online dating platform — profiles, matching, chat and video — where the design work that mattered most was the part nobody screenshots.</p>
+    <figure class="cover is-fit is-flat" data-glass-in><img class="cover-fg" src="/assets/projects/meetsland-wide.jpg?v=221" alt="Meetsland — Social"></figure>
+    <dl class="meta"><div><dt class="mono">Role</dt><dd>Product Designer</dd></div><div><dt class="mono">Timeline</dt><dd>2022</dd></div><div><dt class="mono">Team</dt><dd>Founders, engineering</dd></div></dl>
+    
+  </div>
+</section>
+
+<nav class="casenav" aria-label="Case study sections"><a href="/work/" class="mono is-back" data-trans="Work" aria-label="Back to all work">&larr;<span>Work</span></a><a href="#overview" class="mono">Case study</a><a href="#challenge" class="mono">The challenge</a><a href="#solution" class="mono">The solution</a><a href="#outcome" class="mono">Outcome</a></nav>
+
+<section class="csec" id="challenge">
+  <div class="wrap">
+    <div class="csec-label mono tick">The challenge</div>
+    <h2 data-chars>Everything a dating site does well is invisible, and everything it does badly is a headline.</h2>
+    <div class="ctwo">
+      <div class="body"><div class="cbody"><p>The visible half is easy to describe: profiles, browsing, matching, messaging, video calls, a premium tier. Every competitor has the same list, so none of it is a reason to choose one.</p><p>The half that decides whether people stay is moderation, reporting, blocking and what happens after somebody behaves badly — and it is designed last, if at all.</p><p>There is also an asymmetry nobody likes discussing: the same feature feels like discovery to one person and exposure to another, and the interface has to be built for the one with more to lose.</p></div></div>
+      <div class="side"><div class="callout glass" data-glass-in><span class="pill mono">Opportunity</span><h3>Design the report before the match</h3><p>A platform is judged on its worst interaction. Building the safety surfaces first changes what the rest of the product is allowed to do.</p></div></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="csec" style="padding-block:0">
+  <div class="wrap">
+    <div class="insight glass" data-glass-in>
+      <div class="csec-label mono tick">Key insight</div>
+      <blockquote>The premium feature people actually want is control, not visibility.</blockquote>
+      <div class="after"><p>Paid tiers in this category usually sell reach — be seen by more people. The subscription here leads with the opposite: see who liked you, and decide who can see you.</p><p>That reframes the upgrade from vanity to agency, and it aligns the business model with the safety model rather than against it.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="csec" id="solution">
+  <div class="wrap">
+    <div class="csec-label mono tick">The solution</div>
+    <h2 data-chars>Browse, match, talk — with the controls at every step rather than in a settings page.</h2>
+    <div class="ctwo"><div class="body"><div class="cbody"><p>Profiles are built from a photo and a short set of facts, browsed by age, location and interests, with matches suggested from stated preferences and previous behaviour. Conversation moves from text to video inside the platform, so nobody has to hand over a phone number to find out whether there is anything there.</p><p>Visibility, blocking and reporting sit alongside those actions rather than three levels down, and events and group activities give people a lower-stakes way to meet than a one-to-one first message.</p></div></div></div>
+    <div class="decision" data-rise><span class="pill mono">Design decision</span><h3>Video before phone numbers</h3><p class="sub">Calls happen inside the platform.</p><div class="cbody"><p>The riskiest step in online dating is the one where the conversation leaves the app, because everything protective is left behind with it. Keeping video in-platform means a person can find out whether somebody is real without giving away a way to be contacted forever.</p><p>It also compresses the timeline honestly — a five-minute call answers more than a fortnight of messages, and both people know it.</p></div><figure class="shot is-browser" data-glass-in><span class="chrome" aria-hidden="true"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></span><img src="/assets/projects/meetsland/01.jpg?v=221" alt="Meetsland — Video before phone numbers" loading="lazy"></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>Controls next to the action</h3><p class="sub">Blocking, reporting and visibility where they are needed.</p><div class="cbody"><p>A safety control buried in settings is a safety control that gets used after the damage. Putting them on the profile and in the conversation means they are reachable at the moment somebody actually wants them.</p><p>The moderation team behind them is stated in the product rather than implied, because knowing a human will read the report is most of what makes people file one.</p></div><figure class="shot is-browser" data-glass-in><span class="chrome" aria-hidden="true"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></span><img src="/assets/projects/meetsland/02.jpg?v=221" alt="Meetsland — Controls next to the action" loading="lazy"></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>Premium sells agency</h3><p class="sub">See who liked you; control who sees you.</p><div class="cbody"><p>Selling reach makes the platform louder for everyone and worse for the people already receiving too much attention. Selling control does the opposite, and it is the thing users ask for first.</p><p>Group events and activities sit outside the paywall on purpose — the lowest-pressure way to meet somebody should not be the one behind a subscription.</p></div><figure class="shot is-browser is-page" data-glass-in><span class="chrome" aria-hidden="true"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></span><img src="/assets/projects/meetsland/03.jpg?v=221" alt="Meetsland — Premium sells agency" loading="lazy"></figure></div>
+  </div>
+</section>
+
+<section class="csec" id="outcome">
+  <div class="wrap">
+    <div class="csec-label mono tick">Outcome</div>
+    <h2 data-chars>The unglamorous half, designed on purpose.</h2>
+    <div class="ctwo"><div class="body"><div class="cbody"><p>Meetsland ships the expected set — profiles, matching, chat, video, premium — with the safety surfaces designed alongside them rather than retrofitted after the first incident.</p><p>The premium proposition doubles as the safety proposition, which is the rare case where the commercial and the ethical argument point the same way.</p></div></div></div>
+    <div class="callout glass" data-glass-in style="margin-top:clamp(32px,5vh,60px)"><span class="pill mono">Reflection</span><h3>What I would keep from this one</h3><p>Designing the report flow before the match flow changes what you are willing to build. Several features that look good in a pitch quietly disappear once you have written what happens when they are misused.</p><p>I would also push harder on the empty state. Every dating product launches with too few people on it, and pretending otherwise is how the first thousand users leave.</p></div>
+  </div>
+</section>
+
+<section class="csec" style="padding-top:0">
+  <div class="wrap"><div class="csec-label mono tick">More screens</div>
+  <figure class="shot is-browser" data-glass-in><span class="chrome" aria-hidden="true"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></span><img src="/assets/projects/meetsland/04.jpg?v=221" alt="Meetsland screen" loading="lazy"></figure></div>
+</section>
+
+<nav class="pager" aria-label="Project navigation">
+  <a class="glass hoverable prev" href="/work/tichera/" data-trans="Tichera">
+    <span class="k mono">← Previous</span><span class="t">Tichera</span>
+  </a>
+  <a class="pager-up mono" href="/work/" data-trans="Work">All 32 projects</a>
+  <a class="glass hoverable next" href="/work/mvb-redesign/" data-trans="MVB Club">
+    <span class="k mono">Next →</span><span class="t">MVB Club</span>
+  </a>
+</nav>
+
+</main>
+
+<div class="peek-row" aria-hidden="true"><span class="eye pk pk--1" data-eye="d" data-reach="160" style="aspect-ratio:370/480" aria-hidden="true"></span><span class="eye pk pk--2" data-eye="c" style="aspect-ratio:425/480" aria-hidden="true"></span><span class="eye pk pk--3" data-eye="p1" data-reach="260" style="aspect-ratio:430/480" aria-hidden="true"></span><span class="eye pk pk--4" data-eye="b" style="aspect-ratio:644/480" aria-hidden="true"></span></div>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4 class="mono">Navigate</h4>
+        <ul class="mono">
+          <li><a href="/">Home</a></li>
+          <li><a href="/work/">Work</a></li>
+          <li><a href="/lab/">AI Lab</a></li>
+          <li><a href="/experience/">Experience</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Enquiry</h4>
+        <ul class="mono">
+          <li><a href="mailto:contact@khomeriki.design">contact@khomeriki.design</a></li>
+          <li><a href="tel:+99599460466">+995 99 460466</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Elsewhere</h4>
+        <ul class="mono">
+          <li><a href="https://www.linkedin.com/in/nodari-khomeriki" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="https://dribbble.com/SimpleVibes" target="_blank" rel="noopener">Dribbble ↗</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Based in</h4>
+        <ul class="mono"><li>Tbilisi, Georgia</li><li>Working globally</li><li>Open to work</li></ul>
+      </div>
+    </div>
+    <div class="fmark" aria-hidden="true">NK</div>
+    <div class="fbar mono">
+      <span>© 2026 Nodari Khomeriki</span>
+      <span>Designed &amp; built in Tbilisi</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/gsap.min.js"></script>
+<script src="/assets/js/ScrollTrigger.min.js"></script>
+<script src="/assets/js/lenis.min.js"></script>
+<script src="/assets/js/glass.js?v=221"></script>
+<script src="/assets/js/eyes.js?v=221" defer></script>
+<script src="/assets/js/nebula.js?v=221" defer></script>
+<script src="/assets/js/peek.js?v=221" defer></script>
+</body>
+</html>

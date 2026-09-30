@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>try{if(sessionStorage.getItem('nk-seen')==='1')document.documentElement.classList.add('pre-seen')}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Barlepie — case study | Nodari Khomeriki</title>
+<meta name="description" content="A library of chart templates a team can style, fill with their own data and embed — without a designer or a front-end developer.">
+<meta name="theme-color" content="#0a0a0b">
+<link rel="canonical" href="https://khomeriki.design/work/barlepie/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://khomeriki.design/work/barlepie/">
+<meta property="og:title" content="Barlepie — case study | Nodari Khomeriki">
+<meta property="og:description" content="A library of chart templates a team can style, fill with their own data and embed — without a designer or a front-end developer.">
+<meta property="og:image" content="https://khomeriki.design/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/favicon.svg?v=221" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=221">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/assets/css/glass.css?v=221">
+</head>
+
+<body data-page="work">
+
+
+<div class="aurora" aria-hidden="true"><canvas id="fieldbg" class="fieldcv"></canvas><canvas id="nebula"></canvas><i class="a1"></i><i class="a2"></i><i class="a3"></i><i class="a4"></i><i class="a5"></i></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="marks" aria-hidden="true"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></div>
+<div id="cur" aria-hidden="true"></div>
+<div id="ring" aria-hidden="true"><b></b></div>
+<div id="trans" aria-hidden="true"><span></span></div>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="/" data-trans="Home"><span class="eye eye--brand" data-eye="d" data-reach="120" style="aspect-ratio:370/480" aria-hidden="true"></span>Nodari&nbsp;<span>Khomeriki</span></a>
+    <nav class="nav-links mono" aria-label="Primary">
+      <a href="/work/" aria-current="page" class="nav-hide" data-trans="Work"><span class="swap"><span>Work</span><span>Work</span></span></a>
+      <a href="/lab/" class="nav-hide" data-trans="AI Lab"><span class="swap"><span>AI Lab</span><span>AI Lab</span></span></a>
+      <a href="/experience/" class="nav-hide" data-trans="Experience"><span class="swap"><span>Experience</span><span>Experience</span></span></a>
+      <a href="/contact/" class="nav-cta mono nav-hide" data-mag=".25" data-trans="Contact">Let's create</a>
+      <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><i></i><i></i></button>
+    </nav>
+  </div>
+</header>
+
+<div id="menu" aria-hidden="true">
+  <div class="mlinks">
+    <a href="/" data-trans="Home">Home</a>
+    <a href="/work/" aria-current="page" data-trans="Work">Work</a>
+    <a href="/lab/" data-trans="AI Lab">AI Lab</a>
+    <a href="/experience/" data-trans="Experience">Experience</a>
+    <a href="/contact/" data-trans="Contact">Contact</a>
+  </div>
+  <div class="mfoot mono">
+    <span>contact@khomeriki.design</span>
+    <span>Tbilisi, Georgia</span>
+  </div>
+</div>
+
+<main>
+
+<section class="case-hero" id="overview">
+  <canvas class="fieldcv" aria-hidden="true"></canvas>
+  <div class="scrim" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="crumb mono">
+      <a href="/" data-trans="Home">Home</a> <span>/</span>
+      <a href="/work/" data-trans="Work" class="is-back">&larr;<span>Work</span></a> <span>/</span>
+      <span>Barlepie</span>
+    </div>
+    <h1><span data-chars style="display:block">Charts as a product, not a feature: Barlepie</span></h1>
+    <p class="lead case-sum" data-rise=".08">A library of chart templates a team can style, fill with their own data and embed — without a designer or a front-end developer.</p>
+    <figure class="cover is-fit is-flat" data-glass-in style="background:rgb(90,111,116)"><img class="cover-fg" src="/assets/projects/barlepie.jpg?v=221" alt="Barlepie — Data viz"></figure>
+    <dl class="meta"><div><dt class="mono">Role</dt><dd>UX/UI Designer</dd></div><div><dt class="mono">Timeline</dt><dd>2021</dd></div><div><dt class="mono">Team</dt><dd>Client, engineering</dd></div></dl>
+    
+  </div>
+</section>
+
+<nav class="casenav" aria-label="Case study sections"><a href="/work/" class="mono is-back" data-trans="Work" aria-label="Back to all work">&larr;<span>Work</span></a><a href="#overview" class="mono">Case study</a><a href="#challenge" class="mono">The challenge</a><a href="#solution" class="mono">The solution</a><a href="#outcome" class="mono">Outcome</a></nav>
+
+<section class="csec" id="challenge">
+  <div class="wrap">
+    <div class="csec-label mono tick">The challenge</div>
+    <h2 data-chars>Everybody needs a chart on their site and almost nobody has the two people it normally takes.</h2>
+    <div class="ctwo">
+      <div class="body"><div class="cbody"><p>Putting a decent bar chart on a marketing page usually means a designer to make it fit the brand and a developer to wire it to the data. For a small team that is a week of two people's time for one graphic.</p><p>The alternative most teams reach for — a screenshot from a spreadsheet — is unstyled, unreadable on a phone and out of date the moment the numbers change.</p><p>A template library only solves that if the templates are genuinely good by default. A chart that needs work before it looks right has not saved anybody anything.</p></div></div>
+      <div class="side"><div class="callout glass" data-glass-in><span class="pill mono">Opportunity</span><h3>Design the defaults, not the options</h3><p>The value is in what the chart looks like before anyone touches it. Customisation is the escape hatch, not the product.</p></div></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="csec" style="padding-block:0">
+  <div class="wrap">
+    <div class="insight glass" data-glass-in>
+      <div class="csec-label mono tick">Key insight</div>
+      <blockquote>Nobody wants a chart builder. They want a chart, and to stop thinking about it.</blockquote>
+      <div class="after"><p>Tools in this space compete on how much you can configure, which is exactly backwards for the person who has one number to publish this afternoon.</p><p>So the flow is upload, pick a template, adjust the few things that matter — colour, type, labels — and take the embed code. Everything else has an opinion baked in.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="csec" id="solution">
+  <div class="wrap">
+    <div class="csec-label mono tick">The solution</div>
+    <h2 data-chars>A catalogue of finished charts, each of which happens to be editable.</h2>
+    <div class="ctwo"><div class="body"><div class="cbody"><p>Bar, line, pie, scatter and their relatives, each designed to be legible at the sizes people actually publish at rather than at poster scale. Data arrives as CSV, Excel or JSON, or from a live source that keeps the chart current after publication.</p><p>Customisation is limited to the decisions a non-designer can get right: palette, typeface, data labels. The proportions, spacing, axis treatment and small-screen behaviour are not exposed, because those are where an untrained hand does the most damage.</p></div></div></div>
+    <div class="decision" data-rise><span class="pill mono">Design decision</span><h3>Templates that are finished, not starting points</h3><p class="sub">Every chart is publishable the moment your data is in it.</p><div class="cbody"><p>The default state of each template is the design work. Legibility, contrast, label density and how the chart behaves on a phone are decided once, properly, so the user inherits them instead of negotiating them.</p><p>That is also what makes the library a product rather than a toolkit — the promise is a good chart in two minutes, and every configuration option added is a way for that promise to fail.</p></div></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>Embed is the finish line</h3><p class="sub">A snippet you paste, that keeps updating.</p><div class="cbody"><p>The whole journey ends in somebody else's website, so the export is the feature. Connecting a live source means the chart is still right a month later, which is where a pasted screenshot always loses.</p><p>Annotations and comments sit with the chart rather than around it, so the story the numbers are telling travels with them into wherever they end up.</p></div></div>
+  </div>
+</section>
+
+<section class="csec" id="outcome">
+  <div class="wrap">
+    <div class="csec-label mono tick">Outcome</div>
+    <h2 data-chars>A chart on the page by lunchtime.</h2>
+    <div class="ctwo"><div class="body"><div class="cbody"><p>Teams with no designer and no front-end capacity can publish charts that look designed, stay current and read properly on a phone.</p><p>The library holds its consistency because the parts that carry it — spacing, axis language, label behaviour — were never made configurable in the first place.</p></div></div></div>
+    <div class="callout glass" data-glass-in style="margin-top:clamp(32px,5vh,60px)"><span class="pill mono">Reflection</span><h3>What I would keep from this one</h3><p>Restricting what a user can change is usually framed as a limitation. Here it was the entire value proposition, and the hardest part was persuading everyone that fewer controls was the feature.</p><p>Charts are also a good reminder that defaults are design. Most people never open the settings, so whatever the tool does on its own is what the tool is.</p></div>
+  </div>
+</section>
+
+
+<nav class="pager" aria-label="Project navigation">
+  <a class="glass hoverable prev" href="/work/villey/" data-trans="Villey">
+    <span class="k mono">← Previous</span><span class="t">Villey</span>
+  </a>
+  <a class="pager-up mono" href="/work/" data-trans="Work">All 32 projects</a>
+  <a class="glass hoverable next" href="/work/11-corners/" data-trans="11 Corners">
+    <span class="k mono">Next →</span><span class="t">11 Corners</span>
+  </a>
+</nav>
+
+</main>
+
+<div class="peek-row" aria-hidden="true"><span class="eye pk pk--1" data-eye="d" data-reach="160" style="aspect-ratio:370/480" aria-hidden="true"></span><span class="eye pk pk--2" data-eye="c" style="aspect-ratio:425/480" aria-hidden="true"></span><span class="eye pk pk--3" data-eye="p1" data-reach="260" style="aspect-ratio:430/480" aria-hidden="true"></span><span class="eye pk pk--4" data-eye="b" style="aspect-ratio:644/480" aria-hidden="true"></span></div>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4 class="mono">Navigate</h4>
+        <ul class="mono">
+          <li><a href="/">Home</a></li>
+          <li><a href="/work/">Work</a></li>
+          <li><a href="/lab/">AI Lab</a></li>
+          <li><a href="/experience/">Experience</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Enquiry</h4>
+        <ul class="mono">
+          <li><a href="mailto:contact@khomeriki.design">contact@khomeriki.design</a></li>
+          <li><a href="tel:+99599460466">+995 99 460466</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Elsewhere</h4>
+        <ul class="mono">
+          <li><a href="https://www.linkedin.com/in/nodari-khomeriki" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="https://dribbble.com/SimpleVibes" target="_blank" rel="noopener">Dribbble ↗</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Based in</h4>
+        <ul class="mono"><li>Tbilisi, Georgia</li><li>Working globally</li><li>Open to work</li></ul>
+      </div>
+    </div>
+    <div class="fmark" aria-hidden="true">NK</div>
+    <div class="fbar mono">
+      <span>© 2026 Nodari Khomeriki</span>
+      <span>Designed &amp; built in Tbilisi</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/gsap.min.js"></script>
+<script src="/assets/js/ScrollTrigger.min.js"></script>
+<script src="/assets/js/lenis.min.js"></script>
+<script src="/assets/js/glass.js?v=221"></script>
+<script src="/assets/js/eyes.js?v=221" defer></script>
+<script src="/assets/js/nebula.js?v=221" defer></script>
+<script src="/assets/js/peek.js?v=221" defer></script>
+</body>
+</html>

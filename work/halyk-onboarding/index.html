@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>try{if(sessionStorage.getItem('nk-seen')==='1')document.documentElement.classList.add('pre-seen')}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Halyk · Onboarding — case study | Nodari Khomeriki</title>
+<meta name="description" content="Registration for the Halyk Bank mobile app, where the design problem is not the form — it is what the state registry and the bank’s own records say about you">
+<meta name="theme-color" content="#0a0a0b">
+<link rel="canonical" href="https://khomeriki.design/work/halyk-onboarding/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://khomeriki.design/work/halyk-onboarding/">
+<meta property="og:title" content="Halyk · Onboarding — case study | Nodari Khomeriki">
+<meta property="og:description" content="Registration for the Halyk Bank mobile app, where the design problem is not the form — it is what the state registry and the bank’s own records say about you">
+<meta property="og:image" content="https://khomeriki.design/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/favicon.svg?v=221" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=221">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/assets/css/glass.css?v=221">
+</head>
+
+<body data-page="work">
+
+
+<div class="aurora" aria-hidden="true"><canvas id="fieldbg" class="fieldcv"></canvas><canvas id="nebula"></canvas><i class="a1"></i><i class="a2"></i><i class="a3"></i><i class="a4"></i><i class="a5"></i></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="marks" aria-hidden="true"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></div>
+<div id="cur" aria-hidden="true"></div>
+<div id="ring" aria-hidden="true"><b></b></div>
+<div id="trans" aria-hidden="true"><span></span></div>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="/" data-trans="Home"><span class="eye eye--brand" data-eye="d" data-reach="120" style="aspect-ratio:370/480" aria-hidden="true"></span>Nodari&nbsp;<span>Khomeriki</span></a>
+    <nav class="nav-links mono" aria-label="Primary">
+      <a href="/work/" aria-current="page" class="nav-hide" data-trans="Work"><span class="swap"><span>Work</span><span>Work</span></span></a>
+      <a href="/lab/" class="nav-hide" data-trans="AI Lab"><span class="swap"><span>AI Lab</span><span>AI Lab</span></span></a>
+      <a href="/experience/" class="nav-hide" data-trans="Experience"><span class="swap"><span>Experience</span><span>Experience</span></span></a>
+      <a href="/contact/" class="nav-cta mono nav-hide" data-mag=".25" data-trans="Contact">Let's create</a>
+      <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><i></i><i></i></button>
+    </nav>
+  </div>
+</header>
+
+<div id="menu" aria-hidden="true">
+  <div class="mlinks">
+    <a href="/" data-trans="Home">Home</a>
+    <a href="/work/" aria-current="page" data-trans="Work">Work</a>
+    <a href="/lab/" data-trans="AI Lab">AI Lab</a>
+    <a href="/experience/" data-trans="Experience">Experience</a>
+    <a href="/contact/" data-trans="Contact">Contact</a>
+  </div>
+  <div class="mfoot mono">
+    <span>contact@khomeriki.design</span>
+    <span>Tbilisi, Georgia</span>
+  </div>
+</div>
+
+<main>
+
+<section class="case-hero" id="overview">
+  <canvas class="fieldcv" aria-hidden="true"></canvas>
+  <div class="scrim" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="crumb mono">
+      <a href="/" data-trans="Home">Home</a> <span>/</span>
+      <a href="/work/" data-trans="Work" class="is-back">&larr;<span>Work</span></a> <span>/</span>
+      <span>Halyk · Onboarding</span>
+    </div>
+    <h1><span data-chars style="display:block">Seven ways to already exist: Halyk Bank onboarding</span></h1>
+    <p class="lead case-sum" data-rise=".08">Registration for the Halyk Bank mobile app, where the design problem is not the form — it is what the state registry and the bank’s own records say about you before you have finished typing.</p>
+    <figure class="cover is-device is-phone" data-glass-in><img class="cover-bg" src="/assets/projects/halyk-onboarding.jpg?v=221" alt="" aria-hidden="true"><span class="phone"><span class="notch" aria-hidden="true"></span><img src="/assets/projects/halyk-onboarding/01.jpg?v=221" alt="Halyk · Onboarding — Fintech"></span></figure>
+    <dl class="meta"><div><dt class="mono">Role</dt><dd>UX/UI Designer</dd></div><div><dt class="mono">Timeline</dt><dd>2021</dd></div><div><dt class="mono">Team</dt><dd>Bank product team, compliance, engineering</dd></div></dl>
+    
+  </div>
+</section>
+
+<nav class="casenav" aria-label="Case study sections"><a href="/work/" class="mono is-back" data-trans="Work" aria-label="Back to all work">&larr;<span>Work</span></a><a href="#overview" class="mono">Case study</a><a href="#challenge" class="mono">The challenge</a><a href="#solution" class="mono">The solution</a><a href="#outcome" class="mono">Outcome</a></nav>
+
+<section class="csec" id="challenge">
+  <div class="wrap">
+    <div class="csec-label mono tick">The challenge</div>
+    <h2 data-chars>Onboarding a bank customer in Georgia means asking two databases about them, and neither one answers yes or no.</h2>
+    <div class="ctwo">
+      <div class="body"><div class="cbody"><p>Three fields — personal number, date of birth, phone — and the app already knows more about you than you have typed. The national personal number reaches the Entrepreneurs’ Registry; the phone reaches the bank’s own customer records.</p><p>Between them they produce a branch for every kind of person who might be standing there: a genuinely new customer, somebody already in the bank’s database without an active account, somebody who already has internet banking, a business whose registry entry stops the process, and several ways for the lookup to simply fail.</p><p>There is also a compliance layer that cannot be softened away. Legal form, tax residency, whether the applicant is a US taxpayer under FATCA, and a consent text that has to be shown in full — all of it before an account exists.</p></div></div>
+      <div class="side"><div class="callout glass" data-glass-in><span class="pill mono">Constraint</span><h3>The happy path is the rare one</h3><p>Most onboarding is designed for the person who sails through. Here the branches were the majority of the screens, and the majority of the work.</p></div></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="csec" style="padding-block:0">
+  <div class="wrap">
+    <div class="insight glass" data-glass-in>
+      <div class="csec-label mono tick">Key insight</div>
+      <blockquote>Every one of these outcomes is a person standing there with a phone. ‘Registration failed’ tells them nothing about what to do next.</blockquote>
+      <div class="after"><p>An error state that only reports the system’s condition puts the burden back on the customer, who then phones the branch — which is the exact cost the app existed to remove.</p><p>So each branch was written as a situation rather than a status: what we found, what that means for you, and the one thing to do about it. That is why there are seven end screens instead of one.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="csec" id="solution">
+  <div class="wrap">
+    <div class="csec-label mono tick">The solution</div>
+    <h2 data-chars>Ask for almost nothing, then be honest about what came back.</h2>
+    <div class="ctwo"><div class="body"><div class="cbody"><p>The form is three fields, and the phone number carries the country code because a Georgian bank knows where its customers are. A six-digit SMS code follows, with the number it was sent to shown on screen and a visible resend countdown — so waiting is a state rather than a silence.</p><p>The regulatory questions sit behind segmented tabs that split an individual from a sole trader from a company, so nobody reads questions that do not apply to them. Then the lookups run, and whichever of the seven outcomes comes back gets its own screen with its own next step.</p></div></div></div>
+    <div class="decision" data-rise><span class="pill mono">Design decision</span><h3>Three fields, and one of them does the work</h3><p class="sub">Personal number, date of birth, phone — nothing else.</p><div class="cbody"><p>The national personal number is the key to everything the state already knows, so asking for a name, an address or a company would be asking somebody to type what the registry is about to return.</p><p>The phone field carries +995 rather than a country picker. A dropdown of two hundred countries on a domestic bank’s registration form is a decision nobody needs to make.</p></div><figure class="shot is-phone" data-glass-in><span class="phone"><span class="notch" aria-hidden="true"></span><img src="/assets/projects/halyk-onboarding/02.jpg?v=221" alt="Halyk · Onboarding — Three fields, and one of them does the work" loading="lazy"></span></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>Waiting is a state, not a silence</h3><p class="sub">The number shown, a countdown, and a numeric pad already open.</p><div class="cbody"><p>The SMS screen states which number the code went to, which is the only question anybody has at that moment, and counts down to when a resend becomes available instead of leaving the option greyed out with no explanation.</p><p>The pad opens on arrival and the boxes advance on their own — six digits should be six taps and nothing else.</p></div><figure class="shot is-phone" data-glass-in><span class="phone"><span class="notch" aria-hidden="true"></span><img src="/assets/projects/halyk-onboarding/03.jpg?v=221" alt="Halyk · Onboarding — Waiting is a state, not a silence" loading="lazy"></span></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>Split the compliance questions by who is answering</h3><p class="sub">Individual, sole trader and company as segmented tabs.</p><div class="cbody"><p>Legal form, tax status and FATCA residency are three different conversations depending on which one you are. Putting them behind a segment means an individual never reads a question about a company’s registration certificate.</p><p>The questions themselves are asked as questions — are you a US tax resident, yes or no — rather than as the regulation they come from. The regulation is what the answer is for, not what the customer is here to understand.</p></div><figure class="shot is-phone" data-glass-in><span class="phone"><span class="notch" aria-hidden="true"></span><img src="/assets/projects/halyk-onboarding/04.jpg?v=221" alt="Halyk · Onboarding — Split the compliance questions by who is answering" loading="lazy"></span></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>Consent shown in full, and scrollable</h3><p class="sub">The whole text, with the agreement below it.</p><div class="cbody"><p>A consent that is summarised is not a consent. The full text is on the screen and the accept control sits after it, so agreement follows reading rather than replacing it.</p><p>The alternative — a checkbox next to a link — collects a tap and produces nothing anybody could defend later.</p></div><figure class="shot is-phone" data-glass-in><span class="phone"><span class="notch" aria-hidden="true"></span><img src="/assets/projects/halyk-onboarding/05.jpg?v=221" alt="Halyk · Onboarding — Consent shown in full, and scrollable" loading="lazy"></span></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>Already existing is not an error</h3><p class="sub">Internet banking already active; in our records without an account.</p><div class="cbody"><p>Two of the most common outcomes are that the person is already known to the bank. Treating either as a failure sends an existing customer to a call centre to be told they are a customer.</p><p>Each gets a screen that names the situation and offers the action that resolves it — sign in, or continue and activate — so the branch is a fork rather than a dead end.</p></div><figure class="shot is-phone" data-glass-in><span class="phone"><span class="notch" aria-hidden="true"></span><img src="/assets/projects/halyk-onboarding/06.jpg?v=221" alt="Halyk · Onboarding — Already existing is not an error" loading="lazy"></span></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>The registry can stop the process, and the screen says so</h3><p class="sub">What came back, what it means, and who to talk to.</p><div class="cbody"><p>Some registry answers genuinely end the flow: a legal form the app cannot open an account for, or a record that does not exist. Pretending otherwise wastes the customer’s next ten minutes.</p><p>So the terminal screens state the finding plainly and route the person to the one channel that can help, which is the honest version of a dead end and the only one that does not generate a complaint.</p></div><figure class="shot is-phone" data-glass-in><span class="phone"><span class="notch" aria-hidden="true"></span><img src="/assets/projects/halyk-onboarding/07.jpg?v=221" alt="Halyk · Onboarding — The registry can stop the process, and the screen says so" loading="lazy"></span></figure></div>
+  </div>
+</section>
+
+<section class="csec" id="outcome">
+  <div class="wrap">
+    <div class="csec-label mono tick">Outcome</div>
+    <h2 data-chars>An account opened from a phone, or a clear reason why not.</h2>
+    <div class="ctwo"><div class="body"><div class="cbody"><p>Registration takes three fields and an SMS for the straightforward case, and every other case ends on a screen that names the situation and offers a next step rather than an error code.</p><p>The success screen lists what actually happened — the account, the mobile banking access, the confirmation — because the last thing a new customer needs is to wonder whether it worked.</p></div></div></div>
+    <div class="callout glass" data-glass-in style="margin-top:clamp(32px,5vh,60px)"><span class="pill mono">Reflection</span><h3>What I would keep from this one</h3><p>Onboarding portfolios are full of happy paths. This project was almost entirely the other thing, and it taught me that the branch screens are where a bank either keeps a customer or hands them to a call centre.</p><p>The rule I took from it: an error state that only describes the system has not been designed. It has to describe the person’s situation and give them one thing to do.</p></div>
+  </div>
+</section>
+
+<section class="csec" style="padding-top:0">
+  <div class="wrap"><div class="csec-label mono tick">More screens</div>
+  <div class="galp"><figure class="shot is-phone" data-glass-in><span class="phone"><span class="notch" aria-hidden="true"></span><img src="/assets/projects/halyk-onboarding/08.jpg?v=221" alt="Halyk · Onboarding screen" loading="lazy"></span></figure></div></div>
+</section>
+
+<nav class="pager" aria-label="Project navigation">
+  <a class="glass hoverable prev" href="/work/halyk-bank/" data-trans="Halyk Bank Georgia">
+    <span class="k mono">← Previous</span><span class="t">Halyk Bank Georgia</span>
+  </a>
+  <a class="pager-up mono" href="/work/" data-trans="Work">All 32 projects</a>
+  <a class="glass hoverable next" href="/work/halyk-open-banking/" data-trans="Halyk · Open Banking">
+    <span class="k mono">Next →</span><span class="t">Halyk · Open Banking</span>
+  </a>
+</nav>
+
+</main>
+
+<div class="peek-row" aria-hidden="true"><span class="eye pk pk--1" data-eye="d" data-reach="160" style="aspect-ratio:370/480" aria-hidden="true"></span><span class="eye pk pk--2" data-eye="c" style="aspect-ratio:425/480" aria-hidden="true"></span><span class="eye pk pk--3" data-eye="p1" data-reach="260" style="aspect-ratio:430/480" aria-hidden="true"></span><span class="eye pk pk--4" data-eye="b" style="aspect-ratio:644/480" aria-hidden="true"></span></div>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4 class="mono">Navigate</h4>
+        <ul class="mono">
+          <li><a href="/">Home</a></li>
+          <li><a href="/work/">Work</a></li>
+          <li><a href="/lab/">AI Lab</a></li>
+          <li><a href="/experience/">Experience</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Enquiry</h4>
+        <ul class="mono">
+          <li><a href="mailto:contact@khomeriki.design">contact@khomeriki.design</a></li>
+          <li><a href="tel:+99599460466">+995 99 460466</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Elsewhere</h4>
+        <ul class="mono">
+          <li><a href="https://www.linkedin.com/in/nodari-khomeriki" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="https://dribbble.com/SimpleVibes" target="_blank" rel="noopener">Dribbble ↗</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Based in</h4>
+        <ul class="mono"><li>Tbilisi, Georgia</li><li>Working globally</li><li>Open to work</li></ul>
+      </div>
+    </div>
+    <div class="fmark" aria-hidden="true">NK</div>
+    <div class="fbar mono">
+      <span>© 2026 Nodari Khomeriki</span>
+      <span>Designed &amp; built in Tbilisi</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/gsap.min.js"></script>
+<script src="/assets/js/ScrollTrigger.min.js"></script>
+<script src="/assets/js/lenis.min.js"></script>
+<script src="/assets/js/glass.js?v=221"></script>
+<script src="/assets/js/eyes.js?v=221" defer></script>
+<script src="/assets/js/nebula.js?v=221" defer></script>
+<script src="/assets/js/peek.js?v=221" defer></script>
+</body>
+</html>

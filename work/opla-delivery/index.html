@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>try{if(sessionStorage.getItem('nk-seen')==='1')document.documentElement.classList.add('pre-seen')}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Opla Delivery — case study | Nodari Khomeriki</title>
+<meta name="description" content="The courier app — what to collect, what to deliver, what you already did — with a leaderboard and the day’s earnings behind the same screen.">
+<meta name="theme-color" content="#0a0a0b">
+<link rel="canonical" href="https://khomeriki.design/work/opla-delivery/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://khomeriki.design/work/opla-delivery/">
+<meta property="og:title" content="Opla Delivery — case study | Nodari Khomeriki">
+<meta property="og:description" content="The courier app — what to collect, what to deliver, what you already did — with a leaderboard and the day’s earnings behind the same screen.">
+<meta property="og:image" content="https://khomeriki.design/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/favicon.svg?v=221" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=221">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/assets/css/glass.css?v=221">
+</head>
+
+<body data-page="work">
+
+
+<div class="aurora" aria-hidden="true"><canvas id="fieldbg" class="fieldcv"></canvas><canvas id="nebula"></canvas><i class="a1"></i><i class="a2"></i><i class="a3"></i><i class="a4"></i><i class="a5"></i></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="marks" aria-hidden="true"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></div>
+<div id="cur" aria-hidden="true"></div>
+<div id="ring" aria-hidden="true"><b></b></div>
+<div id="trans" aria-hidden="true"><span></span></div>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="/" data-trans="Home"><span class="eye eye--brand" data-eye="d" data-reach="120" style="aspect-ratio:370/480" aria-hidden="true"></span>Nodari&nbsp;<span>Khomeriki</span></a>
+    <nav class="nav-links mono" aria-label="Primary">
+      <a href="/work/" aria-current="page" class="nav-hide" data-trans="Work"><span class="swap"><span>Work</span><span>Work</span></span></a>
+      <a href="/lab/" class="nav-hide" data-trans="AI Lab"><span class="swap"><span>AI Lab</span><span>AI Lab</span></span></a>
+      <a href="/experience/" class="nav-hide" data-trans="Experience"><span class="swap"><span>Experience</span><span>Experience</span></span></a>
+      <a href="/contact/" class="nav-cta mono nav-hide" data-mag=".25" data-trans="Contact">Let's create</a>
+      <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><i></i><i></i></button>
+    </nav>
+  </div>
+</header>
+
+<div id="menu" aria-hidden="true">
+  <div class="mlinks">
+    <a href="/" data-trans="Home">Home</a>
+    <a href="/work/" aria-current="page" data-trans="Work">Work</a>
+    <a href="/lab/" data-trans="AI Lab">AI Lab</a>
+    <a href="/experience/" data-trans="Experience">Experience</a>
+    <a href="/contact/" data-trans="Contact">Contact</a>
+  </div>
+  <div class="mfoot mono">
+    <span>contact@khomeriki.design</span>
+    <span>Tbilisi, Georgia</span>
+  </div>
+</div>
+
+<main>
+
+<section class="case-hero" id="overview">
+  <canvas class="fieldcv" aria-hidden="true"></canvas>
+  <div class="scrim" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="crumb mono">
+      <a href="/" data-trans="Home">Home</a> <span>/</span>
+      <a href="/work/" data-trans="Work" class="is-back">&larr;<span>Work</span></a> <span>/</span>
+      <span>Opla Delivery</span>
+    </div>
+    <h1><span data-chars style="display:block">Three tabs shaped like a working day: Opla Delivery</span></h1>
+    <p class="lead case-sum" data-rise=".08">The courier app — what to collect, what to deliver, what you already did — with a leaderboard and the day’s earnings behind the same screen.</p>
+    <figure class="cover is-device is-phone" data-glass-in><img class="cover-bg" src="/assets/projects/opla-delivery.jpg?v=221" alt="" aria-hidden="true"><span class="phone"><span class="notch" aria-hidden="true"></span><img src="/assets/projects/opla-delivery/01.jpg?v=221" alt="Opla Delivery — Mobile"></span></figure>
+    <dl class="meta"><div><dt class="mono">Role</dt><dd>UX/UI Designer</dd></div><div><dt class="mono">Timeline</dt><dd>2021</dd></div><div><dt class="mono">Team</dt><dd>Client product, engineering</dd></div></dl>
+    
+  </div>
+</section>
+
+<nav class="casenav" aria-label="Case study sections"><a href="/work/" class="mono is-back" data-trans="Work" aria-label="Back to all work">&larr;<span>Work</span></a><a href="#overview" class="mono">Case study</a><a href="#challenge" class="mono">The challenge</a><a href="#solution" class="mono">The solution</a><a href="#outcome" class="mono">Outcome</a></nav>
+
+<section class="csec" id="challenge">
+  <div class="wrap">
+    <div class="csec-label mono tick">The challenge</div>
+    <h2 data-chars>The courier is the only person in the delivery chain who is standing up.</h2>
+    <div class="ctwo">
+      <div class="body"><div class="cbody"><p>Everybody else in the system — dispatcher, warehouse, support — is at a desk with two hands free. The courier is outdoors between two drops, holding a parcel, glancing at a phone for a few seconds at a time.</p><p>There is no session in the usual sense. There are twenty ten-second sessions across a shift, each with exactly one thing to do, and the interface has to be re-enterable at any point without losing where you were.</p><p>The information itself is also more awkward than it looks. A Georgian address is rarely enough to find a door — the useful part is ‘intercom 36B, left door from the lift’, which no address field has a place for.</p><p>And the app holds something personal: how the courier is ranked against their colleagues, and how much they have earned today. Putting pay inside a work tool changes how often it is opened and how much it is trusted.</p></div></div>
+      <div class="side"><div class="callout glass" data-glass-in><span class="pill mono">Constraint</span><h3>Every interaction happens between two stops</h3><p>One screen, one glance, one action — and the ability to pick up exactly where the last glance ended.</p></div></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="csec" style="padding-block:0">
+  <div class="wrap">
+    <div class="insight glass" data-glass-in>
+      <div class="csec-label mono tick">Key insight</div>
+      <blockquote>A courier does not have orders. They have a pile to pick up and a pile to drop off, and the day ends when both are empty.</blockquote>
+      <div class="after"><p>That sentence became the navigation. Three tabs — to collect, to deliver, history — rather than the usual orders / map / profile, because those are the two piles and the record of the ones already cleared.</p><p>It also fixed the density question. Somebody working through a pile wants to see the pile, so the list is a table rather than a stack of cards: twenty jobs on one screen instead of four.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="csec" id="solution">
+  <div class="wrap">
+    <div class="csec-label mono tick">The solution</div>
+    <h2 data-chars>A table you can scan, a row that opens where it sits, and one orange action per screen.</h2>
+    <div class="ctwo"><div class="body"><div class="cbody"><p>Each tab is a dated table with three columns — order number, address, time — grouped under day headings with alternating row shading, so a shift reads as a list rather than a feed. Tapping a row expands it in place.</p><p>The delivery tab can flip between the list and a map with numbered pins showing the sequence. Ratings and earnings sit behind the same shell as a three-section accordion.</p></div></div></div>
+    <div class="decision" data-rise><span class="pill mono">Design decision</span><h3>The list is a table, not a stack of cards</h3><p class="sub">Order number, address, time — under a date heading.</p><div class="cbody"><p>Cards are the default for mobile lists and they are wrong here. A courier is working through a pile and needs to see the size of it; a card layout would show four jobs where a table shows twenty.</p><p>Three columns is the whole record at a glance. Alternating row shading does the separating rather than borders or gaps, which keeps the density readable without costing vertical space.</p></div><figure class="shot is-phone" data-glass-in><span class="phone"><span class="notch" aria-hidden="true"></span><img src="/assets/projects/opla-delivery/02.jpg?v=221" alt="Opla Delivery — The list is a table, not a stack of cards" loading="lazy"></span></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>A row opens where it sits</h3><p class="sub">Full address, a map link, the call time, and the action — inline.</p><div class="cbody"><p>Navigating to a detail screen and back loses the courier’s place in a list of twenty. Expanding in place means the surrounding rows stay put, which matters far more when the screen is being read in three-second bursts.</p><p>The expanded row carries only what is needed to act: where it is, when it was called in, a link to the map, and the button. Everything else waits for the detail view.</p></div><figure class="shot is-phone" data-glass-in><span class="phone"><span class="notch" aria-hidden="true"></span><img src="/assets/projects/opla-delivery/03.jpg?v=221" alt="Opla Delivery — A row opens where it sits" loading="lazy"></span></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>Two tabs, because it is two piles</h3><p class="sub">To collect, and to deliver.</p><div class="cbody"><p>A single ‘orders’ list mixes two different physical states — a parcel that is still at a shop and a parcel already in the bag. Splitting them means each tab empties over the course of the shift, and an empty tab is the clearest possible progress indicator.</p><p>The delivery rows carry a van mark and an assignment time that the collection rows do not, because those are the two facts that only matter once something is in your hands.</p></div><figure class="shot is-phone" data-glass-in><span class="phone"><span class="notch" aria-hidden="true"></span><img src="/assets/projects/opla-delivery/04.jpg?v=221" alt="Opla Delivery — Two tabs, because it is two piles" loading="lazy"></span></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>The map is a view, not a tab</h3><p class="sub">A list/map toggle on the same set, with numbered pins.</p><div class="cbody"><p>Making the map its own tab would split one job across two places. Toggling keeps it as a second reading of the same orders — and the pins are numbered rather than identical, so the map answers <em>what order do I do these in</em> rather than just <em>where are they</em>.</p><p>Under the map sits the current order with a comment field carrying what an address cannot: <em>intercom 36B, left door from the lift</em>. That line is the single most valuable field in courier software and it is given its own label rather than being appended to the address.</p></div><figure class="shot is-phone" data-glass-in><span class="phone"><span class="notch" aria-hidden="true"></span><img src="/assets/projects/opla-delivery/05.jpg?v=221" alt="Opla Delivery — The map is a view, not a tab" loading="lazy"></span></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>You cannot mark it delivered from the sofa</h3><p class="sub">‘12 minutes until arrival’, and the button greyed out until then.</p><div class="cbody"><p>Proof of delivery is worth nothing if it can be tapped early. The button is disabled with the reason written directly underneath it, so a courier who reaches for it sees why rather than assuming the app is broken.</p><p>The detail screen puts the recipient’s name, the full address and a phone number with its own call button in reach. Calling ahead is the most common recovery action in delivery, and it should never be more than one tap from the address that failed.</p></div><figure class="shot is-phone" data-glass-in><span class="phone"><span class="notch" aria-hidden="true"></span><img src="/assets/projects/opla-delivery/06.jpg?v=221" alt="Opla Delivery — You cannot mark it delivered from the sofa" loading="lazy"></span></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>Two named outcomes, not a swipe</h3><p class="sub">‘Yes, delivered’ or ‘No, return it’.</p><div class="cbody"><p>Handing over a parcel is a financial and legal event, so it gets a modal that restates the order number, the recipient and the address before anything is confirmed. A swipe or a checkmark is too easy to do by accident with a parcel in the other hand.</p><p>The failure path is offered in the same breath and written as a sentence rather than as <em>Cancel</em>. A courier who cannot complete a drop needs a route through the app, not a dead end that leaves the job open.</p></div><figure class="shot is-phone" data-glass-in><span class="phone"><span class="notch" aria-hidden="true"></span><img src="/assets/projects/opla-delivery/07.jpg?v=221" alt="Opla Delivery — Two named outcomes, not a swipe" loading="lazy"></span></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>History is searched by date, because that is how disputes arrive</h3><p class="sub">A date range, a search field, and the same table.</p><div class="cbody"><p>‘Where was my parcel on the twelfth’ is the question this tab exists to answer, so the calendar is at the top rather than in a filter sheet. The range shows as plain text — 01.12.20–18.12.20 — and stays visible.</p><p>The rows are the identical component from the other two tabs. Once a courier has learned the table, they have learned the whole product.</p></div><figure class="shot is-phone" data-glass-in><span class="phone"><span class="notch" aria-hidden="true"></span><img src="/assets/projects/opla-delivery/08.jpg?v=221" alt="Opla Delivery — History is searched by date, because that is how disputes arrive" loading="lazy"></span></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>The leaderboard has real names on it</h3><p class="sub">A ranked bar chart of couriers, with your own position stated.</p><div class="cbody"><p>This is the decision in the project that I would still argue about. A named ranking is genuinely motivating near the top and quietly punishing near the bottom, and it is the client’s call rather than the designer’s.</p><p>What design could do was give the courier their own numbers alongside it — current position, deliveries completed, average delivery time, percentage of target — so the chart is context for a personal figure rather than the only thing being shown.</p></div><figure class="shot is-phone" data-glass-in><span class="phone"><span class="notch" aria-hidden="true"></span><img src="/assets/projects/opla-delivery/09.jpg?v=221" alt="Opla Delivery — The leaderboard has real names on it" loading="lazy"></span></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>Pay sits in the same accordion as performance</h3><p class="sub">Today, this week, this month — under a rising line.</p><div class="cbody"><p>Earnings are the reason this section gets opened, and separating them from the ranking would have implied the two are unrelated when the whole point of the ranking is that they are.</p><p>Three totals and one line is deliberately all of it. A courier checking pay between drops wants a number, not a breakdown — and a rising line is legible in the second and a half this screen actually gets.</p></div><figure class="shot is-phone" data-glass-in><span class="phone"><span class="notch" aria-hidden="true"></span><img src="/assets/projects/opla-delivery/10.jpg?v=221" alt="Opla Delivery — Pay sits in the same accordion as performance" loading="lazy"></span></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>A login with nothing on it</h3><p class="sub">A wordmark, two fields, one button.</p><div class="cbody"><p>No marketing, no social sign-in, no ‘create an account’ — couriers are issued credentials, so every one of those would be a dead end dressed as an option.</p><p>The single instruction above the fields says what to enter. On a tool people use at six in the morning, the correct amount of onboarding is one sentence.</p></div><figure class="shot is-phone" data-glass-in><span class="phone"><span class="notch" aria-hidden="true"></span><img src="/assets/projects/opla-delivery/11.jpg?v=221" alt="Opla Delivery — A login with nothing on it" loading="lazy"></span></figure></div>
+  </div>
+</section>
+
+<section class="csec" id="outcome">
+  <div class="wrap">
+    <div class="csec-label mono tick">Outcome</div>
+    <h2 data-chars>A work tool that empties as the day goes.</h2>
+    <div class="ctwo"><div class="body"><div class="cbody"><p>Two piles that shrink, a history that answers the questions support actually asks, and a ratings section where the courier’s ranking and pay sit in the same place.</p><p>One table component carries every list in the product, so the whole app is learned once and the build stays small.</p></div></div></div>
+    <div class="callout glass" data-glass-in style="margin-top:clamp(32px,5vh,60px)"><span class="pill mono">Reflection</span><h3>What I would keep, and what I would push back on</h3><p>Shaping the navigation around the physical state of the parcels rather than around a database entity is the decision I would repeat. ‘To collect’ and ‘to deliver’ are the same records with a different status flag, and treating them as one list would have been technically tidier and much worse to work with.</p><p>The named leaderboard is the part I would question harder now. It is effective and it is not neutral — being visibly last among your colleagues every day is a real cost to somebody, and if I revisited it I would want the ranking anonymised below the top few, with the personal figures kept exactly as they are.</p></div>
+  </div>
+</section>
+
+<section class="csec" style="padding-top:0">
+  <div class="wrap"><div class="csec-label mono tick">More screens</div>
+  <div class="galp"><figure class="shot is-phone" data-glass-in><span class="phone"><span class="notch" aria-hidden="true"></span><img src="/assets/projects/opla-delivery/12.jpg?v=221" alt="Opla Delivery screen" loading="lazy"></span></figure></div></div>
+</section>
+
+<nav class="pager" aria-label="Project navigation">
+  <a class="glass hoverable prev" href="/work/chat-bar/" data-trans="Chat Bar">
+    <span class="k mono">← Previous</span><span class="t">Chat Bar</span>
+  </a>
+  <a class="pager-up mono" href="/work/" data-trans="Work">All 32 projects</a>
+  <a class="glass hoverable next" href="/work/opla-fulfilment/" data-trans="Opla Fulfilment">
+    <span class="k mono">Next →</span><span class="t">Opla Fulfilment</span>
+  </a>
+</nav>
+
+</main>
+
+<div class="peek-row" aria-hidden="true"><span class="eye pk pk--1" data-eye="d" data-reach="160" style="aspect-ratio:370/480" aria-hidden="true"></span><span class="eye pk pk--2" data-eye="c" style="aspect-ratio:425/480" aria-hidden="true"></span><span class="eye pk pk--3" data-eye="p1" data-reach="260" style="aspect-ratio:430/480" aria-hidden="true"></span><span class="eye pk pk--4" data-eye="b" style="aspect-ratio:644/480" aria-hidden="true"></span></div>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4 class="mono">Navigate</h4>
+        <ul class="mono">
+          <li><a href="/">Home</a></li>
+          <li><a href="/work/">Work</a></li>
+          <li><a href="/lab/">AI Lab</a></li>
+          <li><a href="/experience/">Experience</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Enquiry</h4>
+        <ul class="mono">
+          <li><a href="mailto:contact@khomeriki.design">contact@khomeriki.design</a></li>
+          <li><a href="tel:+99599460466">+995 99 460466</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Elsewhere</h4>
+        <ul class="mono">
+          <li><a href="https://www.linkedin.com/in/nodari-khomeriki" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="https://dribbble.com/SimpleVibes" target="_blank" rel="noopener">Dribbble ↗</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Based in</h4>
+        <ul class="mono"><li>Tbilisi, Georgia</li><li>Working globally</li><li>Open to work</li></ul>
+      </div>
+    </div>
+    <div class="fmark" aria-hidden="true">NK</div>
+    <div class="fbar mono">
+      <span>© 2026 Nodari Khomeriki</span>
+      <span>Designed &amp; built in Tbilisi</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/gsap.min.js"></script>
+<script src="/assets/js/ScrollTrigger.min.js"></script>
+<script src="/assets/js/lenis.min.js"></script>
+<script src="/assets/js/glass.js?v=221"></script>
+<script src="/assets/js/eyes.js?v=221" defer></script>
+<script src="/assets/js/nebula.js?v=221" defer></script>
+<script src="/assets/js/peek.js?v=221" defer></script>
+</body>
+</html>

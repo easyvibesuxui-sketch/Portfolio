@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>try{if(sessionStorage.getItem('nk-seen')==='1')document.documentElement.classList.add('pre-seen')}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MVB Club — case study | Nodari Khomeriki</title>
+<meta name="description" content="A redesign for a London online-coaching business — one scrolling page and a members’ login, built to turn a stranger into an application.">
+<meta name="theme-color" content="#0a0a0b">
+<link rel="canonical" href="https://khomeriki.design/work/mvb-redesign/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://khomeriki.design/work/mvb-redesign/">
+<meta property="og:title" content="MVB Club — case study | Nodari Khomeriki">
+<meta property="og:description" content="A redesign for a London online-coaching business — one scrolling page and a members’ login, built to turn a stranger into an application.">
+<meta property="og:image" content="https://khomeriki.design/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/favicon.svg?v=221" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=221">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/assets/css/glass.css?v=221">
+</head>
+
+<body data-page="work">
+
+
+<div class="aurora" aria-hidden="true"><canvas id="fieldbg" class="fieldcv"></canvas><canvas id="nebula"></canvas><i class="a1"></i><i class="a2"></i><i class="a3"></i><i class="a4"></i><i class="a5"></i></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="marks" aria-hidden="true"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></div>
+<div id="cur" aria-hidden="true"></div>
+<div id="ring" aria-hidden="true"><b></b></div>
+<div id="trans" aria-hidden="true"><span></span></div>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="/" data-trans="Home"><span class="eye eye--brand" data-eye="d" data-reach="120" style="aspect-ratio:370/480" aria-hidden="true"></span>Nodari&nbsp;<span>Khomeriki</span></a>
+    <nav class="nav-links mono" aria-label="Primary">
+      <a href="/work/" aria-current="page" class="nav-hide" data-trans="Work"><span class="swap"><span>Work</span><span>Work</span></span></a>
+      <a href="/lab/" class="nav-hide" data-trans="AI Lab"><span class="swap"><span>AI Lab</span><span>AI Lab</span></span></a>
+      <a href="/experience/" class="nav-hide" data-trans="Experience"><span class="swap"><span>Experience</span><span>Experience</span></span></a>
+      <a href="/contact/" class="nav-cta mono nav-hide" data-mag=".25" data-trans="Contact">Let's create</a>
+      <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><i></i><i></i></button>
+    </nav>
+  </div>
+</header>
+
+<div id="menu" aria-hidden="true">
+  <div class="mlinks">
+    <a href="/" data-trans="Home">Home</a>
+    <a href="/work/" aria-current="page" data-trans="Work">Work</a>
+    <a href="/lab/" data-trans="AI Lab">AI Lab</a>
+    <a href="/experience/" data-trans="Experience">Experience</a>
+    <a href="/contact/" data-trans="Contact">Contact</a>
+  </div>
+  <div class="mfoot mono">
+    <span>contact@khomeriki.design</span>
+    <span>Tbilisi, Georgia</span>
+  </div>
+</div>
+
+<main>
+
+<section class="case-hero" id="overview">
+  <canvas class="fieldcv" aria-hidden="true"></canvas>
+  <div class="scrim" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="crumb mono">
+      <a href="/" data-trans="Home">Home</a> <span>/</span>
+      <a href="/work/" data-trans="Work" class="is-back">&larr;<span>Work</span></a> <span>/</span>
+      <span>MVB Club</span>
+    </div>
+    <h1><span data-chars style="display:block">Selling two people, not a programme: MVB Club</span></h1>
+    <p class="lead case-sum" data-rise=".08">A redesign for a London online-coaching business — one scrolling page and a members’ login, built to turn a stranger into an application.</p>
+    <figure class="cover is-device is-laptop" data-glass-in><img class="cover-bg" src="/assets/projects/mvb-redesign.jpg?v=221" alt="" aria-hidden="true"><span class="laptop"><span class="lid"><img src="/assets/projects/mvb-redesign/01.jpg?v=221" alt="MVB Club — Web"></span><span class="base"><i></i></span></span></figure>
+    <dl class="meta"><div><dt class="mono">Role</dt><dd>UX/UI Designer</dd></div><div><dt class="mono">Timeline</dt><dd>2020 — 2021</dd></div><div><dt class="mono">Team</dt><dd>Client, engineering</dd></div></dl>
+    
+  </div>
+</section>
+
+<nav class="casenav" aria-label="Case study sections"><a href="/work/" class="mono is-back" data-trans="Work" aria-label="Back to all work">&larr;<span>Work</span></a><a href="#overview" class="mono">Case study</a><a href="#challenge" class="mono">The challenge</a><a href="#solution" class="mono">The solution</a><a href="#outcome" class="mono">Outcome</a></nav>
+
+<section class="csec" id="challenge">
+  <div class="wrap">
+    <div class="csec-label mono tick">The challenge</div>
+    <h2 data-chars>The product is two coaches, and the competition costs nine pounds a month.</h2>
+    <div class="ctwo">
+      <div class="body"><div class="cbody"><p>MVB Club is George and Miles — thirteen years between them — selling personal online coaching: a workout and meal plan written for you, direct contact with the coaches, a training app and a video library.</p><p>Everything in that list except the last two words is also offered by a fitness app for a fraction of the price. The service is expensive, recurring, and asks a stranger to hand over their body composition and their diet to somebody they have never met.</p><p>So the site is not selling features. It is selling the belief that a specific person will read what you send them and write back — which is the one thing an app cannot do, and the hardest thing to make credible on a landing page.</p><p>It also had to be one page. This is a two-person business; a site with twelve routes through it is a site nobody maintains.</p></div></div>
+      <div class="side"><div class="callout glass" data-glass-in><span class="pill mono">Opportunity</span><h3>Put the coaches in front of the offer</h3><p>If the visitor meets George and Miles before they meet the price list, every claim afterwards has somebody attached to it.</p></div></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="csec" style="padding-block:0">
+  <div class="wrap">
+    <div class="insight glass" data-glass-in>
+      <div class="csec-label mono tick">Key insight</div>
+      <blockquote>An app can write you a programme. It cannot be somebody who knows your name.</blockquote>
+      <div class="after"><p>That is the entire commercial argument, and it decided the order of the page. The coaches are named and photographed in the second section, before anything is offered, and the promise underneath the offer is written in the first person plural: <em>we personally coach you all the way</em>.</p><p>It is repeated verbatim at the bottom of the page. On a single-scroll site the same sentence in two places is not redundancy — it is the argument bracketing everything in between.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="csec" id="solution">
+  <div class="wrap">
+    <div class="csec-label mono tick">The solution</div>
+    <h2 data-chars>One scroll: welcome, the coaches, what you get, proof, what is included, apply.</h2>
+    <div class="ctwo"><div class="body"><div class="cbody"><p>Each section is announced by its own name set huge and hollow behind the real heading — ABOUT, STORIES, PLANS, CONTACT — so a page with no navigation still has landmarks you can scroll to and recognise.</p><p>The sections are separated by a diagonal notch rather than a straight edge, and threaded together by a thin orange rule that runs down the centre between them. Photography is the client’s own, desaturated, with orange and white doing all the signalling.</p></div></div></div>
+    <div class="decision" data-rise><span class="pill mono">Design decision</span><h3>A welcome, not a pitch</h3><p class="sub">‘Welcome to MVB’ over a photograph, and nothing else.</p><div class="cbody"><p>The hero makes no claim and lists no benefit. On a service sold on relationship, the first screen is an introduction — the argument starts one scroll later, once there are faces attached to it.</p><p>The band ends in a diagonal notch rather than a horizontal edge. It is the page’s one structural mannerism, repeated at every section boundary, and it does the job a grid usually does on a site with no columns to speak of.</p></div><figure class="shot is-browser" data-glass-in><span class="chrome" aria-hidden="true"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></span><img src="/assets/projects/mvb-redesign/02.jpg?v=221" alt="MVB Club — A welcome, not a pitch" loading="lazy"></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>Name the two people and count the years</h3><p class="sub">‘George & Miles’, a photograph of them, thirteen years.</p><div class="cbody"><p>A number is what turns a claim into a fact. ‘Thirteen years in the industry’ is the most persuasive sentence on the page and it sits in the second section rather than in a footer.</p><p>The photograph is them, not a stock athlete. Everywhere else on the site the imagery is anonymous training footage; here it is deliberately the two people you would be paying, looking at the camera.</p></div><figure class="shot is-browser" data-glass-in><span class="chrome" aria-hidden="true"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></span><img src="/assets/projects/mvb-redesign/03.jpg?v=221" alt="MVB Club — Name the two people and count the years" loading="lazy"></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>Four pillars, and the promise underneath the heading</h3><p class="sub">Programming, tracking, meal plans, coaching — numbered 01 to 04.</p><div class="cbody"><p>The offer is four things, so it is shown as four columns with hollow numerals and a line icon each, over a full-bleed training photograph turned down to grey. Rendering it as a list would have made a coaching service look like a pricing table.</p><p>‘We personally coach you all the way’ sits directly under the section title in orange, so the differentiator is read before the features rather than after them. The same four pillars reappear on the quiz result screen, with the same icons — one offer, told identically wherever somebody meets it.</p></div><figure class="shot is-browser" data-glass-in><span class="chrome" aria-hidden="true"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></span><img src="/assets/projects/mvb-redesign/04.jpg?v=221" alt="MVB Club — Four pillars, and the promise underneath the heading" loading="lazy"></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>One long testimonial, not a wall of stars</h3><p class="sub">A single client, in his own words, with arrows to the next.</p><div class="cbody"><p>Richard’s quote is four lines long and mentions injury setbacks and ups and downs. A curated five-star wall reads as marketing; a testimonial that admits the process was hard reads as a person.</p><p>It occupies its own section with nothing competing for attention, because on a high-trust purchase the proof is not a supporting element — it is a step in the argument.</p></div><figure class="shot is-browser" data-glass-in><span class="chrome" aria-hidden="true"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></span><img src="/assets/projects/mvb-redesign/05.jpg?v=221" alt="MVB Club — One long testimonial, not a wall of stars" loading="lazy"></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>The ask is an application, and it costs nothing</h3><p class="sub">A ticked list of what is included, APPLY NOW, and ‘applying is non-committal’.</p><div class="cbody"><p>The four inclusions are set as literal ticked rows on a dark card so the offer can be read in five seconds without a price anywhere near it. Naming a figure at this point invites a comparison with a nine-pound app, and that is the wrong conversation.</p><p>The line under the button is the most important copy in the section. On a service this expensive the barrier is not doubt about quality, it is fear of being sold to — and ‘applying is non-committal’ removes that for the cost of three words.</p></div><figure class="shot is-browser" data-glass-in><span class="chrome" aria-hidden="true"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></span><img src="/assets/projects/mvb-redesign/06.jpg?v=221" alt="MVB Club — The ask is an application, and it costs nothing" loading="lazy"></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>Close by repeating the promise and changing the verb</h3><p class="sub">The same headline again, and ‘Get started’ instead of ‘Apply now’.</p><div class="cbody"><p>Somebody who has scrolled the whole page has read the argument and is ready for a different word. ‘Get started’ addresses a decision already made; ‘Apply now’ addresses one still being considered.</p><p>Repeating the headline verbatim closes the bracket opened four sections earlier. The visitor leaves having been told the same thing twice, which on a page with no navigation is how a message survives the scroll.</p></div><figure class="shot is-browser" data-glass-in><span class="chrome" aria-hidden="true"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></span><img src="/assets/projects/mvb-redesign/07.jpg?v=221" alt="MVB Club — Close by repeating the promise and changing the verb" loading="lazy"></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>The members’ area wears the same clothes</h3><p class="sub">The marketing header and footer, around a four-element login.</p><div class="cbody"><p>Clients arrive at the login from an advert, an email or the site itself, and it is the first thing they see after paying. Handing it to a default framework would have made the product feel like a different company from the one that sold it.</p><p>The form itself is deliberately plain — two fields, one orange button, a way back in if the password is gone, and the data policy in reach. There is nothing to design here except restraint.</p></div></div>
+  </div>
+</section>
+
+<section class="csec" id="outcome">
+  <div class="wrap">
+    <div class="csec-label mono tick">Outcome</div>
+    <h2 data-chars>A one-page argument that ends in an application.</h2>
+    <div class="ctwo"><div class="body"><div class="cbody"><p>The site introduces the coaches, states the four things a client receives, proves it with one long testimonial and asks for an application that costs nothing to send — in a single scroll a two-person business can maintain.</p><p>The visual system — orange on near-black, hollow landmark type, diagonal section cuts and the client’s own photography — carries from the marketing page through the onboarding quiz to the members’ login without a seam.</p></div></div></div>
+    <div class="callout glass" data-glass-in style="margin-top:clamp(32px,5vh,60px)"><span class="pill mono">Reflection</span><h3>What I would keep, and what the device cost</h3><p>Leading with the people rather than the offer is the decision I would repeat on anything sold by a small team. The features are matched by every competitor; the names are not.</p><p>The hollow section labels are the part I would handle differently. Setting a word at two hundred pixels behind every heading is a strong device and a completely unforgiving one — a typo that would pass unnoticed in body copy becomes the largest object on the screen. If the type is going to be that big, the words have to be locked before the layout is.</p></div>
+  </div>
+</section>
+
+
+<nav class="pager" aria-label="Project navigation">
+  <a class="glass hoverable prev" href="/work/meetsland/" data-trans="Meetsland">
+    <span class="k mono">← Previous</span><span class="t">Meetsland</span>
+  </a>
+  <a class="pager-up mono" href="/work/" data-trans="Work">All 32 projects</a>
+  <a class="glass hoverable next" href="/work/mvb-quiz/" data-trans="MVB Club Quiz">
+    <span class="k mono">Next →</span><span class="t">MVB Club Quiz</span>
+  </a>
+</nav>
+
+</main>
+
+<div class="peek-row" aria-hidden="true"><span class="eye pk pk--1" data-eye="d" data-reach="160" style="aspect-ratio:370/480" aria-hidden="true"></span><span class="eye pk pk--2" data-eye="c" style="aspect-ratio:425/480" aria-hidden="true"></span><span class="eye pk pk--3" data-eye="p1" data-reach="260" style="aspect-ratio:430/480" aria-hidden="true"></span><span class="eye pk pk--4" data-eye="b" style="aspect-ratio:644/480" aria-hidden="true"></span></div>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4 class="mono">Navigate</h4>
+        <ul class="mono">
+          <li><a href="/">Home</a></li>
+          <li><a href="/work/">Work</a></li>
+          <li><a href="/lab/">AI Lab</a></li>
+          <li><a href="/experience/">Experience</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Enquiry</h4>
+        <ul class="mono">
+          <li><a href="mailto:contact@khomeriki.design">contact@khomeriki.design</a></li>
+          <li><a href="tel:+99599460466">+995 99 460466</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Elsewhere</h4>
+        <ul class="mono">
+          <li><a href="https://www.linkedin.com/in/nodari-khomeriki" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="https://dribbble.com/SimpleVibes" target="_blank" rel="noopener">Dribbble ↗</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Based in</h4>
+        <ul class="mono"><li>Tbilisi, Georgia</li><li>Working globally</li><li>Open to work</li></ul>
+      </div>
+    </div>
+    <div class="fmark" aria-hidden="true">NK</div>
+    <div class="fbar mono">
+      <span>© 2026 Nodari Khomeriki</span>
+      <span>Designed &amp; built in Tbilisi</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/gsap.min.js"></script>
+<script src="/assets/js/ScrollTrigger.min.js"></script>
+<script src="/assets/js/lenis.min.js"></script>
+<script src="/assets/js/glass.js?v=221"></script>
+<script src="/assets/js/eyes.js?v=221" defer></script>
+<script src="/assets/js/nebula.js?v=221" defer></script>
+<script src="/assets/js/peek.js?v=221" defer></script>
+</body>
+</html>

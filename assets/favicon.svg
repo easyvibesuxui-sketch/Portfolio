@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="NK">
+  <!--
+    NK monogram. The letterforms are strokes, not <text>: a browser
+    renders an SVG favicon with whatever font it happens to have, so
+    real type here would be unpredictable across machines.
+    Ember-to-plum matches the hero card and the CTA.
+  -->
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f4f2f0"/>
+      <stop offset="52%" stop-color="#8a8785"/>
+      <stop offset="100%" stop-color="#0a0a0b"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="64" height="64" rx="15" fill="url(#g)"/>
+
+  <g stroke="#0a0a0b" stroke-width="6" stroke-linecap="butt" fill="none">
+    <!-- N -->
+    <path d="M14 46V18"/>
+    <path d="M14 18l14 28"/>
+    <path d="M28 18v28"/>
+    <!-- K -->
+    <path d="M39 46V18"/>
+    <path d="M40 33l11-14"/>
+    <path d="M40 32l12 14"/>
+  </g>
+</svg>

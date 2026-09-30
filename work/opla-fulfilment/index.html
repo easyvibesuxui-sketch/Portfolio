@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>try{if(sessionStorage.getItem('nk-seen')==='1')document.documentElement.classList.add('pre-seen')}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Opla Fulfilment — case study | Nodari Khomeriki</title>
+<meta name="description" content="The in-store picker’s app — scan-verified grocery picking, and a receipt honest enough to name what could not be supplied.">
+<meta name="theme-color" content="#0a0a0b">
+<link rel="canonical" href="https://khomeriki.design/work/opla-fulfilment/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://khomeriki.design/work/opla-fulfilment/">
+<meta property="og:title" content="Opla Fulfilment — case study | Nodari Khomeriki">
+<meta property="og:description" content="The in-store picker’s app — scan-verified grocery picking, and a receipt honest enough to name what could not be supplied.">
+<meta property="og:image" content="https://khomeriki.design/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/favicon.svg?v=221" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=221">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/assets/css/glass.css?v=221">
+</head>
+
+<body data-page="work">
+
+
+<div class="aurora" aria-hidden="true"><canvas id="fieldbg" class="fieldcv"></canvas><canvas id="nebula"></canvas><i class="a1"></i><i class="a2"></i><i class="a3"></i><i class="a4"></i><i class="a5"></i></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="marks" aria-hidden="true"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></div>
+<div id="cur" aria-hidden="true"></div>
+<div id="ring" aria-hidden="true"><b></b></div>
+<div id="trans" aria-hidden="true"><span></span></div>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="/" data-trans="Home"><span class="eye eye--brand" data-eye="d" data-reach="120" style="aspect-ratio:370/480" aria-hidden="true"></span>Nodari&nbsp;<span>Khomeriki</span></a>
+    <nav class="nav-links mono" aria-label="Primary">
+      <a href="/work/" aria-current="page" class="nav-hide" data-trans="Work"><span class="swap"><span>Work</span><span>Work</span></span></a>
+      <a href="/lab/" class="nav-hide" data-trans="AI Lab"><span class="swap"><span>AI Lab</span><span>AI Lab</span></span></a>
+      <a href="/experience/" class="nav-hide" data-trans="Experience"><span class="swap"><span>Experience</span><span>Experience</span></span></a>
+      <a href="/contact/" class="nav-cta mono nav-hide" data-mag=".25" data-trans="Contact">Let's create</a>
+      <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><i></i><i></i></button>
+    </nav>
+  </div>
+</header>
+
+<div id="menu" aria-hidden="true">
+  <div class="mlinks">
+    <a href="/" data-trans="Home">Home</a>
+    <a href="/work/" aria-current="page" data-trans="Work">Work</a>
+    <a href="/lab/" data-trans="AI Lab">AI Lab</a>
+    <a href="/experience/" data-trans="Experience">Experience</a>
+    <a href="/contact/" data-trans="Contact">Contact</a>
+  </div>
+  <div class="mfoot mono">
+    <span>contact@khomeriki.design</span>
+    <span>Tbilisi, Georgia</span>
+  </div>
+</div>
+
+<main>
+
+<section class="case-hero" id="overview">
+  <canvas class="fieldcv" aria-hidden="true"></canvas>
+  <div class="scrim" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="crumb mono">
+      <a href="/" data-trans="Home">Home</a> <span>/</span>
+      <a href="/work/" data-trans="Work" class="is-back">&larr;<span>Work</span></a> <span>/</span>
+      <span>Opla Fulfilment</span>
+    </div>
+    <h1><span data-chars style="display:block">A picking list that counts down: Opla Fulfilment</span></h1>
+    <p class="lead case-sum" data-rise=".08">The in-store picker’s app — scan-verified grocery picking, and a receipt honest enough to name what could not be supplied.</p>
+    <figure class="cover is-device is-phone" data-glass-in><img class="cover-bg" src="/assets/projects/opla-fulfilment.jpg?v=221" alt="" aria-hidden="true"><span class="phone"><span class="notch" aria-hidden="true"></span><img src="/assets/projects/opla-fulfilment/01.jpg?v=221" alt="Opla Fulfilment — Mobile"></span></figure>
+    <dl class="meta"><div><dt class="mono">Role</dt><dd>UX/UI Designer</dd></div><div><dt class="mono">Timeline</dt><dd>2021</dd></div><div><dt class="mono">Team</dt><dd>Client product, engineering</dd></div></dl>
+    
+  </div>
+</section>
+
+<nav class="casenav" aria-label="Case study sections"><a href="/work/" class="mono is-back" data-trans="Work" aria-label="Back to all work">&larr;<span>Work</span></a><a href="#overview" class="mono">Case study</a><a href="#challenge" class="mono">The challenge</a><a href="#solution" class="mono">The solution</a><a href="#outcome" class="mono">Outcome</a></nav>
+
+<section class="csec" id="challenge">
+  <div class="wrap">
+    <div class="csec-label mono tick">The challenge</div>
+    <h2 data-chars>Picking groceries for somebody else is a job where being fast and being right pull in opposite directions.</h2>
+    <div class="ctwo">
+      <div class="body"><div class="cbody"><p>An order arrives as a list of quantities — seventeen of one bread, two kilos of apples — and a picker walks a shop floor assembling it against a clock. Every second spent checking is a second lost, and every check skipped is a wrong item in somebody’s bag.</p><p>Groceries make the verification harder than parcels. Four breads from the same bakery differ by a word on the label, and the picker is holding a basket while reading a phone.</p><p>Shortages are constant and unavoidable. Half the orders cannot be filled completely, so ‘what happens when the shelf is empty’ is not an edge case — it is a core flow, and it ends in somebody’s money.</p><p>And it is the same company as the courier app, so the two tools had to feel like one system operated by two different jobs.</p></div></div>
+      <div class="side"><div class="callout glass" data-glass-in><span class="pill mono">Constraint</span><h3>One hand, a basket in the other, and a clock running</h3><p>Every screen has to be readable at arm’s length and actionable with a thumb.</p></div></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="csec" style="padding-block:0">
+  <div class="wrap">
+    <div class="insight glass" data-glass-in>
+      <div class="csec-label mono tick">Key insight</div>
+      <blockquote>A picker does not want to know what is in the order. They want to know how much of it is left.</blockquote>
+      <div class="after"><p>A list of everything you must collect is demoralising at the start and useless in the middle. The same list phrased as a remainder tells you where you are in the job every time you look at it.</p><p>So the counting runs everywhere: how many kinds of product an order contains before it is opened, how many units of the current line are still needed, and how many lines are left on the button that finishes the job.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="csec" id="solution">
+  <div class="wrap">
+    <div class="csec-label mono tick">The solution</div>
+    <h2 data-chars>A worksheet that shrinks, a scan that verifies rather than enters, and a receipt that admits what is missing.</h2>
+    <div class="ctwo"><div class="body"><div class="cbody"><p>Three tabs carry the shift — new orders, ready to send, history — in the same table component as the courier app, so the two roles share one product. Opening an order gives a line-by-line worksheet where each row states what to find, how many, and how many remain.</p><p>Picking a line opens a full-screen scan with the required quantity already on it. Everything that can go wrong — the wrong code, an unreadable label, an empty shelf — has a named state rather than an error toast.</p></div></div></div>
+    <div class="decision" data-rise><span class="pill mono">Design decision</span><h3>Count kinds, not items</h3><p class="sub">The order list shows ‘27 kinds’ rather than a total quantity.</p><div class="cbody"><p>The number that predicts how long a pick takes is how many different products it contains, not how many units. Seventeen of one bread is one stop; seventeen different things is seventeen.</p><p>It is the only figure on the row besides the number and the time, because a picker choosing what to start is making exactly one judgement: how big is this.</p></div><figure class="shot is-phone" data-glass-in><span class="phone"><span class="notch" aria-hidden="true"></span><img src="/assets/projects/opla-fulfilment/02.jpg?v=221" alt="Opla Fulfilment — Count kinds, not items" loading="lazy"></span></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>The page counts down, not up</h3><p class="sub">‘12 left to prepare’ on the line, ‘13 positions remaining’ on the button.</p><div class="cbody"><p>Progress bars are for people watching; remainders are for people working. Every number on this screen is phrased as what is still owed, so a glance answers ‘am I nearly done’ without any arithmetic.</p><p>A finished line greys out and takes a tick rather than disappearing. The list stays the same length all the way through, which is what lets a picker keep their place in it while walking.</p></div><figure class="shot is-phone" data-glass-in><span class="phone"><span class="notch" aria-hidden="true"></span><img src="/assets/projects/opla-fulfilment/03.jpg?v=221" alt="Opla Fulfilment — The page counts down, not up" loading="lazy"></span></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>The quantity is on screen before the scan</h3><p class="sub">The product card sits above the scan target, with the number in orange.</p><div class="cbody"><p>Scanning is verification, not data entry — the picker already knows what they are looking for. Putting the photograph, the name, the barcode and the required count above the camera means the scan confirms a decision rather than announcing one.</p><p>The count repeats under the frame as the remainder, so the same number is visible whether the picker is looking at the top or the bottom of the screen.</p></div><figure class="shot is-phone" data-glass-in><span class="phone"><span class="notch" aria-hidden="true"></span><img src="/assets/projects/opla-fulfilment/04.jpg?v=221" alt="Opla Fulfilment — The quantity is on screen before the scan" loading="lazy"></span></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>A scan is confirmed, not assumed</h3><p class="sub">‘This product is ordered — 17 units’, then Add, with Cancel underneath.</p><div class="cbody"><p>A barcode reader that commits on read will eventually add something twice, and in a shop that means a wrong basket and a refund. One tap between the read and the record costs a second and removes an entire class of error.</p><p>Cancel is offered in the same panel and written plainly, because the most common reason to abandon a scan is realising you picked up the wrong size.</p></div><figure class="shot is-phone" data-glass-in><span class="phone"><span class="notch" aria-hidden="true"></span><img src="/assets/projects/opla-fulfilment/05.jpg?v=221" alt="Opla Fulfilment — A scan is confirmed, not assumed" loading="lazy"></span></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>The wrong product gets its own screen</h3><p class="sub">Red on dark: ‘the product with this code is not in this order’.</p><div class="cbody"><p>This is the error the whole app exists to prevent, so it is not a toast that slides away while the picker is looking at a shelf. It takes the screen, states the problem in one sentence and offers two exits: try again, or back to the list.</p><p>Inverting to dark with a red mark makes it unmistakable at arm’s length in a bright shop — the only red in the entire product, spent on the only thing that must never be missed.</p></div><figure class="shot is-phone" data-glass-in><span class="phone"><span class="notch" aria-hidden="true"></span><img src="/assets/projects/opla-fulfilment/06.jpg?v=221" alt="Opla Fulfilment — The wrong product gets its own screen" loading="lazy"></span></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>Typing the barcode is a first-class route</h3><p class="sub">‘Or find by barcode’, with a filtered list underneath.</p><div class="cbody"><p>Labels get torn, frozen, wet and creased, and a scanner that fails on the seventh item stops the shift. Manual entry sits one tap from the scanner rather than three levels down in a settings menu.</p><p>It filters the order’s own products as you type rather than searching the whole catalogue, so the shortcut cannot become a way to add something that was never ordered.</p></div><figure class="shot is-phone" data-glass-in><span class="phone"><span class="notch" aria-hidden="true"></span><img src="/assets/projects/opla-fulfilment/07.jpg?v=221" alt="Opla Fulfilment — Typing the barcode is a first-class route" loading="lazy"></span></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>Two timestamps are the whole service level</h3><p class="sub">Ordered at, prepared at — as two columns.</p><div class="cbody"><p>The ready-to-send tab exists so somebody can see how long orders are sitting. Putting the two times side by side makes the gap between them readable without a calculation, which is the only number a shift supervisor actually wants.</p><p>It is the same table as every other list in both apps. One component, learned once, used by two jobs.</p></div><figure class="shot is-phone" data-glass-in><span class="phone"><span class="notch" aria-hidden="true"></span><img src="/assets/projects/opla-fulfilment/08.jpg?v=221" alt="Opla Fulfilment — Two timestamps are the whole service level" loading="lazy"></span></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>The row opens to what was actually picked</h3><p class="sub">Line items with photographs, inside the row.</p><div class="cbody"><p>A packed order is checked far more often than it is read, so expanding shows the assembled contents rather than a summary. Photographs make that check possible at a glance instead of by reading barcodes.</p><p>It expands in place for the same reason as the courier app — a supervisor working down a list should not lose their position to look at one order.</p></div><figure class="shot is-phone" data-glass-in><span class="phone"><span class="notch" aria-hidden="true"></span><img src="/assets/projects/opla-fulfilment/09.jpg?v=221" alt="Opla Fulfilment — The row opens to what was actually picked" loading="lazy"></span></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>The receipt says what it could not supply</h3><p class="sub">Totals, then the shortfall, then the refund amount.</p><div class="cbody"><p>This is the decision I am proudest of in the project. A grocery order that arrives short is the moment a customer decides whether to order again, and most systems handle it by quietly charging less and hoping nobody notices.</p><p>Here the receipt lists the missing items by name and quantity and states the amount going back to the account. Naming a failure and pricing it is more reassuring than a total that silently does not match — and it turns the delivery driver from somebody with bad news into somebody handing over a document that already explains itself.</p></div><figure class="shot is-phone" data-glass-in><span class="phone"><span class="notch" aria-hidden="true"></span><img src="/assets/projects/opla-fulfilment/10.jpg?v=221" alt="Opla Fulfilment — The receipt says what it could not supply" loading="lazy"></span></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>A login with nothing on it</h3><p class="sub">A wordmark, two fields, one button.</p><div class="cbody"><p>Staff are issued credentials, so social sign-in and ‘create an account’ would be dead ends dressed as options. One sentence of instruction is the right amount of onboarding for a tool used at six in the morning.</p><p>It is identical to the courier app’s login. Two different jobs, one company, and the first screen of both says so.</p></div><figure class="shot is-phone" data-glass-in><span class="phone"><span class="notch" aria-hidden="true"></span><img src="/assets/projects/opla-fulfilment/11.jpg?v=221" alt="Opla Fulfilment — A login with nothing on it" loading="lazy"></span></figure></div>
+  </div>
+</section>
+
+<section class="csec" id="outcome">
+  <div class="wrap">
+    <div class="csec-label mono tick">Outcome</div>
+    <h2 data-chars>A worksheet that empties, and an order that is honest about itself.</h2>
+    <div class="ctwo"><div class="body"><div class="cbody"><p>Pickers work down a counting-down list with scan verification at every line and a named state for each way it can fail; supervisors read two timestamps to see what is sitting.</p><p>The receipt closes the loop by naming shortfalls and refunds rather than hiding them, and the whole product shares its shell, table and login with the courier app — one system, two jobs.</p></div></div></div>
+    <div class="callout glass" data-glass-in style="margin-top:clamp(32px,5vh,60px)"><span class="pill mono">Reflection</span><h3>What I would keep from this one</h3><p>Phrasing every number as a remainder rather than a total is a small change with a disproportionate effect on a repetitive task. It is the difference between a list you are facing and a list you are finishing.</p><p>Designing the shortfall properly is the other. Teams spend their effort on the path where everything is available, and then the flow that decides whether somebody orders again gets built in an afternoon. On a grocery product it deserves the opposite ratio.</p></div>
+  </div>
+</section>
+
+
+<nav class="pager" aria-label="Project navigation">
+  <a class="glass hoverable prev" href="/work/opla-delivery/" data-trans="Opla Delivery">
+    <span class="k mono">← Previous</span><span class="t">Opla Delivery</span>
+  </a>
+  <a class="pager-up mono" href="/work/" data-trans="Work">All 32 projects</a>
+  <a class="glass hoverable next" href="/work/tichera/" data-trans="Tichera">
+    <span class="k mono">Next →</span><span class="t">Tichera</span>
+  </a>
+</nav>
+
+</main>
+
+<div class="peek-row" aria-hidden="true"><span class="eye pk pk--1" data-eye="d" data-reach="160" style="aspect-ratio:370/480" aria-hidden="true"></span><span class="eye pk pk--2" data-eye="c" style="aspect-ratio:425/480" aria-hidden="true"></span><span class="eye pk pk--3" data-eye="p1" data-reach="260" style="aspect-ratio:430/480" aria-hidden="true"></span><span class="eye pk pk--4" data-eye="b" style="aspect-ratio:644/480" aria-hidden="true"></span></div>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4 class="mono">Navigate</h4>
+        <ul class="mono">
+          <li><a href="/">Home</a></li>
+          <li><a href="/work/">Work</a></li>
+          <li><a href="/lab/">AI Lab</a></li>
+          <li><a href="/experience/">Experience</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Enquiry</h4>
+        <ul class="mono">
+          <li><a href="mailto:contact@khomeriki.design">contact@khomeriki.design</a></li>
+          <li><a href="tel:+99599460466">+995 99 460466</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Elsewhere</h4>
+        <ul class="mono">
+          <li><a href="https://www.linkedin.com/in/nodari-khomeriki" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="https://dribbble.com/SimpleVibes" target="_blank" rel="noopener">Dribbble ↗</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Based in</h4>
+        <ul class="mono"><li>Tbilisi, Georgia</li><li>Working globally</li><li>Open to work</li></ul>
+      </div>
+    </div>
+    <div class="fmark" aria-hidden="true">NK</div>
+    <div class="fbar mono">
+      <span>© 2026 Nodari Khomeriki</span>
+      <span>Designed &amp; built in Tbilisi</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/gsap.min.js"></script>
+<script src="/assets/js/ScrollTrigger.min.js"></script>
+<script src="/assets/js/lenis.min.js"></script>
+<script src="/assets/js/glass.js?v=221"></script>
+<script src="/assets/js/eyes.js?v=221" defer></script>
+<script src="/assets/js/nebula.js?v=221" defer></script>
+<script src="/assets/js/peek.js?v=221" defer></script>
+</body>
+</html>

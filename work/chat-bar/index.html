@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>try{if(sessionStorage.getItem('nk-seen')==='1')document.documentElement.classList.add('pre-seen')}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chat Bar — case study | Nodari Khomeriki</title>
+<meta name="description" content="A location-based social app where the unit is the venue — check in, see who else is there, and start a conversation that already has a place attached to it.">
+<meta name="theme-color" content="#0a0a0b">
+<link rel="canonical" href="https://khomeriki.design/work/chat-bar/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://khomeriki.design/work/chat-bar/">
+<meta property="og:title" content="Chat Bar — case study | Nodari Khomeriki">
+<meta property="og:description" content="A location-based social app where the unit is the venue — check in, see who else is there, and start a conversation that already has a place attached to it.">
+<meta property="og:image" content="https://khomeriki.design/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/favicon.svg?v=221" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=221">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/assets/css/glass.css?v=221">
+</head>
+
+<body data-page="work">
+
+
+<div class="aurora" aria-hidden="true"><canvas id="fieldbg" class="fieldcv"></canvas><canvas id="nebula"></canvas><i class="a1"></i><i class="a2"></i><i class="a3"></i><i class="a4"></i><i class="a5"></i></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="marks" aria-hidden="true"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></div>
+<div id="cur" aria-hidden="true"></div>
+<div id="ring" aria-hidden="true"><b></b></div>
+<div id="trans" aria-hidden="true"><span></span></div>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="/" data-trans="Home"><span class="eye eye--brand" data-eye="d" data-reach="120" style="aspect-ratio:370/480" aria-hidden="true"></span>Nodari&nbsp;<span>Khomeriki</span></a>
+    <nav class="nav-links mono" aria-label="Primary">
+      <a href="/work/" aria-current="page" class="nav-hide" data-trans="Work"><span class="swap"><span>Work</span><span>Work</span></span></a>
+      <a href="/lab/" class="nav-hide" data-trans="AI Lab"><span class="swap"><span>AI Lab</span><span>AI Lab</span></span></a>
+      <a href="/experience/" class="nav-hide" data-trans="Experience"><span class="swap"><span>Experience</span><span>Experience</span></span></a>
+      <a href="/contact/" class="nav-cta mono nav-hide" data-mag=".25" data-trans="Contact">Let's create</a>
+      <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><i></i><i></i></button>
+    </nav>
+  </div>
+</header>
+
+<div id="menu" aria-hidden="true">
+  <div class="mlinks">
+    <a href="/" data-trans="Home">Home</a>
+    <a href="/work/" aria-current="page" data-trans="Work">Work</a>
+    <a href="/lab/" data-trans="AI Lab">AI Lab</a>
+    <a href="/experience/" data-trans="Experience">Experience</a>
+    <a href="/contact/" data-trans="Contact">Contact</a>
+  </div>
+  <div class="mfoot mono">
+    <span>contact@khomeriki.design</span>
+    <span>Tbilisi, Georgia</span>
+  </div>
+</div>
+
+<main>
+
+<section class="case-hero" id="overview">
+  <canvas class="fieldcv" aria-hidden="true"></canvas>
+  <div class="scrim" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="crumb mono">
+      <a href="/" data-trans="Home">Home</a> <span>/</span>
+      <a href="/work/" data-trans="Work" class="is-back">&larr;<span>Work</span></a> <span>/</span>
+      <span>Chat Bar</span>
+    </div>
+    <h1><span data-chars style="display:block">You are not meeting a stranger, you are meeting a bar: Chat Bar</span></h1>
+    <p class="lead case-sum" data-rise=".08">A location-based social app where the unit is the venue — check in, see who else is there, and start a conversation that already has a place attached to it.</p>
+    <figure class="cover is-device is-phone" data-glass-in><img class="cover-bg" src="/assets/projects/chat-bar.jpg?v=221" alt="" aria-hidden="true"><span class="phone"><span class="notch" aria-hidden="true"></span><img src="/assets/projects/chat-bar/01.jpg?v=221" alt="Chat Bar — Social"></span></figure>
+    <dl class="meta"><div><dt class="mono">Role</dt><dd>Product Designer</dd></div><div><dt class="mono">Timeline</dt><dd>2022</dd></div><div><dt class="mono">Team</dt><dd>Founders, engineering</dd></div></dl>
+    
+  </div>
+</section>
+
+<nav class="casenav" aria-label="Case study sections"><a href="/work/" class="mono is-back" data-trans="Work" aria-label="Back to all work">&larr;<span>Work</span></a><a href="#overview" class="mono">Case study</a><a href="#challenge" class="mono">The challenge</a><a href="#solution" class="mono">The solution</a><a href="#outcome" class="mono">Outcome</a></nav>
+
+<section class="csec" id="challenge">
+  <div class="wrap">
+    <div class="csec-label mono tick">The challenge</div>
+    <h2 data-chars>Meeting people nearby is a safety problem long before it is a matching problem.</h2>
+    <div class="ctwo">
+      <div class="body"><div class="cbody"><p>The obvious version of this app is a map of people around you. That version is also the one nobody sensible installs — broadcasting your live position to strangers is a cost no amount of social upside pays for.</p><p>The second problem is the opening move. Talking to somebody in a bar is hard because there is nothing to talk about yet; an app that drops two strangers into an empty message thread has reproduced exactly that difficulty on a smaller screen.</p><p>And the whole thing only works in the moment. A person is in that bar for two hours. Anything that takes a profile, a questionnaire and a matching algorithm has missed the evening it was supposed to be part of.</p></div></div>
+      <div class="side"><div class="callout glass" data-glass-in><span class="pill mono">Opportunity</span><h3>Put a place between the two people</h3><p>A venue is public, chosen, temporary and shared. It solves the privacy problem and supplies the first thing to talk about at the same time.</p></div></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="csec" style="padding-block:0">
+  <div class="wrap">
+    <div class="insight glass" data-glass-in>
+      <div class="csec-label mono tick">Key insight</div>
+      <blockquote>Nobody wants to announce where they are. Plenty of people are happy to announce which bar they are in.</blockquote>
+      <div class="after"><p>Those sound like the same statement and are not. A live location is continuous, precise and involuntary-feeling; a check-in is a single, deliberate act attached to a public place you already walked into.</p><p>Building the product around the venue rather than the person changed what the interface had to show. There is no map of people anywhere in it — only a list of places, and inside a place, a list of the people who chose to say they were there.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="csec" id="solution">
+  <div class="wrap">
+    <div class="csec-label mono tick">The solution</div>
+    <h2 data-chars>Places first, people second, and nothing visible until someone opts in.</h2>
+    <div class="ctwo"><div class="body"><div class="cbody"><p>Three tabs carry the entire product: Feed is the list of venues near you, Chat is the conversations that came out of them, and Profile is four facts about you. Nothing else was added, because the app is used standing up, in a loud room, for a couple of hours.</p><p>Everything below that is one level deep. There is no discovery layer, no feed of people and no map — the venue does that work, and the rest of the app exists to get you into one and then out of the way.</p></div></div></div>
+    <div class="decision" data-rise><span class="pill mono">Design decision</span><h3>The list is of places, not people</h3><p class="sub">Photograph, name, address, distance, guest count — and ‘You are here’ on the one you checked into.</p><div class="cbody"><p>Leading with venues means the app never has to show a person on a map. The nearest thing to a location it reveals is one a user typed themselves by choosing to check in, and that state is marked plainly on the card as <em>You are here</em>.</p><p>Each venue carries how many people are currently checked in and how far away it is, to two decimals. Both are decision information rather than decoration: thirty-two guests and 0.05 km is a different evening from four guests and 1.68 km, and nothing else on the card distinguishes them.</p></div><figure class="shot is-phone" data-glass-in><span class="phone"><span class="notch" aria-hidden="true"></span><img src="/assets/projects/chat-bar/02.jpg?v=221" alt="Chat Bar — The list is of places, not people" loading="lazy"></span></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>Guests are behind the check-in</h3><p class="sub">Feed and Guests as two tabs inside a venue, with a photo carousel above them.</p><div class="cbody"><p>Reciprocity is the rule that makes this safe to use: you can see who is here because you have said you are here too. It removes the lurker, and it removes the need to explain a privacy model in a paragraph.</p><p>A guest row is a photo, a first name, an age and a gender mark — nothing else, and no message button on the row. Anything richer turns a bar into a dating profile, which is a different product with a different tone. The venue keeps its own like count, so popularity attaches to the place rather than the people in it.</p></div><figure class="shot is-phone" data-glass-in><span class="phone"><span class="notch" aria-hidden="true"></span><img src="/assets/projects/chat-bar/03.jpg?v=221" alt="Chat Bar — Guests are behind the check-in" loading="lazy"></span></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>Chat is ordinary on purpose</h3><p class="sub">A search box, unread counts and timestamps. Nothing invented.</p><div class="cbody"><p>The conversation is the payoff, not the place to be clever. Anything unfamiliar here — disappearing messages, gimmicked composers, a novel list — would make people hesitate at exactly the moment the product is supposed to be working.</p><p>So it looks like every messaging app anyone already uses, which is the highest compliment a chat screen can be paid. The only thing worth designing is how you got into the thread, and that happened two screens earlier.</p></div><figure class="shot is-phone" data-glass-in><span class="phone"><span class="notch" aria-hidden="true"></span><img src="/assets/projects/chat-bar/04.jpg?v=221" alt="Chat Bar — Chat is ordinary on purpose" loading="lazy"></span></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>A profile with four fields</h3><p class="sub">Photo, name, gender, age — and a mute switch.</p><div class="cbody"><p>No bio, no interests, no prompts. Every field a profile gains is a field somebody is judged on before they have spoken, and the venue was supposed to do that work instead.</p><p>Mute notifications sits on the profile rather than in a settings tree, because a social app that pings you in a bar you are already sitting in is a social app you delete.</p></div><figure class="shot is-phone" data-glass-in><span class="phone"><span class="notch" aria-hidden="true"></span><img src="/assets/projects/chat-bar/05.jpg?v=221" alt="Chat Bar — A profile with four fields" loading="lazy"></span></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>A mark that means two people</h3><p class="sub">Two interlocking rings, and a welcome screen that says nothing else.</p><div class="cbody"><p>The identity had to work at the size of an app icon and stay legible on a photograph of a dim room, so it is one shape with no wordmark inside it. Two rings overlapping, each with an eye, is the shortest possible statement of what the app is for.</p><p>The opening screen carries only that mark. A product about meeting people in the next twenty minutes should not begin with a value proposition.</p></div></div>
+  </div>
+</section>
+
+<section class="csec" id="outcome">
+  <div class="wrap">
+    <div class="csec-label mono tick">Outcome</div>
+    <h2 data-chars>A social app that never shows you a person on a map.</h2>
+    <div class="ctwo"><div class="body"><div class="cbody"><p>The venue model resolved the two hardest problems at once: it gave the product a privacy rule a user can hold in their head, and it gave every conversation a subject before the first message.</p><p>It also kept the interface to three tabs and a profile with four fields, which is the right size for something opened between two drinks rather than studied at home.</p></div></div></div>
+    <div class="callout glass" data-glass-in style="margin-top:clamp(32px,5vh,60px)"><span class="pill mono">Reflection</span><h3>What I would keep from this one</h3><p>The instinct with a proximity product is to make proximity the feature. Making it a consequence instead — of choosing a place — is what made it usable by people who would never switch on a live location.</p><p>If I revisited it, the check-in would need an expiry that is visible in the interface. A guest list that quietly includes people who left an hour ago is the failure mode that would erode trust fastest, and thirty-two guests is only reassuring if the number is true.</p></div>
+  </div>
+</section>
+
+
+<nav class="pager" aria-label="Project navigation">
+  <a class="glass hoverable prev" href="/work/neuro-pilot/" data-trans="Neuro Pilot">
+    <span class="k mono">← Previous</span><span class="t">Neuro Pilot</span>
+  </a>
+  <a class="pager-up mono" href="/work/" data-trans="Work">All 32 projects</a>
+  <a class="glass hoverable next" href="/work/opla-delivery/" data-trans="Opla Delivery">
+    <span class="k mono">Next →</span><span class="t">Opla Delivery</span>
+  </a>
+</nav>
+
+</main>
+
+<div class="peek-row" aria-hidden="true"><span class="eye pk pk--1" data-eye="d" data-reach="160" style="aspect-ratio:370/480" aria-hidden="true"></span><span class="eye pk pk--2" data-eye="c" style="aspect-ratio:425/480" aria-hidden="true"></span><span class="eye pk pk--3" data-eye="p1" data-reach="260" style="aspect-ratio:430/480" aria-hidden="true"></span><span class="eye pk pk--4" data-eye="b" style="aspect-ratio:644/480" aria-hidden="true"></span></div>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4 class="mono">Navigate</h4>
+        <ul class="mono">
+          <li><a href="/">Home</a></li>
+          <li><a href="/work/">Work</a></li>
+          <li><a href="/lab/">AI Lab</a></li>
+          <li><a href="/experience/">Experience</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Enquiry</h4>
+        <ul class="mono">
+          <li><a href="mailto:contact@khomeriki.design">contact@khomeriki.design</a></li>
+          <li><a href="tel:+99599460466">+995 99 460466</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Elsewhere</h4>
+        <ul class="mono">
+          <li><a href="https://www.linkedin.com/in/nodari-khomeriki" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="https://dribbble.com/SimpleVibes" target="_blank" rel="noopener">Dribbble ↗</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Based in</h4>
+        <ul class="mono"><li>Tbilisi, Georgia</li><li>Working globally</li><li>Open to work</li></ul>
+      </div>
+    </div>
+    <div class="fmark" aria-hidden="true">NK</div>
+    <div class="fbar mono">
+      <span>© 2026 Nodari Khomeriki</span>
+      <span>Designed &amp; built in Tbilisi</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/gsap.min.js"></script>
+<script src="/assets/js/ScrollTrigger.min.js"></script>
+<script src="/assets/js/lenis.min.js"></script>
+<script src="/assets/js/glass.js?v=221"></script>
+<script src="/assets/js/eyes.js?v=221" defer></script>
+<script src="/assets/js/nebula.js?v=221" defer></script>
+<script src="/assets/js/peek.js?v=221" defer></script>
+</body>
+</html>

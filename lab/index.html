@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>try{if(sessionStorage.getItem('nk-seen')==='1')document.documentElement.classList.add('pre-seen')}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AI Lab — Nodari Khomeriki</title>
+<meta name="description" content="Things built with AI: interfaces, tools and experiments shipped end to end — what worked, what did not, and what it is actually made of.">
+<meta name="theme-color" content="#0a0a0b">
+<link rel="canonical" href="https://khomeriki.design/lab/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://khomeriki.design/lab/">
+<meta property="og:title" content="AI Lab — Nodari Khomeriki">
+<meta property="og:description" content="Things built with AI: interfaces, tools and experiments shipped end to end — what worked, what did not, and what it is actually made of.">
+<meta property="og:image" content="https://khomeriki.design/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/favicon.svg?v=221" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=221">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/assets/css/glass.css?v=221">
+</head>
+
+<body data-page="lab">
+
+
+<div class="aurora" aria-hidden="true"><canvas id="fieldbg" class="fieldcv"></canvas><canvas id="nebula"></canvas><i class="a1"></i><i class="a2"></i><i class="a3"></i><i class="a4"></i><i class="a5"></i></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="marks" aria-hidden="true"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></div>
+<div id="cur" aria-hidden="true"></div>
+<div id="ring" aria-hidden="true"><b></b></div>
+<div id="trans" aria-hidden="true"><span></span></div>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="/" data-trans="Home"><span class="eye eye--brand" data-eye="d" data-reach="120" style="aspect-ratio:370/480" aria-hidden="true"></span>Nodari&nbsp;<span>Khomeriki</span></a>
+    <nav class="nav-links mono" aria-label="Primary">
+      <a href="/work/" class="nav-hide" data-trans="Work"><span class="swap"><span>Work</span><span>Work</span></span></a>
+      <a href="/lab/" aria-current="page" class="nav-hide" data-trans="AI Lab"><span class="swap"><span>AI Lab</span><span>AI Lab</span></span></a>
+      <a href="/experience/" class="nav-hide" data-trans="Experience"><span class="swap"><span>Experience</span><span>Experience</span></span></a>
+      <a href="/contact/" class="nav-cta mono nav-hide" data-mag=".25" data-trans="Contact">Let's create</a>
+      <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><i></i><i></i></button>
+    </nav>
+  </div>
+</header>
+
+<div id="menu" aria-hidden="true">
+  <div class="mlinks">
+    <a href="/" data-trans="Home">Home</a>
+    <a href="/work/" data-trans="Work">Work</a>
+    <a href="/lab/" aria-current="page" data-trans="AI Lab">AI Lab</a>
+    <a href="/experience/" data-trans="Experience">Experience</a>
+    <a href="/contact/" data-trans="Contact">Contact</a>
+  </div>
+  <div class="mfoot mono">
+    <span>contact@khomeriki.design</span>
+    <span>Tbilisi, Georgia</span>
+  </div>
+</div>
+
+<section class="phead">
+  <span class="eye eye--phead" data-eye="b" data-reach="320" style="aspect-ratio:644/480" aria-hidden="true"></span>
+  <div class="scrim" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="crumb mono"><a href="/" data-trans="Home" class="is-back">&larr;<span>Home</span></a> <span>/</span> <span>AI Lab</span></div>
+    <h1>
+      <span data-chars style="display:block">Built with AI.</span>
+      <span data-chars style="display:block" class="em">Shipped anyway.</span>
+    </h1>
+    <p class="lead" data-rise=".1">A designer who can build changes what is worth proposing. These are the ones that made it to a URL — with the parts that fought back written down.</p>
+  </div>
+</section>
+
+<main>
+
+<section class="pane" style="padding-top:clamp(20px,3vh,40px)">
+  <div class="wrap">
+    <div class="slab mono tick">21 builds</div>
+    <div class="labs">
+
+      <article class="labcard glass" data-glass-in>
+        <div class="labshot"><img src="/assets/lab/lust-photography.jpg?v=221" alt="Lust Photography — screenshot" loading="lazy" width="1200" height="600"></div>
+        <div class="labbody">
+          <div class="labtop">
+            <h2 class="h3">Lust Photography<span class="labwip mono">In progress</span></h2>
+          </div>
+          <div class="labmeta mono">
+            <span class="labyear">AI studio</span>
+            <time datetime="2026-09-26">2026-09-26</time>
+          </div>
+          <p class="lablead">An AI photography studio with a Tuscan film look — sensual reels and stills of fictional muses, AI photoshoots for brands, and a web studio that builds creators their own platforms. Three businesses, one aesthetic, one page.</p>
+          <div class="wtags mono"><span class="wtag">Cloudflare Workers</span><span class="wtag">Blur-to-reveal gallery</span><span class="wtag">Lead forms</span><span class="wtag is-sector">Claude</span><span class="wtag is-sector">AI image + video</span></div>
+          <details class="labmore">
+            <summary class="mono">5 notes</summary>
+            <ul class="labnotes"><li>In progress — the gallery, the muses, the brand and creator offers and all three forms are standing; the content library is still being filled.</li><li>Every tile loads blurred and opens on a click. That one decision makes the site safe to open anywhere and turns consent into a gesture the viewer makes per image rather than a box ticked once on the way in — the same idea as the hold-to-reveal gate on Maison Ondine, applied to a whole catalogue.</li><li>The safeguards sit where the question arises, not in the terms. Each muse is labelled as an AI character and the cast section says every one is a fictional adult; the fantasy form asks for 18+, consenting adults and fictional characters right above the send button. A rule no one reads protects no one.</li><li>Three audiences on one page is the real design problem. A brand buying a swimwear shoot is looking for a reason to leave, so that section says in one line that brand work is always fully clothed and safe for every platform — it answers the first objection before it is asked.</li><li>Both offers carry real prices — €450, €950, €1,600 a month for brands, from €1,200 for creator sites. A named number lets the right client qualify themselves; ‘get in touch’ makes everyone do a call first.</li></ul>
+          </details>
+          <div class="lablinks"><a class="btn mono" href="https://lust-photography.khomerik-nod.workers.dev/" target="_blank" rel="noopener" data-mag=".26">Open it &rarr;</a></div>
+        </div>
+      </article>
+
+      <article class="labcard glass" data-glass-in>
+        <div class="labshot"><img src="/assets/lab/uxaudit-ai.jpg?v=221" alt="UXAudit AI — screenshot" loading="lazy" width="1200" height="600"></div>
+        <div class="labbody">
+          <div class="labtop">
+            <h2 class="h3">UXAudit AI<span class="labwip mono">In progress</span></h2>
+          </div>
+          <div class="labmeta mono">
+            <span class="labyear">SaaS</span>
+            <time datetime="2026-09-24">2026-09-24</time>
+          </div>
+          <p class="lablead">Paste a URL and get a senior-level UX and CRO audit in about thirty seconds — graded against WCAG 2.1 and Nielsen’s ten heuristics, with every finding ranked by impact divided by effort so you know what to do first.</p>
+          <div class="wtags mono"><span class="wtag">Cloudflare Workers</span><span class="wtag">Vision + LLM passes</span><span class="wtag">PDF export</span><span class="wtag is-sector">Claude</span><span class="wtag is-sector">Vision</span></div>
+          <details class="labmore">
+            <summary class="mono">6 notes</summary>
+            <ul class="labnotes"><li>In progress — URL and screenshot audits run, Flow Mode and the paid tiers are still being finished.</li><li>AI design feedback is usually adjectives: ‘the hierarchy could be clearer’. Useless. Every finding here has to carry a number — 2.1:1, 913px, 69px past the fold, the exact success criterion violated. A measurement can be argued with and acted on; an adjective can only be nodded at.</li><li>Ranking by impact ÷ effort is what makes it a tool rather than a report. Twenty findings paralyse; three that are high-impact and ten minutes of CSS get done this afternoon, which is the only version of an audit that changes anything.</li><li>The section I am most pleased with is the one where the site audits itself. The buttons are light blue with dark text because white on mid-blue tops out at 5.2:1 — AA, not AAA. The conventional choice would have failed the product’s own test, and saying so out loud is worth more than any trust badge.</li><li>Pricing is framed against the thing it replaces: an agency audit is $2,000 and two weeks. Naming the alternative does the persuading, so the plans themselves can just list what you get.</li><li>Failed audits are never charged and the copy says so. The failure case is where a tool like this earns or loses trust — a credit burned on a page we could not even reach is exactly the moment someone cancels.</li></ul>
+          </details>
+          <div class="lablinks"><a class="btn mono" href="https://uxaudit-ai.easyvibesuxui.workers.dev/" target="_blank" rel="noopener" data-mag=".26">Open it &rarr;</a></div>
+        </div>
+      </article>
+
+      <article class="labcard glass" data-glass-in>
+        <div class="labshot"><img src="/assets/lab/giftly.jpg?v=221" alt="Giftly — screenshot" loading="lazy" width="1200" height="600"></div>
+        <div class="labbody">
+          <div class="labtop">
+            <h2 class="h3">Giftly<span class="labwip mono">In progress</span></h2>
+          </div>
+          <div class="labmeta mono">
+            <span class="labyear">AI search</span>
+            <time datetime="2026-09-24">2026-09-24</time>
+          </div>
+          <p class="lablead">A gift finder you describe a person to, not a product. You write “my dad who won’t stop talking about coffee” the way you’d text a friend, and it reads the sentence for meaning rather than matching keywords.</p>
+          <div class="wtags mono"><span class="wtag">Vector search</span><span class="wtag">Gemini embeddings</span><span class="wtag">Cloudflare Pages</span><span class="wtag is-sector">Claude</span><span class="wtag is-sector">Gemini</span></div>
+          <details class="labmore">
+            <summary class="mono">5 notes</summary>
+            <ul class="labnotes"><li>In progress — the search, the curated shelf and the affiliate model are standing; the counters on the landing page still read zero because they are wired to real numbers that have not arrived yet, rather than being filled with flattering placeholders.</li><li>Every gift site asks what you want to buy. Nobody knows what they want to buy — that is the entire problem. Asking who the person is instead is the whole product, and it only works because embeddings can match on meaning where a keyword index cannot.</li><li>The prompt examples do the teaching: ‘Mom who gardens’, ‘Techie boyfriend, under $50’. An empty box with an AI behind it is intimidating; four sample sentences show the register to write in faster than any instruction would.</li><li>No account, nothing stored, free. A gift search is a once-a-year panic, and a signup wall in front of a panic loses the user. The affiliate cut pays for it, and the footer says so plainly instead of burying it in the terms.</li><li>One testimonial, not a wall of them. ‘He actually cried’ is the outcome the product sells; adding nine more would have made all ten read as invented.</li></ul>
+          </details>
+          <div class="lablinks"><a class="btn mono" href="https://giftly-aza.pages.dev/" target="_blank" rel="noopener" data-mag=".26">Open it &rarr;</a></div>
+        </div>
+      </article>
+
+      <article class="labcard glass" data-glass-in>
+        <div class="labshot"><img src="/assets/lab/wedding-platform.jpg?v=221" alt="ორი გული — Two Hearts — screenshot" loading="lazy" width="1200" height="600"></div>
+        <div class="labbody">
+          <div class="labtop">
+            <h2 class="h3">ორი გული — Two Hearts</h2>
+          </div>
+          <div class="labmeta mono">
+            <span class="labyear">Product</span>
+            <time datetime="2026-09-23">2026-09-23</time>
+          </div>
+          <p class="lablead">A Georgian platform for digital wedding invitations. Pick a template, write your own words, send one link — and the replies come back as a list instead of ninety separate text messages.</p>
+          <div class="wtags mono"><span class="wtag">Next.js</span><span class="wtag">Multi-tenant publishing</span><span class="wtag">i18n × 3</span><span class="wtag is-sector">Claude</span></div>
+          <details class="labmore">
+            <summary class="mono">6 notes</summary>
+            <ul class="labnotes"><li>This started as one invitation for one couple. Building it made the product obvious: everything except the names, the date and the photographs was the same work every time. The single site became the template engine.</li><li>The line that sells it is the one about paper: a paper invitation ends up under glass, a link stays in the pocket until the day. That is the whole argument for the category, and it fits in a sentence.</li><li>RSVP is the feature people actually pay for, even though templates are what they browse. Counting guests from scattered replies is the worst week of planning a wedding — here the guest answers on the same page they were invited on, and the couple sees one list with headcount and dietary notes already in it.</li><li>Language is detected from the guest’s phone rather than asked. Georgian, English and Russian, with the switch still in the corner for anyone it guessed wrong about. A language picker as the first screen of an invitation is a toll gate on a gift.</li><li>Templates are fully openable before you buy — you walk through one exactly as a guest would, envelope to last frame. Thumbnails would have been cheaper and would have sold nothing: the thing being sold is a sequence, so it has to be experienced as one.</li><li>Custom design is priced at 50₾ as a one-off: send three photographs and say what you want. Naming a number, rather than ‘contact us’, is what turns a portfolio piece into a business.</li></ul>
+          </details>
+          <div class="lablinks"><a class="btn mono" href="https://wedding-platform-omega.vercel.app/" target="_blank" rel="noopener" data-mag=".26">Open it &rarr;</a></div>
+        </div>
+      </article>
+
+      <article class="labcard glass" data-glass-in>
+        <div class="labshot"><img src="/assets/lab/inverse.jpg?v=221" alt="Inverse — screenshot" loading="lazy" width="1200" height="600"></div>
+        <div class="labbody">
+          <div class="labtop">
+            <h2 class="h3">Inverse</h2>
+          </div>
+          <div class="labmeta mono">
+            <span class="labyear">B2B services + platform</span>
+            <time datetime="2026-09-11">2026-09-11</time>
+          </div>
+          <p class="lablead">A Tbilisi stocktaking firm, and the tool its own counters use. A worker photographs a shelf, the system reads the still, counts what it can see per SKU and says how sure it is — then a person decides.</p>
+          <div class="wtags mono"><span class="wtag">Next.js</span><span class="wtag">Multi-tenant DB</span><span class="wtag">Vision on stills</span><span class="wtag is-sector">Claude</span><span class="wtag is-sector">Vision</span></div>
+          <details class="labmore">
+            <summary class="mono">6 notes</summary>
+            <ul class="labnotes"><li>The platform pricing is shown as awaiting commercial sign-off rather than quietly presented as final — a number a client might plan around should say when it is not settled yet.</li><li>The verification runs on a still frame, not a live stream. A frame is the thing that gets stored, re-checked and shown to an auditor months later; a stream is gone the moment it plays. For a count that has to be defensible, evidence beats immediacy.</li><li>Every SKU gets a verdict rather than a guess: green matches, yellow needs a human, red means the record is wrong. Nothing reaches the ledger without a person confirming it — an inventory system that silently writes its own numbers is a liability, not a feature.</li><li>The interesting part is where the camera is admitted to be useless. Two products from one line are identical at a metre and differ only in size, so those get flagged for a barcode check with the likely candidates named. Saying ‘I cannot tell these apart’ is worth more than a confident wrong count.</li><li>Tenants are isolated at the database level rather than by code that might forget a filter. With client stock figures, that is the difference between an architecture and a hope.</li><li>Written in Georgian first, with English and Russian alongside — the buyers are warehouse and retail managers in Tbilisi.</li></ul>
+          </details>
+          <div class="lablinks"><a class="btn mono" href="https://inverse-xi.vercel.app/ka" target="_blank" rel="noopener" data-mag=".26">Open it &rarr;</a></div>
+        </div>
+      </article>
+
+      <article class="labcard glass" data-glass-in>
+        <div class="labshot"><img src="/assets/lab/treasure-marathon.jpg?v=221" alt="საგანძურის მარათონი — Treasure Marathon — screenshot" loading="lazy" width="1200" height="600"></div>
+        <div class="labbody">
+          <div class="labtop">
+            <h2 class="h3">საგანძურის მარათონი — Treasure Marathon</h2>
+          </div>
+          <div class="labmeta mono">
+            <span class="labyear">Campaign concept</span>
+            <time datetime="2026-09-03">2026-09-03</time>
+          </div>
+          <p class="lablead">A campaign concept for TBC that turns four money habits into four noble houses. A treasure shatters into coins across the kingdom, the houses race to collect them, and a quiz tells you which one you have been all along.</p>
+          <div class="wtags mono"><span class="wtag">Next.js</span><span class="wtag">Tailwind</span><span class="wtag">Scroll-driven sections</span><span class="wtag is-sector">Claude</span><span class="wtag is-sector">AI video</span></div>
+          <details class="labmore">
+            <summary class="mono">5 notes</summary>
+            <ul class="labnotes"><li>Banks talk about saving and spending in the language of product features, which nobody adopts as an identity. Houses people do adopt. Kharjiani spends because life happens once, Anabaridze insures the future, Dovlatia chases luck, Baratishvili keeps the old order — four financial behaviours, none of them written as the wrong answer.</li><li>That last part is the constraint the whole thing is built on. The moment one house is the sensible one, the quiz becomes a scolding and the campaign becomes a lecture. Every motto had to be defensible from inside the house.</li><li>The leaderboard is what turns a personality quiz into a season: your result stops being a private label and becomes a side you are adding a coin to. It is placeholder data here, but the mechanic is the point — a bank campaign that has standings has a reason to be checked twice.</li><li>Written in Georgian first, with the English house names underneath rather than the other way round. A myth told in translation is somebody else’s myth.</li><li>The whole arc is three scroll acts — prologue, the night it shattered, the marathon — before a single house appears. Front-loading the story is what earns the quiz at the end; leading with ‘take our quiz’ would have got the usual answer.</li></ul>
+          </details>
+          <div class="lablinks"><a class="btn mono" href="https://easyvibesuxui-sketch.github.io/TBCLegend/" target="_blank" rel="noopener" data-mag=".26">Open it &rarr;</a></div>
+        </div>
+      </article>
+
+      <article class="labcard glass" data-glass-in>
+        <div class="labshot"><img src="/assets/lab/maison-ondine.jpg?v=221" alt="Maison Ondine — screenshot" loading="lazy" width="1200" height="600"></div>
+        <div class="labbody">
+          <div class="labtop">
+            <h2 class="h3">Maison Ondine</h2>
+          </div>
+          <div class="labmeta mono">
+            <span class="labyear">Lingerie e-commerce</span>
+            <time datetime="2026-09-03">2026-09-03</time>
+          </div>
+          <p class="lablead">A lingerie house where the shop mechanics are the product. Hold-to-reveal instead of an age-gate button, motion backgrounds behind the collection, and a score written for the site rather than licensed onto it — the video and the music are both mine, made with AI tools.</p>
+          <div class="wtags mono"><span class="wtag">HTML + CSS</span><span class="wtag">Vanilla JS</span><span class="wtag">Scroll-driven video</span><span class="wtag is-sector">Claude</span><span class="wtag is-sector">AI video + music</span></div>
+          <details class="labmore">
+            <summary class="mono">5 notes</summary>
+            <ul class="labnotes"><li>Still in progress — the gate, the identity, the score and Collection Première are standing; the rest of the shop is being built.</li><li>Lingerie sells badly in a normal product grid: a flat thumbnail on white tells you nothing about how a piece moves or sits. So the browsing mechanic is built on motion — video behind the collection rather than stills in a matrix, which is the one thing a photograph cannot do.</li><li>Compliance screens are usually designed by nobody. This one is the brief: hold to reveal, so entry is a deliberate physical action instead of a mis-tapped button, and the tone is set before a single product appears.</li><li>I wrote the music with an AI tool rather than licensing a track. A stock loop makes any brand sound like every other brand — and for a house whose whole proposition is intimacy, borrowed atmosphere is exactly the wrong signal. Same reasoning for the video: generated to the brand, not bought off a shelf.</li><li>Sound is offered, never autoplayed. On a site like this it is the one element that can genuinely embarrass someone, so it stays a choice — which also means the score has to earn the tap.</li></ul>
+          </details>
+          <div class="lablinks"><a class="btn mono" href="https://easyvibesuxui-sketch.github.io/EroticAD/" target="_blank" rel="noopener" data-mag=".26">Open it &rarr;</a></div>
+        </div>
+      </article>
+
+      <article class="labcard glass" data-glass-in>
+        <div class="labshot"><img src="/assets/lab/terramech.jpg?v=221" alt="TerraMech — screenshot" loading="lazy" width="1200" height="600"></div>
+        <div class="labbody">
+          <div class="labtop">
+            <h2 class="h3">TerraMech</h2>
+          </div>
+          <div class="labmeta mono">
+            <span class="labyear">Brand site</span>
+            <time datetime="2026-08-30">2026-08-30</time>
+          </div>
+          <p class="lablead">A site for a fictional heavy-plant maker whose company history is locked. You run an arcade shift on the yard — catch the loads, keep hazards out of the bucket — and your salvage total unseals the six pages of the record one at a time.</p>
+          <div class="wtags mono"><span class="wtag">HTML + CSS</span><span class="wtag">Vanilla JS</span><span class="wtag">Canvas game loop</span><span class="wtag is-sector">Claude</span></div>
+          <details class="labmore">
+            <summary class="mono">4 notes</summary>
+            <ul class="labnotes"><li>The premise is one inversion of a normal About page: nobody reads a company timeline, so the timeline is earned. Six entries, most of them sealed, opening as the score rises — the copy even says it out loud: ‘Nobody reads our history. They earn it.’</li><li>Because the history is the reward, the writing had to be worth unlocking. Each entry is a real turn in how a machine company would change — the first rebuilt dragline, the day everything got painted signal red because it was the only paint the yard held in quantity.</li><li>The game is deliberately simple — one axis, mouse or arrows, three power-ups. Anything more and people would play instead of read, which would defeat the point of the mechanic.</li><li>It is a fictional client, which is the freedom: no brand guidelines to satisfy, so every decision had to be justified by the idea alone.</li></ul>
+          </details>
+          <div class="lablinks"><a class="btn mono" href="https://easyvibesuxui-sketch.github.io/minigame/" target="_blank" rel="noopener" data-mag=".26">Open it &rarr;</a></div>
+        </div>
+      </article>
+
+      <article class="labcard glass" data-glass-in>
+        <div class="labshot"><img src="/assets/lab/nami.jpg?v=221" alt="NAMI — screenshot" loading="lazy" width="1200" height="600"></div>
+        <div class="labbody">
+          <div class="labtop">
+            <h2 class="h3">NAMI</h2>
+          </div>
+          <div class="labmeta mono">
+            <span class="labyear">Hospitality</span>
+            <time datetime="2026-08-30">2026-08-30</time>
+          </div>
+          <p class="lablead">A bathhouse and mountain garden at 2,025 m on the Goderdzi Pass — twelve saunas, four waters and a ritual timetable where something begins every half hour. Georgian-rooted, written to be read slowly.</p>
+          <div class="wtags mono"><span class="wtag">HTML + CSS</span><span class="wtag">Vanilla JS</span><span class="wtag">Scroll-driven animation</span><span class="wtag is-sector">Claude</span></div>
+          <details class="labmore">
+            <summary class="mono">4 notes</summary>
+            <ul class="labnotes"><li>ნამი means dew, and the whole identity comes from that one word: a serif set at whisper weight, brass on near-black, and a mark that is a single drop. Naming the brand in Georgian first made every other decision easier.</li><li>The hard part of a spa site is that the product is an absence — no noise, no hurry, nothing to do. So the specifics carry it instead: eight degrees chest deep for thirty seconds, Black Sea salt carried up from Batumi, nine hundred candles lit at dusk.</li><li>The ritual timetable is the structure rather than a feature list. ‘Every half hour, something begins’ turns a menu of services into a reason to stay, which is what the business actually sells.</li><li>Pacing is done with scroll rather than motion. Long holds, wide measure, very little movement — a site about slowness that animates eagerly would be arguing with itself.</li></ul>
+          </details>
+          <div class="lablinks"><a class="btn mono" href="https://easyvibesuxui-sketch.github.io/SPa/" target="_blank" rel="noopener" data-mag=".26">Open it &rarr;</a></div>
+        </div>
+      </article>
+
+      <article class="labcard glass" data-glass-in>
+        <div class="labshot"><img src="/assets/lab/chalet.jpg?v=221" alt="Chalet — screenshot" loading="lazy" width="1200" height="600"></div>
+        <div class="labbody">
+          <div class="labtop">
+            <h2 class="h3">Chalet</h2>
+          </div>
+          <div class="labmeta mono">
+            <span class="labyear">Marketing site</span>
+            <time datetime="2026-08-25">2026-08-25</time>
+          </div>
+          <p class="lablead">A landing page for a fictional alpine villa atelier, built around one idea: the hero is an ink blueprint of a chalet that draws itself in as you scroll. Fourteen sections, a build sequence from survey to first fire, and a preloader that says ‘drawing the blueprint’.</p>
+          <div class="wtags mono"><span class="wtag">HTML + CSS</span><span class="wtag">Vanilla JS</span><span class="wtag">Canvas</span><span class="wtag is-sector">Claude</span></div>
+          <details class="labmore">
+            <summary class="mono">4 notes</summary>
+            <ul class="labnotes"><li>The whole site hangs off one metaphor. ‘Scroll to build’ in the hero and a BLUEPRINT progress rail along the bottom mean the scrollbar is reframed as construction — and the five process sections (survey, structure, stone, envelope, keys) inherit that reading without needing to explain it.</li><li>Copy did more for the tone than any effect. ‘We draw it in winter. You live in it by the next one’ and ‘cozy is an engineering decision’ set a register that the visuals then only have to keep, which is much easier than generating atmosphere from motion alone.</li><li>The hero is a canvas, not an image, so it scales without a 4MB render and the line work stays crisp at any width. That was the right call for a drawing and would have been the wrong one for a photograph.</li><li>It is a fictional client, which is the point — no brand guidelines, no stakeholder, so every decision had to be justified by the idea alone.</li></ul>
+          </details>
+          <div class="lablinks"><a class="btn mono" href="https://easyvibesuxui-sketch.github.io/Chalet/" target="_blank" rel="noopener" data-mag=".26">Open it &rarr;</a></div>
+        </div>
+      </article>
+
+      <article class="labcard glass" data-glass-in>
+        <div class="labshot"><img src="/assets/lab/ga-logistics.jpg?v=221" alt="GA Logistics — screenshot" loading="lazy" width="1200" height="600"></div>
+        <div class="labbody">
+          <div class="labtop">
+            <h2 class="h3">GA Logistics</h2>
+          </div>
+          <div class="labmeta mono">
+            <span class="labyear">Redesign</span>
+            <time datetime="2026-08-22">2026-08-22</time>
+          </div>
+          <p class="lablead">A redesign for a New Jersey trucking carrier — 200 power units, 48 states, eight services and one dispatch desk. The brief was not to make a haulage company look like a tech startup, but to make ten years of real capacity legible to a broker deciding in thirty seconds.</p>
+          <div class="wtags mono"><span class="wtag">Static site</span><span class="wtag">Video hero</span><span class="wtag">Horizontal scroll</span><span class="wtag is-sector">Claude</span><span class="wtag is-sector">Code generation</span></div>
+          <details class="labmore">
+            <summary class="mono">4 notes</summary>
+            <ul class="labnotes"><li>Freight buyers are checking one thing: can you actually move this. So the numbers lead — ten years, two hundred power units, forty-eight states, 24/7 dispatch — and the strongest line on the site is the one that says what those numbers mean: when we commit to a load, the truck exists.</li><li>Eight services is too many for a menu and exactly right for a sideways scroll. Turning the range into something you move through rather than read down let each one keep a full card without the page becoming a list of eight identical blocks.</li><li>The copy does the differentiating, not the layout. ‘Asset-based carrier’, ‘founded by drivers with 7 and 14 years on the road’, ‘the people answering the phone at 3am’ — in a market where every competitor claims reliability, the specific thing is the only convincing thing.</li><li>Two yards and a dark, photographic treatment do the rest. Trucking sites default to blue gradients and stock highways; shooting the actual fleet against near-black is both more honest and, for once, cheaper.</li></ul>
+          </details>
+          <div class="lablinks"><a class="btn mono" href="https://easyvibesuxui-sketch.github.io/GALogisticsRedesign/" target="_blank" rel="noopener" data-mag=".26">Open it &rarr;</a></div>
+        </div>
+      </article>
+
+      <article class="labcard glass" data-glass-in>
+        <div class="labshot"><img src="/assets/lab/ibsu-international.jpg?v=221" alt="IBSU — International Admission — screenshot" loading="lazy" width="1200" height="600"></div>
+        <div class="labbody">
+          <div class="labtop">
+            <h2 class="h3">IBSU — International Admission</h2>
+          </div>
+          <div class="labmeta mono">
+            <span class="labyear">Concept</span>
+            <time datetime="2026-08-22">2026-08-22</time>
+          </div>
+          <p class="lablead">A fourth answer to the IBSU brief, this time for the students arriving from abroad: twenty-six English-taught degrees, the documents you have to notarise, and the five steps between an enquiry and a residence permit.</p>
+          <div class="wtags mono"><span class="wtag">Scroll narrative</span><span class="wtag">Mosaic imagery</span><span class="wtag">Web</span><span class="wtag is-sector">Claude</span><span class="wtag is-sector">Generative imagery</span></div>
+          <details class="labmore">
+            <summary class="mono">4 notes</summary>
+            <ul class="labnotes"><li>International admission is an anxiety problem before it is a marketing one. Somebody deciding to move countries needs to know what to send, what it costs and what happens next — so the page is structured as requirements and steps rather than as reasons to come.</li><li>The one detail that mattered most is repeated where it applies: every document must be notarised and translated into Georgian. That single sentence is the difference between an application that proceeds and one that comes back, and it is usually buried in a PDF.</li><li>The classical staging — Roman numerals, a mosaic that shifts as you scroll, a golden road for the five steps — gives an ordinary admissions page the weight of an institution. It is the same argument as the marble concept, made for a different reader.</li><li>It closes on the International Relations Office rather than on a form, with a footnote telling applicants to verify tuition and deadlines before submitting. A concept page about someone’s visa should not pretend to be authoritative about their visa.</li></ul>
+          </details>
+          <div class="lablinks"><a class="btn mono" href="https://romanibsu.netlify.app/" target="_blank" rel="noopener" data-mag=".26">Open it &rarr;</a></div>
+        </div>
+      </article>
+
+      <article class="labcard glass" data-glass-in>
+        <div class="labshot"><img src="/assets/lab/syniotec-devices.jpg?v=221" alt="Syniotec — Devices — screenshot" loading="lazy" width="1200" height="600"></div>
+        <div class="labbody">
+          <div class="labtop">
+            <h2 class="h3">Syniotec — Devices</h2>
+          </div>
+          <div class="labmeta mono">
+            <span class="labyear">Product site</span>
+            <time datetime="2026-08-16">2026-08-16</time>
+          </div>
+          <p class="lablead">A showroom for seven telematics units that go on construction machinery — wired boxes reading the CAN bus, self-powered trackers, and passive tags with no battery at all. The hardware counterpart to the Syniotec platform I design, built as a scroll narrative where the exploded parts assemble as you read.</p>
+          <div class="wtags mono"><span class="wtag">Next.js</span><span class="wtag">Static export</span><span class="wtag">Scroll-driven render sequence</span><span class="wtag is-sector">Claude</span><span class="wtag is-sector">Code generation</span></div>
+          <details class="labmore">
+            <summary class="mono">5 notes</summary>
+            <ul class="labnotes"><li>Seven SKUs is past the number anybody can hold in their head, so the range is presented as three classes first — wired, powered, passive — and only then as seven units. The classification is the product decision; the grid underneath is just the consequence.</li><li>The exploded board assembling on scroll is the argument, not the decoration. It says these are one range built from the same parts, which is the claim a hardware line has to make before any single spec matters.</li><li>Every unit gets one sentence and then the numbers that back it. ‘Reads the machine, not just the map.’ ‘Five years without a thought.’ ‘No battery. No radio. Still tracked.’ A spec sheet nobody reads becomes a spec sheet somebody remembers when each device is allowed a position rather than a paragraph.</li><li>The footer states what the site refuses to be: hardware only, no pricing, no forms. A showroom that does not chase you is a stronger sales tool for equipment bought by engineers than one that does — and it is the reason the whole thing could stay this quiet.</li><li>It pairs with the SAM and RAM platforms in my work section: these are the devices sending the data those interfaces spend their time making legible. Designing both ends of the same system is rarer than it should be, and it changes what you notice at each end.</li></ul>
+          </details>
+          <div class="lablinks"><a class="btn mono" href="https://easyvibesuxui-sketch.github.io/Land-Game-IBSu-/" target="_blank" rel="noopener" data-mag=".26">Open it &rarr;</a></div>
+        </div>
+      </article>
+
+      <article class="labcard glass" data-glass-in>
+        <div class="labshot"><img src="/assets/lab/classygreens.jpg?v=221" alt="ClassyGreens — screenshot" loading="lazy" width="1200" height="600"></div>
+        <div class="labbody">
+          <div class="labtop">
+            <h2 class="h3">ClassyGreens</h2>
+          </div>
+          <div class="labmeta mono">
+            <span class="labyear">AI-operated</span>
+            <time datetime="2026-08-09">2026-08-09</time>
+          </div>
+          <p class="lablead">A visual atelier that runs itself. Every image, every film, every line of copy and the site around them are generated — and the publishing keeps going week after week without a photographer, a studio or a shoot day. The closest thing I have to a proof that an entire brand can be operated by one person and a set of models.</p>
+          <div class="wtags mono"><span class="wtag">Sanity CMS</span><span class="wtag">Structured content</span><span class="wtag">Trilingual DE / EN / RU</span><span class="wtag is-sector">Image generation</span><span class="wtag is-sector">Video generation</span></div>
+          <details class="labmore">
+            <summary class="mono">6 notes</summary>
+            <ul class="labnotes"><li>This is the part that interests me: it is not a one-off generated site, it is a production line. A new series is generated, written, translated, tagged and published on a weekly rhythm — so the question stopped being 'can AI make an image' and became 'can AI hold a publishing schedule'. It can, but only because the content is modelled properly first.</li><li>Nothing is a page. Projects, models and journal entries are structured records in a CMS, which is why one generated series can fan out into a project page, a model's history, a listing card, an Instagram crop and its own metadata without anyone assembling those by hand.</li><li>Models are treated as recurring characters rather than one-time outputs. Each has a profile and a project history, so the work accumulates into a body of work instead of a feed — that continuity is the hardest thing to get out of generative tooling and the thing that makes the brand feel like a studio.</li><li>SEO is generated with the work, not bolted on after: titles, descriptions and canonicals per record, in three languages, so every new series arrives already indexable. Volume is only an advantage if each item can be found on its own.</li><li>The interface earns its keep too. Premium frames are revealed by dragging across them like a scratch card, rationed to three a day — a deliberate friction that makes an infinite supply of images feel finite, which is the whole economic problem with generated work.</li><li>The disclosure is the position, not the small print. An 'AI' mark sits in the header, the footer says it plainly, and the front door is an 18+ advisory. Naming the tool is more interesting than hiding it — and the site is only as credible as the thing it admits to being.</li></ul>
+          </details>
+          <div class="lablinks"><a class="btn mono" href="https://www.classygreens.com/" target="_blank" rel="noopener" data-mag=".26">Open it &rarr;</a></div>
+        </div>
+      </article>
+
+      <article class="labcard glass" data-glass-in>
+        <div class="labshot"><img src="/assets/lab/ibsu-ink-gallery.jpg?v=221" alt="IBSU — The Ink Gallery — screenshot" loading="lazy" width="1200" height="600"></div>
+        <div class="labbody">
+          <div class="labtop">
+            <h2 class="h3">IBSU — The Ink Gallery</h2>
+          </div>
+          <div class="labmeta mono">
+            <span class="labyear">Playable</span>
+            <time datetime="2026-08-08">2026-08-08</time>
+          </div>
+          <p class="lablead">A university prospectus you walk through. An ink stickman crosses a hand-drawn hall lined with six doors — Programs, Fees, Admission, Tuition, Relocation, International — and pushing one open takes you to that part of IBSU admissions.</p>
+          <div class="wtags mono"><span class="wtag">Canvas</span><span class="wtag">Vanilla JS</span><span class="wtag">Hand-drawn assets</span><span class="wtag is-sector">Claude</span><span class="wtag is-sector">Generative imagery</span></div>
+          <details class="labmore">
+            <summary class="mono">4 notes</summary>
+            <ul class="labnotes"><li>The third answer to the same IBSU brief, and the one that stops pretending to be a website. Navigation is a room: six doors instead of six nav links, and a counter that tells you how many you have opened.</li><li>Everything is ink on paper — the pen strokes carry the whole art direction, so there is no photography to source and nothing to look dated in two years.</li><li>Games have onboarding costs a website does not, so the controls are taught three ways at once: keyboard, an on-screen joystick, and simply clicking the floor. Clicking is the one nobody has to be told about.</li><li>Honest limitation: it takes about fifteen seconds to load and it asks for effort before it gives anything back. That is the right trade for a school-leaver browsing at midnight and the wrong one for a parent checking tuition — which is exactly why it sits beside two conventional proposals rather than replacing them.</li></ul>
+          </details>
+          <div class="lablinks"><a class="btn mono" href="https://ibsu-ink-gallery.netlify.app/" target="_blank" rel="noopener" data-mag=".26">Open it &rarr;</a></div>
+        </div>
+      </article>
+
+      <article class="labcard glass" data-glass-in>
+        <div class="labshot"><img src="/assets/lab/khomeriki-design.jpg?v=221" alt="khomeriki.design — screenshot" loading="lazy" width="1200" height="600"></div>
+        <div class="labbody">
+          <div class="labtop">
+            <h2 class="h3">khomeriki.design</h2>
+          </div>
+          <div class="labmeta mono">
+            <span class="labyear">Portfolio</span>
+            <time datetime="2026-08-02">2026-08-02</time>
+          </div>
+          <p class="lablead">This site. A portfolio with no framework and no page builder — a Python script generates thirty static pages from one shell, and the motion runs on hand-written WebGL and GSAP.</p>
+          <div class="wtags mono"><span class="wtag">Python generator</span><span class="wtag">Vanilla JS</span><span class="wtag">WebGL</span><span class="wtag is-sector">Claude</span></div>
+          <details class="labmore">
+            <summary class="mono">3 notes</summary>
+            <ul class="labnotes"><li>The background is a GPU particle field. The reference implementation I started from advected 50,000 particles in a JavaScript loop; moving the whole simulation into a vertex shader dropped it to one draw call and 12KB, instead of the 600KB three.js would have cost.</li><li>Every page comes from one build script, so the nav, footer and meta can never drift apart. Editing content means editing a Python list.</li><li>Vibe coding gets you to a running thing fast, then the real work starts: most of the time here went on contrast, layout drift and cache headers — the parts a demo never has to survive.</li></ul>
+          </details>
+          <div class="lablinks"><a class="btn mono" href="https://khomeriki.design" target="_blank" rel="noopener" data-mag=".26">Open it &rarr;</a></div>
+        </div>
+      </article>
+
+      <article class="labcard glass" data-glass-in>
+        <div class="labshot"><img src="/assets/lab/ibsu-entrant.jpg?v=221" alt="IBSU — Entrant — screenshot" loading="lazy" width="1200" height="600"></div>
+        <div class="labbody">
+          <div class="labtop">
+            <h2 class="h3">IBSU — Entrant</h2>
+          </div>
+          <div class="labmeta mono">
+            <span class="labyear">Concept</span>
+            <time datetime="2026-08-02">2026-08-02</time>
+          </div>
+          <p class="lablead">An admissions site aimed squarely at school-leavers rather than at the university. Five scroll chapters — Vision, Programs, Admission, Funding, Apply — that end on the Georgian national-exam steps, because that is the actual decision an applicant has to make.</p>
+          <div class="wtags mono"><span class="wtag">Scroll narrative</span><span class="wtag">Composite imagery</span><span class="wtag">Web</span><span class="wtag is-sector">Claude</span><span class="wtag is-sector">Generative imagery</span></div>
+          <details class="labmore">
+            <summary class="mono">3 notes</summary>
+            <ul class="labnotes"><li>Universities usually sell themselves to parents. This one addresses the seventeen-year-old: one question in the hero, then the enrolment path in three concrete steps instead of a prospectus.</li><li>Classical sculpture composited into a dark, gilded field — an attempt at an academic institution that does not look like every other one.</li><li>The chapter rail doubles as a progress indicator, so the page tells you how much decision is left before you commit to reading it.</li></ul>
+          </details>
+          <div class="lablinks"><a class="btn mono" href="https://ibsu-entrant-cd-b8aa2ec2e0.netlify.app/" target="_blank" rel="noopener" data-mag=".26">Open it &rarr;</a></div>
+        </div>
+      </article>
+
+      <article class="labcard glass" data-glass-in>
+        <div class="labshot"><img src="/assets/lab/ibsu-wisdom.jpg?v=221" alt="IBSU — Wisdom, carved in stone — screenshot" loading="lazy" width="1200" height="600"></div>
+        <div class="labbody">
+          <div class="labtop">
+            <h2 class="h3">IBSU — Wisdom, carved in stone</h2>
+          </div>
+          <div class="labmeta mono">
+            <span class="labyear">Concept</span>
+            <time datetime="2026-08-02">2026-08-02</time>
+          </div>
+          <p class="lablead">The same brief taken the opposite way: marble instead of night, a serif voice, and the institution's numbers doing the talking. Built as a counter-proposal so the choice between the two was a decision rather than the first idea.</p>
+          <div class="wtags mono"><span class="wtag">Editorial layout</span><span class="wtag">Serif type system</span><span class="wtag">Web</span><span class="wtag is-sector">Claude</span><span class="wtag is-sector">Generative imagery</span></div>
+          <details class="labmore">
+            <summary class="mono">3 notes</summary>
+            <ul class="labnotes"><li>Two directions for one brief is the cheapest thing a designer can do and the one clients value most — it turns 'do you like it' into 'which one'.</li><li>Stone, owl and quiet gold do the institutional work that a stock photo of smiling students usually fails at.</li><li>Known issue: at some widths the hero headline breaks mid-word — 'carved in ston / e.' A word-break rule set too aggressively on the display type.</li></ul>
+          </details>
+          <div class="lablinks"><a class="btn mono" href="https://merry-blini-9467f3.netlify.app/" target="_blank" rel="noopener" data-mag=".26">Open it &rarr;</a></div>
+        </div>
+      </article>
+
+      <article class="labcard glass" data-glass-in>
+        <div class="labshot"><img src="/assets/lab/my-toolkits.jpg?v=221" alt="My ToolKit — screenshot" loading="lazy" width="1200" height="600"></div>
+        <div class="labbody">
+          <div class="labtop">
+            <h2 class="h3">My ToolKit</h2>
+          </div>
+          <div class="labmeta mono">
+            <span class="labyear">AI-built · Ad-funded</span>
+            <time datetime="2026-08-10">2026-08-10</time>
+          </div>
+          <p class="lablead">Thirty-four browser utilities — JSON formatter, HEIC converter, PDF merge, hash generator, colour and contrast checker — every one of them running on the user's own device. Front end, tooling logic, copy, translations into nine languages and the SEO were all produced with AI; my job was deciding what to build and what the rules were.</p>
+          <div class="wtags mono"><span class="wtag">Client-side JS</span><span class="wtag">Canvas &amp; Web Crypto</span><span class="wtag">Nine languages</span><span class="wtag is-sector">Claude</span><span class="wtag is-sector">Code generation</span></div>
+          <details class="labmore">
+            <summary class="mono">4 notes</summary>
+            <ul class="labnotes"><li>The whole product is one promise: nothing is uploaded. HEIC decoding runs on the device's own graphics stack, hashes come from Web Crypto, PDFs are assembled in memory. That is not a privacy policy, it is an architecture — there is no upload endpoint to trust, because none was ever written.</li><li>Thirty-four tools is only viable because they share one shell: the same input panel, the same result block, the same copy and download actions. Generating the thirty-fifth is cheap; deciding it belongs is the part that still takes judgement.</li><li>Every tool ships with its own long-form explainer and FAQ, and the structured data is written so that search engines and assistants can quote the answer directly. When a chatbot is the front page, being quotable matters more than ranking.</li><li>The honest constraint: this is ad-funded, so the incentive is traffic rather than depth, and free runs are rate-limited to keep costs sane. Naming that in the interface — three runs, share to skip — beats letting someone discover the limit mid-task.</li></ul>
+          </details>
+          <div class="lablinks"><a class="btn mono" href="https://my-toolkits.com/" target="_blank" rel="noopener" data-mag=".26">Open it &rarr;</a></div>
+        </div>
+      </article>
+
+      <article class="labcard glass" data-glass-in>
+        <div class="labshot"><img src="/assets/lab/myclacks.jpg?v=221" alt="myclacks — screenshot" loading="lazy" width="1200" height="600"></div>
+        <div class="labbody">
+          <div class="labtop">
+            <h2 class="h3">myclacks</h2>
+          </div>
+          <div class="labmeta mono">
+            <span class="labyear">AI-built · Ad-funded</span>
+            <time datetime="2026-08-10">2026-08-10</time>
+          </div>
+          <p class="lablead">Financial calculators — mortgage, loan, compound interest, retirement, tax, salary, debt-to-income — in fourteen languages across the US, Canada, UK and EU, wrapped in three dozen guides that do the actual ranking. Built, written, localised and optimised with AI.</p>
+          <div class="wtags mono"><span class="wtag">Static site</span><span class="wtag">Client-side maths</span><span class="wtag">Fourteen locales</span><span class="wtag is-sector">Claude</span><span class="wtag is-sector">Code generation</span></div>
+          <details class="labmore">
+            <summary class="mono">4 notes</summary>
+            <ul class="labnotes"><li>The calculators are the product; the guides are the distribution. Nobody searches for 'mortgage calculator' and reads — they search 'how much house can I afford on 100k' and want an answer. So each guide answers the question in prose and hands the reader the tool that does their own numbers.</li><li>Fourteen locales is not fourteen translations. Tax brackets, currency, date order and what counts as a normal mortgage term all differ, so the localisation had to reach the maths, not just the labels.</li><li>Money tools are trust tools. Everything is calculated locally, no account exists, and the formulas are named in the copy — a user who can see it is amortisation rather than a black box is a user who comes back.</li><li>What I would change: the tool list grew faster than the navigation did. Generation makes adding easy and pruning invisible, and a duplicated percentage calculator sitting in two sections is exactly the kind of drift that follows.</li></ul>
+          </details>
+          <div class="lablinks"><a class="btn mono" href="https://myclacks.com/" target="_blank" rel="noopener" data-mag=".26">Open it &rarr;</a></div>
+        </div>
+      </article>
+
+      <article class="labcard glass" data-glass-in>
+        <div class="labshot"><img src="/assets/lab/belly-bell.jpg?v=221" alt="Belly Bell — screenshot" loading="lazy" width="1200" height="600"></div>
+        <div class="labbody">
+          <div class="labtop">
+            <h2 class="h3">Belly Bell</h2>
+          </div>
+          <div class="labmeta mono">
+            <span class="labyear">AI-built · Ad-funded</span>
+            <time datetime="2026-08-10">2026-08-10</time>
+          </div>
+          <p class="lablead">Pregnancy and fertility calculators — due date, ovulation, fertile window, contraction timer, week-by-week tracking — in six languages, with an editorial layer around them. The narrowest of the three, and the one where the writing had to be handled most carefully.</p>
+          <div class="wtags mono"><span class="wtag">Static site</span><span class="wtag">Client-side maths</span><span class="wtag">Six locales</span><span class="wtag is-sector">Claude</span><span class="wtag is-sector">Code generation</span></div>
+          <details class="labmore">
+            <summary class="mono">4 notes</summary>
+            <ul class="labnotes"><li>A niche audience with high intent beats a broad one. Someone working out a due date is at the start of a nine-month stretch of searches — which is why the tools sit next to a blog rather than alone.</li><li>This is health-adjacent content, so the tone had to be governed rather than generated freely. Naegele's rule is named, the estimate is framed as a window rather than a date, the Chinese gender predictor is labelled as entertainment with no scientific basis, and every page defers to a midwife or obstetrician. AI will happily write in a more confident voice than the subject deserves; the editorial rules exist to stop it.</li><li>Nothing is stored and no account exists — for cycle and pregnancy dates that is not a feature, it is the minimum. The calculations never leave the browser.</li><li>The three sites share one recipe: pick a question people already search, answer it with a tool that runs locally, write the surrounding page properly, translate it, and let it earn while you sleep. Belly Bell is the version where I had to argue with the generated draft the most.</li></ul>
+          </details>
+          <div class="lablinks"><a class="btn mono" href="https://belly-bell.com/en/" target="_blank" rel="noopener" data-mag=".26">Open it &rarr;</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="pane cta">
+  <div class="wrap">
+    <div class="slab mono tick" style="justify-content:center">Contact</div>
+    <a class="big" href="/contact/" data-cur="write" data-trans="Contact">Want one<br><em>of these built?</em></a>
+    <div style="margin-top:44px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap" data-rise=".1">
+      <a class="btn mono" href="/contact/" data-mag=".25" data-trans="Contact">Start a project</a>
+      <a class="btn ghost mono" href="mailto:contact@khomeriki.design">contact@khomeriki.design</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="peek-row" aria-hidden="true"><span class="eye pk pk--1" data-eye="d" data-reach="160" style="aspect-ratio:370/480" aria-hidden="true"></span><span class="eye pk pk--2" data-eye="c" style="aspect-ratio:425/480" aria-hidden="true"></span><span class="eye pk pk--3" data-eye="p1" data-reach="260" style="aspect-ratio:430/480" aria-hidden="true"></span><span class="eye pk pk--4" data-eye="b" style="aspect-ratio:644/480" aria-hidden="true"></span></div>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4 class="mono">Navigate</h4>
+        <ul class="mono">
+          <li><a href="/">Home</a></li>
+          <li><a href="/work/">Work</a></li>
+          <li><a href="/lab/">AI Lab</a></li>
+          <li><a href="/experience/">Experience</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Enquiry</h4>
+        <ul class="mono">
+          <li><a href="mailto:contact@khomeriki.design">contact@khomeriki.design</a></li>
+          <li><a href="tel:+99599460466">+995 99 460466</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Elsewhere</h4>
+        <ul class="mono">
+          <li><a href="https://www.linkedin.com/in/nodari-khomeriki" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="https://dribbble.com/SimpleVibes" target="_blank" rel="noopener">Dribbble ↗</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Based in</h4>
+        <ul class="mono"><li>Tbilisi, Georgia</li><li>Working globally</li><li>Open to work</li></ul>
+      </div>
+    </div>
+    <div class="fmark" aria-hidden="true">NK</div>
+    <div class="fbar mono">
+      <span>© 2026 Nodari Khomeriki</span>
+      <span>Designed &amp; built in Tbilisi</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/gsap.min.js"></script>
+<script src="/assets/js/ScrollTrigger.min.js"></script>
+<script src="/assets/js/lenis.min.js"></script>
+<script src="/assets/js/glass.js?v=221"></script>
+<script src="/assets/js/eyes.js?v=221" defer></script>
+<script src="/assets/js/nebula.js?v=221" defer></script>
+<script src="/assets/js/peek.js?v=221" defer></script>
+</body>
+</html>

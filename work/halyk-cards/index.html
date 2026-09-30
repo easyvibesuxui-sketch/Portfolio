@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>try{if(sessionStorage.getItem('nk-seen')==='1')document.documentElement.classList.add('pre-seen')}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Halyk · Cards — case study | Nodari Khomeriki</title>
+<meta name="description" content="The physical card family — credit, debit, gold, platinum and business — for Halyk Bank’s Georgian arm.">
+<meta name="theme-color" content="#0a0a0b">
+<link rel="canonical" href="https://khomeriki.design/work/halyk-cards/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://khomeriki.design/work/halyk-cards/">
+<meta property="og:title" content="Halyk · Cards — case study | Nodari Khomeriki">
+<meta property="og:description" content="The physical card family — credit, debit, gold, platinum and business — for Halyk Bank’s Georgian arm.">
+<meta property="og:image" content="https://khomeriki.design/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/favicon.svg?v=221" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=221">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/assets/css/glass.css?v=221">
+</head>
+
+<body data-page="work">
+
+
+<div class="aurora" aria-hidden="true"><canvas id="fieldbg" class="fieldcv"></canvas><canvas id="nebula"></canvas><i class="a1"></i><i class="a2"></i><i class="a3"></i><i class="a4"></i><i class="a5"></i></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="marks" aria-hidden="true"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></div>
+<div id="cur" aria-hidden="true"></div>
+<div id="ring" aria-hidden="true"><b></b></div>
+<div id="trans" aria-hidden="true"><span></span></div>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="/" data-trans="Home"><span class="eye eye--brand" data-eye="d" data-reach="120" style="aspect-ratio:370/480" aria-hidden="true"></span>Nodari&nbsp;<span>Khomeriki</span></a>
+    <nav class="nav-links mono" aria-label="Primary">
+      <a href="/work/" aria-current="page" class="nav-hide" data-trans="Work"><span class="swap"><span>Work</span><span>Work</span></span></a>
+      <a href="/lab/" class="nav-hide" data-trans="AI Lab"><span class="swap"><span>AI Lab</span><span>AI Lab</span></span></a>
+      <a href="/experience/" class="nav-hide" data-trans="Experience"><span class="swap"><span>Experience</span><span>Experience</span></span></a>
+      <a href="/contact/" class="nav-cta mono nav-hide" data-mag=".25" data-trans="Contact">Let's create</a>
+      <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><i></i><i></i></button>
+    </nav>
+  </div>
+</header>
+
+<div id="menu" aria-hidden="true">
+  <div class="mlinks">
+    <a href="/" data-trans="Home">Home</a>
+    <a href="/work/" aria-current="page" data-trans="Work">Work</a>
+    <a href="/lab/" data-trans="AI Lab">AI Lab</a>
+    <a href="/experience/" data-trans="Experience">Experience</a>
+    <a href="/contact/" data-trans="Contact">Contact</a>
+  </div>
+  <div class="mfoot mono">
+    <span>contact@khomeriki.design</span>
+    <span>Tbilisi, Georgia</span>
+  </div>
+</div>
+
+<main>
+
+<section class="case-hero" id="overview">
+  <canvas class="fieldcv" aria-hidden="true"></canvas>
+  <div class="scrim" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="crumb mono">
+      <a href="/" data-trans="Home">Home</a> <span>/</span>
+      <a href="/work/" data-trans="Work" class="is-back">&larr;<span>Work</span></a> <span>/</span>
+      <span>Halyk · Cards</span>
+    </div>
+    <h1><span data-chars style="display:block">A card is the only piece of a bank people carry: Halyk Bank Georgia</span></h1>
+    <p class="lead case-sum" data-rise=".08">The physical card family — credit, debit, gold, platinum and business — for Halyk Bank’s Georgian arm.</p>
+    <figure class="cover is-fit" data-glass-in><img class="cover-bg" src="/assets/projects/halyk-cards/01.jpg?v=221" alt="" aria-hidden="true"><img class="cover-fg" src="/assets/projects/halyk-cards/01.jpg?v=221" alt="Halyk · Cards — Brand"></figure>
+    <dl class="meta"><div><dt class="mono">Role</dt><dd>UX/UI Designer</dd></div><div><dt class="mono">Timeline</dt><dd>2021</dd></div><div><dt class="mono">Team</dt><dd>Bank product &amp; marketing team</dd></div></dl>
+    
+  </div>
+</section>
+
+<nav class="casenav" aria-label="Case study sections"><a href="/work/" class="mono is-back" data-trans="Work" aria-label="Back to all work">&larr;<span>Work</span></a><a href="#overview" class="mono">Case study</a><a href="#challenge" class="mono">The challenge</a><a href="#solution" class="mono">The solution</a><a href="#outcome" class="mono">Outcome</a></nav>
+
+<section class="csec" id="challenge">
+  <div class="wrap">
+    <div class="csec-label mono tick">The challenge</div>
+    <h2 data-chars>Every other thing a bank makes lives on a screen. This one lives in a wallet for three years.</h2>
+    <div class="ctwo">
+      <div class="body"><div class="cbody"><p>A card has to do several jobs at once with almost no room: identify the bank in half a second, tell the holder which product they have, satisfy Visa and Mastercard’s placement rules, survive a card printer, and still look like it belongs to the same family as the six cards beside it.</p><p>It is also the most durable brand asset a bank owns. A campaign runs for a month; a card is handed over at a till hundreds of times over its life, usually face-up, usually next to somebody else’s.</p><p>And the constraints are unusually hard. Chip and contactless positions are fixed, network marks have minimum sizes and clear space, the magnetic stripe and signature panel own the back, and the printed data has to stay legible at a glance in bad light.</p></div></div>
+      <div class="side"><div class="callout glass" data-glass-in><span class="pill mono">Opportunity</span><h3>The tier is the design problem</h3><p>Nothing else on the card can vary much. So the entire product ladder has to be carried by colour and by one word.</p></div></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="csec" style="padding-block:0">
+  <div class="wrap">
+    <div class="insight glass" data-glass-in>
+      <div class="csec-label mono tick">Key insight</div>
+      <blockquote>On a counter, the card is read at arm’s length by someone who is not looking for information.</blockquote>
+      <div class="after"><p>That rules out most of what a designer would want to add. Pattern, texture and illustration all compete with the two things that have to survive that glance: whose bank it is and which card it is.</p><p>So the family was built the other way around — strip the face to almost nothing, and let a single flat colour do the work of naming the tier.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="csec" id="solution">
+  <div class="wrap">
+    <div class="csec-label mono tick">The solution</div>
+    <h2 data-chars>One layout, six colours, and a back that earns its keep.</h2>
+    <div class="ctwo"><div class="body"><div class="cbody"><p>Every card in the range shares an identical face: logo top-left, chip and contactless below it, network mark bottom-right, and the tier word in the opposite corner where nothing else competes with it. Change the colour and you have changed the product.</p><p>The palette moves through the range rather than decorating it — sage for credit, the brand’s teal for everyday debit, beige for gold, graphite for platinum and black for business. Nothing is metallic or gradient: flat colour prints predictably and ages better than an effect.</p></div></div></div>
+    <div class="decision" data-rise><span class="pill mono">Design decision</span><h3>The tier is a colour, not a badge</h3><p class="sub">Beige, graphite, black, sage and teal — one flat field each.</p><div class="cbody"><p>A customer holding two Halyk cards should be able to tell them apart in a wallet, in the dark, by edge alone. Colour does that at a distance no typography can reach.</p><p>Flat rather than metallic was a production decision as much as an aesthetic one. Foils and gradients shift between print runs and scuff visibly within months; a solid field looks the same on the day it is issued and two years later.</p></div><figure class="shot is-plain" data-glass-in><img src="/assets/projects/halyk-cards/02.jpg?v=221" alt="Halyk · Cards — The tier is a colour, not a badge" loading="lazy"></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>An empty face is a decision, not a shortage</h3><p class="sub">Logo, chip, contactless, network mark, one word. Nothing else.</p><div class="cbody"><p>The temptation on a card is to add a pattern to justify the design. Every element added is one more thing competing at the moment the card is read, which is a second at a counter.</p><p>The tier word sits in the corner diagonally opposite the logo, so the two things that matter occupy the two positions the eye reaches first and last, with nothing in between.</p></div><figure class="shot is-plain" data-glass-in><img src="/assets/projects/halyk-cards/03.jpg?v=221" alt="Halyk · Cards — An empty face is a decision, not a shortage" loading="lazy"></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>The numbers moved to the back</h3><p class="sub">Front kept clean; card number, holder and expiry printed on the reverse.</p><div class="cbody"><p>Putting the number on the back keeps the face uncluttered and makes the card marginally harder to read over a shoulder or in a photograph — a small, real privacy gain that costs nothing.</p><p>The printed data uses a mono-spaced face so digits stay evenly spaced and legible in a mediocre print at a bad angle, which is how these are actually read.</p></div><figure class="shot is-plain" data-glass-in><img src="/assets/projects/halyk-cards/04.jpg?v=221" alt="Halyk · Cards — The numbers moved to the back" loading="lazy"></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>A QR code that does one job</h3><p class="sub">გადმოწერეთ ჩვენი მობაილ ბანკი — download our mobile bank.</p><div class="cbody"><p>The one piece of real estate a bank never uses is the back of its own card. A QR code with a line of Georgian beside it turns three years in a wallet into a standing invitation to install the app.</p><p>It is deliberately the only call to action anywhere on the card. A second one would make the back look like an advert, and a card that looks like an advert gets used less.</p></div><figure class="shot is-plain" data-glass-in><img src="/assets/projects/halyk-cards/05.jpg?v=221" alt="Halyk · Cards — A QR code that does one job" loading="lazy"></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>Georgian first, on a Kazakh bank’s card</h3><p class="sub">Georgian type on the reverse, and a Georgian app at the end of the QR.</p><div class="cbody"><p>Halyk is a Kazakh bank operating in Georgia, and the card is the most tangible proof of whether that is a local branch or a foreign object. The reverse is set in Georgian, and the QR beside it lands in an app that is also in Georgian — so the chain from wallet to phone never switches language.</p><p>The Georgian script also had to sit comfortably beside a Latin logotype and a network mark — which is a type-pairing problem more than a layout one, and the reason the local line is set small and quiet rather than translated into a slogan.</p></div><figure class="shot is-plain" data-glass-in><img src="/assets/projects/halyk-cards/06.jpg?v=221" alt="Halyk · Cards — Georgian first, on a Kazakh bank’s card" loading="lazy"></figure></div>
+  </div>
+</section>
+
+<section class="csec" id="outcome">
+  <div class="wrap">
+    <div class="csec-label mono tick">Outcome</div>
+    <h2 data-chars>A range that reads as one bank.</h2>
+    <div class="ctwo"><div class="body"><div class="cbody"><p>The family covers Visa Credit, Visa Gold, Visa Platinum, Visa Business and Mastercard World Debit under a single layout, so a new product is a colour and a word rather than a new design.</p><p>Because the face is almost empty, the constraint that usually breaks card design — network placement rules, chip position, print tolerances — stopped being something to work around and became the layout itself.</p></div></div></div>
+    <div class="callout glass" data-glass-in style="margin-top:clamp(32px,5vh,60px)"><span class="pill mono">Reflection</span><h3>What I would keep from this one</h3><p>This is the most constrained brief I have worked on and the one where restraint paid the most. There is nowhere to hide on a card: no scroll, no state, no second screen — every decision is visible at once, forever.</p><p>The thing I would argue for again is the QR on the back. It is the only element that does work for the bank after issue, and it survived because it was the only one asking for attention.</p></div>
+  </div>
+</section>
+
+<section class="csec" style="padding-top:0">
+  <div class="wrap"><div class="csec-label mono tick">More screens</div>
+  <div class="gal"><figure data-glass-in><img src="/assets/projects/halyk-cards/07.jpg?v=221" alt="Halyk · Cards screen" loading="lazy"></figure><figure data-glass-in><img src="/assets/projects/halyk-cards/08.jpg?v=221" alt="Halyk · Cards screen" loading="lazy"></figure><figure data-glass-in><img src="/assets/projects/halyk-cards/09.jpg?v=221" alt="Halyk · Cards screen" loading="lazy"></figure></div></div>
+</section>
+
+<nav class="pager" aria-label="Project navigation">
+  <a class="glass hoverable prev" href="/work/halyk-open-banking/" data-trans="Halyk · Open Banking">
+    <span class="k mono">← Previous</span><span class="t">Halyk · Open Banking</span>
+  </a>
+  <a class="pager-up mono" href="/work/" data-trans="Work">All 32 projects</a>
+  <a class="glass hoverable next" href="/work/veon/" data-trans="VEON">
+    <span class="k mono">Next →</span><span class="t">VEON</span>
+  </a>
+</nav>
+
+</main>
+
+<div class="peek-row" aria-hidden="true"><span class="eye pk pk--1" data-eye="d" data-reach="160" style="aspect-ratio:370/480" aria-hidden="true"></span><span class="eye pk pk--2" data-eye="c" style="aspect-ratio:425/480" aria-hidden="true"></span><span class="eye pk pk--3" data-eye="p1" data-reach="260" style="aspect-ratio:430/480" aria-hidden="true"></span><span class="eye pk pk--4" data-eye="b" style="aspect-ratio:644/480" aria-hidden="true"></span></div>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4 class="mono">Navigate</h4>
+        <ul class="mono">
+          <li><a href="/">Home</a></li>
+          <li><a href="/work/">Work</a></li>
+          <li><a href="/lab/">AI Lab</a></li>
+          <li><a href="/experience/">Experience</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Enquiry</h4>
+        <ul class="mono">
+          <li><a href="mailto:contact@khomeriki.design">contact@khomeriki.design</a></li>
+          <li><a href="tel:+99599460466">+995 99 460466</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Elsewhere</h4>
+        <ul class="mono">
+          <li><a href="https://www.linkedin.com/in/nodari-khomeriki" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="https://dribbble.com/SimpleVibes" target="_blank" rel="noopener">Dribbble ↗</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Based in</h4>
+        <ul class="mono"><li>Tbilisi, Georgia</li><li>Working globally</li><li>Open to work</li></ul>
+      </div>
+    </div>
+    <div class="fmark" aria-hidden="true">NK</div>
+    <div class="fbar mono">
+      <span>© 2026 Nodari Khomeriki</span>
+      <span>Designed &amp; built in Tbilisi</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/gsap.min.js"></script>
+<script src="/assets/js/ScrollTrigger.min.js"></script>
+<script src="/assets/js/lenis.min.js"></script>
+<script src="/assets/js/glass.js?v=221"></script>
+<script src="/assets/js/eyes.js?v=221" defer></script>
+<script src="/assets/js/nebula.js?v=221" defer></script>
+<script src="/assets/js/peek.js?v=221" defer></script>
+</body>
+</html>

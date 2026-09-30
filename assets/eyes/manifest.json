@@ -1,0 +1,118 @@
+{
+ "p1": {
+  "files": {
+   "body": "p1-body.webp",
+   "iris": "p1-iris.webp",
+   "mask": "p1-mask.png",
+   "shade": "p1-shade.png",
+   "hl": "p1-hl.png"
+  },
+  "geom": {
+   "w": 430,
+   "h": 480,
+   "eye": {
+    "x": 100.89,
+    "y": 173.06,
+    "w": 215.36,
+    "h": 138.14
+   },
+   "iris": {
+    "cx": 213.07,
+    "cy": 242.19,
+    "r": 44.86,
+    "size": 99
+   },
+   "travel": {
+    "x": 42.62,
+    "y": 26.92
+   }
+  }
+ },
+ "b": {
+  "files": {
+   "body": "b-body.webp",
+   "iris": "b-iris.webp",
+   "mask": "b-mask.png",
+   "shade": "b-shade.png",
+   "hl": "b-hl.png"
+  },
+  "geom": {
+   "w": 644,
+   "h": 480,
+   "eye": {
+    "x": 168.42,
+    "y": 140.19,
+    "w": 325.94,
+    "h": 168.92
+   },
+   "iris": {
+    "cx": 322.48,
+    "cy": 224.4,
+    "r": 72.32,
+    "size": 160
+   },
+   "travel": {
+    "x": 68.71,
+    "y": 43.39
+   }
+  }
+ },
+ "c": {
+  "files": {
+   "body": "c-body.webp",
+   "iris": "c-iris.webp",
+   "mask": "c-mask.png",
+   "shade": "c-shade.png",
+   "hl": "c-hl.png"
+  },
+  "geom": {
+   "w": 425,
+   "h": 480,
+   "eye": {
+    "x": 82.36,
+    "y": 142.31,
+    "w": 274.09,
+    "h": 190.81
+   },
+   "iris": {
+    "cx": 255.6,
+    "cy": 244.56,
+    "r": 52.53,
+    "size": 116
+   },
+   "travel": {
+    "x": 49.91,
+    "y": 31.52
+   }
+  }
+ },
+ "d": {
+  "files": {
+   "body": "d-body.webp",
+   "iris": "d-iris.webp",
+   "mask": "d-mask.png",
+   "shade": "d-shade.png",
+   "hl": "d-hl.png"
+  },
+  "geom": {
+   "w": 370,
+   "h": 480,
+   "eye": {
+    "x": 57.54,
+    "y": 114.57,
+    "w": 236.72,
+    "h": 132.74
+   },
+   "iris": {
+    "cx": 182.24,
+    "cy": 183.3,
+    "r": 50.71,
+    "size": 112
+   },
+   "travel": {
+    "x": 48.18,
+    "y": 30.43
+   }
+  }
+ }
+}

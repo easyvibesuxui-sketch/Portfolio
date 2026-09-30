@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>try{if(sessionStorage.getItem('nk-seen')==='1')document.documentElement.classList.add('pre-seen')}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Barclays — case study | Nodari Khomeriki</title>
+<meta name="description" content="A charting interface for bank employees — build a view from transaction, customer or market data, and share it without a designer in the loop.">
+<meta name="theme-color" content="#0a0a0b">
+<link rel="canonical" href="https://khomeriki.design/work/barclays-bank/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://khomeriki.design/work/barclays-bank/">
+<meta property="og:title" content="Barclays — case study | Nodari Khomeriki">
+<meta property="og:description" content="A charting interface for bank employees — build a view from transaction, customer or market data, and share it without a designer in the loop.">
+<meta property="og:image" content="https://khomeriki.design/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/favicon.svg?v=221" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=221">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/assets/css/glass.css?v=221">
+</head>
+
+<body data-page="work">
+
+
+<div class="aurora" aria-hidden="true"><canvas id="fieldbg" class="fieldcv"></canvas><canvas id="nebula"></canvas><i class="a1"></i><i class="a2"></i><i class="a3"></i><i class="a4"></i><i class="a5"></i></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="marks" aria-hidden="true"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></div>
+<div id="cur" aria-hidden="true"></div>
+<div id="ring" aria-hidden="true"><b></b></div>
+<div id="trans" aria-hidden="true"><span></span></div>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="/" data-trans="Home"><span class="eye eye--brand" data-eye="d" data-reach="120" style="aspect-ratio:370/480" aria-hidden="true"></span>Nodari&nbsp;<span>Khomeriki</span></a>
+    <nav class="nav-links mono" aria-label="Primary">
+      <a href="/work/" aria-current="page" class="nav-hide" data-trans="Work"><span class="swap"><span>Work</span><span>Work</span></span></a>
+      <a href="/lab/" class="nav-hide" data-trans="AI Lab"><span class="swap"><span>AI Lab</span><span>AI Lab</span></span></a>
+      <a href="/experience/" class="nav-hide" data-trans="Experience"><span class="swap"><span>Experience</span><span>Experience</span></span></a>
+      <a href="/contact/" class="nav-cta mono nav-hide" data-mag=".25" data-trans="Contact">Let's create</a>
+      <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><i></i><i></i></button>
+    </nav>
+  </div>
+</header>
+
+<div id="menu" aria-hidden="true">
+  <div class="mlinks">
+    <a href="/" data-trans="Home">Home</a>
+    <a href="/work/" aria-current="page" data-trans="Work">Work</a>
+    <a href="/lab/" data-trans="AI Lab">AI Lab</a>
+    <a href="/experience/" data-trans="Experience">Experience</a>
+    <a href="/contact/" data-trans="Contact">Contact</a>
+  </div>
+  <div class="mfoot mono">
+    <span>contact@khomeriki.design</span>
+    <span>Tbilisi, Georgia</span>
+  </div>
+</div>
+
+<main>
+
+<section class="case-hero" id="overview">
+  <canvas class="fieldcv" aria-hidden="true"></canvas>
+  <div class="scrim" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="crumb mono">
+      <a href="/" data-trans="Home">Home</a> <span>/</span>
+      <a href="/work/" data-trans="Work" class="is-back">&larr;<span>Work</span></a> <span>/</span>
+      <span>Barclays</span>
+    </div>
+    <h1><span data-chars style="display:block">Charts that survive being sent to someone else: Barclays</span></h1>
+    <p class="lead case-sum" data-rise=".08">A charting interface for bank employees — build a view from transaction, customer or market data, and share it without a designer in the loop.</p>
+    <figure class="cover is-fit is-flat" data-glass-in><img class="cover-fg" src="/assets/projects/barclays-bank-wide.jpg?v=221" alt="Barclays — Data viz"></figure>
+    <dl class="meta"><div><dt class="mono">Role</dt><dd>UX/UI Designer</dd></div><div><dt class="mono">Timeline</dt><dd>2021</dd></div><div><dt class="mono">Team</dt><dd>Client product team</dd></div></dl>
+    
+  </div>
+</section>
+
+<nav class="casenav" aria-label="Case study sections"><a href="/work/" class="mono is-back" data-trans="Work" aria-label="Back to all work">&larr;<span>Work</span></a><a href="#overview" class="mono">Case study</a><a href="#challenge" class="mono">The challenge</a><a href="#solution" class="mono">The solution</a><a href="#outcome" class="mono">Outcome</a></nav>
+
+<section class="csec" id="challenge">
+  <div class="wrap">
+    <div class="csec-label mono tick">The challenge</div>
+    <h2 data-chars>The people who need the chart are not the people who can make one.</h2>
+    <div class="ctwo">
+      <div class="body"><div class="cbody"><p>Inside a bank, the person with the question owns the data and has no visualisation skills; the person who can build a good chart is in another team with a queue. So the analysis either waits or gets done badly in a spreadsheet.</p><p>The datasets are not interchangeable either. Transaction data, customer data and market data have different shapes, different sensitivities and different conventions for how they are read.</p><p>And the chart is made to be circulated. Its real audience is a room of people who were not there when it was built.</p></div></div>
+      <div class="side"><div class="callout glass" data-glass-in><span class="pill mono">Opportunity</span><h3>Make the default output presentable</h3><p>If an employee with no design training produces something publishable on the first try, the queue disappears.</p></div></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="csec" style="padding-block:0">
+  <div class="wrap">
+    <div class="insight glass" data-glass-in>
+      <div class="csec-label mono tick">Key insight</div>
+      <blockquote>Give a non-designer a colour picker and you have created work, not capability.</blockquote>
+      <div class="after"><p>Every configuration option in a tool like this is a chance to produce something worse than the default, and a decision the user did not want to make.</p><p>So the templates carry the design, the data selection carries the meaning, and the customisation is limited to the handful of choices that are genuinely the user's to make.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="csec" id="solution">
+  <div class="wrap">
+    <div class="csec-label mono tick">The solution</div>
+    <h2 data-chars>Pick the data, pick the chart, send it.</h2>
+    <div class="ctwo"><div class="body"><div class="cbody"><p>Employees sign in with existing credentials, choose from the datasets they are entitled to, and select a chart type that is already designed — sized, spaced and coloured to the bank's language before anything is touched.</p><p>Filtering and sorting narrow the view, real-time sources keep it current, and sharing carries the chart with its annotations so the reasoning arrives with the picture.</p></div></div></div>
+    <div class="decision" data-rise><span class="pill mono">Design decision</span><h3>The template is the design work</h3><p class="sub">Chart types that are publishable before customisation.</p><div class="cbody"><p>The user's job is choosing the right data and the right chart type. Every visual decision below that — spacing, axis, label density, palette — was made once and applied everywhere.</p><p>The narrow set of controls that remains is chosen so that no combination produces an unreadable result, which is the only way to give this to a whole bank.</p></div></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>Sharing carries the reasoning</h3><p class="sub">Notes and comments travel with the chart.</p><div class="cbody"><p>A chart circulated inside a bank gets read by people who cannot ask a follow-up question. Attaching the interpretation to the data is what stops it being misread in the next meeting.</p><p>Real-time connections mean the shared view does not quietly go stale, which is the usual failure of a screenshot pasted into a deck.</p></div></div>
+  </div>
+</section>
+
+<section class="csec" id="outcome">
+  <div class="wrap">
+    <div class="csec-label mono tick">Outcome</div>
+    <h2 data-chars>Analysis that does not queue.</h2>
+    <div class="ctwo"><div class="body"><div class="cbody"><p>Employees build and circulate their own charts from the datasets they already have access to, without waiting on a design or reporting team.</p><p>Because the design lives in the templates rather than in the user's hands, the output stays consistent no matter who made it.</p></div></div></div>
+    
+  </div>
+</section>
+
+
+<nav class="pager" aria-label="Project navigation">
+  <a class="glass hoverable prev" href="/work/deutsche-bank/" data-trans="Deutsche Bank">
+    <span class="k mono">← Previous</span><span class="t">Deutsche Bank</span>
+  </a>
+  <a class="pager-up mono" href="/work/" data-trans="Work">All 32 projects</a>
+  <a class="glass hoverable next" href="/work/neuro-pilot/" data-trans="Neuro Pilot">
+    <span class="k mono">Next →</span><span class="t">Neuro Pilot</span>
+  </a>
+</nav>
+
+</main>
+
+<div class="peek-row" aria-hidden="true"><span class="eye pk pk--1" data-eye="d" data-reach="160" style="aspect-ratio:370/480" aria-hidden="true"></span><span class="eye pk pk--2" data-eye="c" style="aspect-ratio:425/480" aria-hidden="true"></span><span class="eye pk pk--3" data-eye="p1" data-reach="260" style="aspect-ratio:430/480" aria-hidden="true"></span><span class="eye pk pk--4" data-eye="b" style="aspect-ratio:644/480" aria-hidden="true"></span></div>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4 class="mono">Navigate</h4>
+        <ul class="mono">
+          <li><a href="/">Home</a></li>
+          <li><a href="/work/">Work</a></li>
+          <li><a href="/lab/">AI Lab</a></li>
+          <li><a href="/experience/">Experience</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Enquiry</h4>
+        <ul class="mono">
+          <li><a href="mailto:contact@khomeriki.design">contact@khomeriki.design</a></li>
+          <li><a href="tel:+99599460466">+995 99 460466</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Elsewhere</h4>
+        <ul class="mono">
+          <li><a href="https://www.linkedin.com/in/nodari-khomeriki" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="https://dribbble.com/SimpleVibes" target="_blank" rel="noopener">Dribbble ↗</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Based in</h4>
+        <ul class="mono"><li>Tbilisi, Georgia</li><li>Working globally</li><li>Open to work</li></ul>
+      </div>
+    </div>
+    <div class="fmark" aria-hidden="true">NK</div>
+    <div class="fbar mono">
+      <span>© 2026 Nodari Khomeriki</span>
+      <span>Designed &amp; built in Tbilisi</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/gsap.min.js"></script>
+<script src="/assets/js/ScrollTrigger.min.js"></script>
+<script src="/assets/js/lenis.min.js"></script>
+<script src="/assets/js/glass.js?v=221"></script>
+<script src="/assets/js/eyes.js?v=221" defer></script>
+<script src="/assets/js/nebula.js?v=221" defer></script>
+<script src="/assets/js/peek.js?v=221" defer></script>
+</body>
+</html>

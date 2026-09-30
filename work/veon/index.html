@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>try{if(sessionStorage.getItem('nk-seen')==='1')document.documentElement.classList.add('pre-seen')}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>VEON — case study | Nodari Khomeriki</title>
+<meta name="description" content="A chart and table component set for a seven-market telecom group — built so one figure looks like itself in a report, a deck, a press release and a web page.">
+<meta name="theme-color" content="#0a0a0b">
+<link rel="canonical" href="https://khomeriki.design/work/veon/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://khomeriki.design/work/veon/">
+<meta property="og:title" content="VEON — case study | Nodari Khomeriki">
+<meta property="og:description" content="A chart and table component set for a seven-market telecom group — built so one figure looks like itself in a report, a deck, a press release and a web page.">
+<meta property="og:image" content="https://khomeriki.design/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/favicon.svg?v=221" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=221">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/assets/css/glass.css?v=221">
+</head>
+
+<body data-page="work">
+
+
+<div class="aurora" aria-hidden="true"><canvas id="fieldbg" class="fieldcv"></canvas><canvas id="nebula"></canvas><i class="a1"></i><i class="a2"></i><i class="a3"></i><i class="a4"></i><i class="a5"></i></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="marks" aria-hidden="true"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></div>
+<div id="cur" aria-hidden="true"></div>
+<div id="ring" aria-hidden="true"><b></b></div>
+<div id="trans" aria-hidden="true"><span></span></div>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="/" data-trans="Home"><span class="eye eye--brand" data-eye="d" data-reach="120" style="aspect-ratio:370/480" aria-hidden="true"></span>Nodari&nbsp;<span>Khomeriki</span></a>
+    <nav class="nav-links mono" aria-label="Primary">
+      <a href="/work/" aria-current="page" class="nav-hide" data-trans="Work"><span class="swap"><span>Work</span><span>Work</span></span></a>
+      <a href="/lab/" class="nav-hide" data-trans="AI Lab"><span class="swap"><span>AI Lab</span><span>AI Lab</span></span></a>
+      <a href="/experience/" class="nav-hide" data-trans="Experience"><span class="swap"><span>Experience</span><span>Experience</span></span></a>
+      <a href="/contact/" class="nav-cta mono nav-hide" data-mag=".25" data-trans="Contact">Let's create</a>
+      <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><i></i><i></i></button>
+    </nav>
+  </div>
+</header>
+
+<div id="menu" aria-hidden="true">
+  <div class="mlinks">
+    <a href="/" data-trans="Home">Home</a>
+    <a href="/work/" aria-current="page" data-trans="Work">Work</a>
+    <a href="/lab/" data-trans="AI Lab">AI Lab</a>
+    <a href="/experience/" data-trans="Experience">Experience</a>
+    <a href="/contact/" data-trans="Contact">Contact</a>
+  </div>
+  <div class="mfoot mono">
+    <span>contact@khomeriki.design</span>
+    <span>Tbilisi, Georgia</span>
+  </div>
+</div>
+
+<main>
+
+<section class="case-hero" id="overview">
+  <canvas class="fieldcv" aria-hidden="true"></canvas>
+  <div class="scrim" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="crumb mono">
+      <a href="/" data-trans="Home">Home</a> <span>/</span>
+      <a href="/work/" data-trans="Work" class="is-back">&larr;<span>Work</span></a> <span>/</span>
+      <span>VEON</span>
+    </div>
+    <h1><span data-chars style="display:block">The same two numbers, on four different backgrounds: VEON</span></h1>
+    <p class="lead case-sum" data-rise=".08">A chart and table component set for a seven-market telecom group — built so one figure looks like itself in a report, a deck, a press release and a web page.</p>
+    <figure class="cover is-device is-laptop" data-glass-in><img class="cover-bg" src="/assets/projects/veon.jpg?v=221" alt="" aria-hidden="true"><span class="laptop"><span class="lid"><img src="/assets/projects/veon/01.jpg?v=221" alt="VEON — Data viz"></span><span class="base"><i></i></span></span></figure>
+    <dl class="meta"><div><dt class="mono">Role</dt><dd>UX/UI Designer</dd></div><div><dt class="mono">Timeline</dt><dd>2020</dd></div><div><dt class="mono">Team</dt><dd>Client, brand</dd></div></dl>
+    
+  </div>
+</section>
+
+<nav class="casenav" aria-label="Case study sections"><a href="/work/" class="mono is-back" data-trans="Work" aria-label="Back to all work">&larr;<span>Work</span></a><a href="#overview" class="mono">Case study</a><a href="#challenge" class="mono">The challenge</a><a href="#solution" class="mono">The solution</a><a href="#outcome" class="mono">Outcome</a></nav>
+
+<section class="csec" id="challenge">
+  <div class="wrap">
+    <div class="csec-label mono tick">The challenge</div>
+    <h2 data-chars>A listed group publishes the same figure a dozen times, and it is redrawn every time.</h2>
+    <div class="ctwo">
+      <div class="body"><div class="cbody"><p>VEON operates across Russia, Pakistan, Algeria, Bangladesh, Ukraine, Uzbekistan and Kazakhstan. A metric like 4G network coverage is therefore never one number — it is seven series, quarter by quarter, and it appears in results announcements, investor decks, the annual report and the corporate site.</p><p>Each of those surfaces has a different background. The report page is white, the deck is dark, the campaign layout is brand yellow, the web section is light grey. A chart designed for one of them fails on the other three, so in practice somebody rebuilds it.</p><p>Rebuilding is where the inconsistency comes from — different colours per market, different quarter labels, gridlines that survive on screen and vanish on a projector, and a source line that is sometimes there and sometimes not.</p><p>For a company on two stock exchanges, that last one is not a cosmetic problem. A figure without a source and a date is a compliance question, not a design preference.</p></div></div>
+      <div class="side"><div class="callout glass" data-glass-in><span class="pill mono">Opportunity</span><h3>Fix the geometry, vary only the surface</h3><p>If the structure, colour assignments and label rules are decided once, every context becomes a theme rather than a redraw.</p></div></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="csec" style="padding-block:0">
+  <div class="wrap">
+    <div class="insight glass" data-glass-in>
+      <div class="csec-label mono tick">Key insight</div>
+      <blockquote>The design problem was not the chart. It was that the chart had to be recognisable four times.</blockquote>
+      <div class="after"><p>Consistency across surfaces is what makes a series of quarterly figures readable as a trend rather than as unrelated pictures. Somebody who saw the coverage chart in the deck should recognise it in the report without re-reading the legend.</p><p>So the work was a single geometry — the same order of markets, the same colour per market, the same axis and label treatment — with four surface treatments applied over it, rather than four charts that happen to show the same data.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="csec" id="solution">
+  <div class="wrap">
+    <div class="csec-label mono tick">The solution</div>
+    <h2 data-chars>One table and one chart, each in four themes, sharing a colour key.</h2>
+    <div class="ctwo"><div class="body"><div class="cbody"><p>The table lists markets as rows and quarters as columns, with percentages right-aligned and a flag carrying the row. The chart plots the same markets as lines against the same quarters, with a legend that repeats the table’s order and colours.</p><p>Both exist as light, grey, dark and brand-yellow variants. Nothing moves between them except the surface: the same rows in the same order, the same series in the same colours.</p></div></div></div>
+    <div class="decision" data-rise><span class="pill mono">Design decision</span><h3>The flag carries the row</h3><p class="sub">A country mark instead of a repeated name column.</p><div class="cbody"><p>In a seven-market table read across eight quarters, the eye returns to the row label constantly. A flag is recognised faster than a word and does not change length between languages, which matters on a document published in more than one.</p><p>The name stays beside it rather than being replaced by it. A flag alone is a quiz for anybody outside the region, and this is a document for investors as much as for staff.</p></div><figure class="shot is-browser is-page" data-glass-in><span class="chrome" aria-hidden="true"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></span><img src="/assets/projects/veon/02.jpg?v=221" alt="VEON — The flag carries the row" loading="lazy"></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>One line per market, and the legend is the key to everything</h3><p class="sub">Fixed colours, fixed order, dots at every quarter.</p><div class="cbody"><p>The colour assigned to a market is the same in the chart, the legend and the table, so a reader learns the key once and carries it through a whole report. Assigning colours per chart is the single most common way this goes wrong.</p><p>Every quarter gets a visible dot rather than a smooth line. These are eight discrete measurements, not a continuous signal, and drawing them as points connected by lines is the honest representation of that.</p></div><figure class="shot is-browser is-page" data-glass-in><span class="chrome" aria-hidden="true"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></span><img src="/assets/projects/veon/03.jpg?v=221" alt="VEON — One line per market, and the legend is the key to everything" loading="lazy"></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>Four themes, one geometry</h3><p class="sub">Light, grey, dark and brand yellow — nothing else changes.</p><div class="cbody"><p>Column widths, row heights, type sizes, axis spacing and label positions are identical across all four. Only the surface, the rule colour and the text contrast move, which is what makes the same chart recognisable on a slide and on a page.</p><p>The brand-yellow variant is the constrained one and was designed first. If the component survives being set on a saturated ground, the white and grey versions are free.</p></div><figure class="shot is-browser is-page" data-glass-in><span class="chrome" aria-hidden="true"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></span><img src="/assets/projects/veon/04.jpg?v=221" alt="VEON — Four themes, one geometry" loading="lazy"></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>Bands instead of gridlines for the projected version</h3><p class="sub">Alternating vertical column bands on the dark theme.</p><div class="cbody"><p>Fine horizontal gridlines are the first thing a projector loses, and a chart with no reference marks is a picture of a slope. Wide alternating bands behind the quarters survive projection and low contrast, and they band the axis a reader is actually tracking along.</p><p>It is the one place where the geometry is allowed to differ, because the failure mode it fixes only exists in that context.</p></div><figure class="shot is-browser is-page" data-glass-in><span class="chrome" aria-hidden="true"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></span><img src="/assets/projects/veon/05.jpg?v=221" alt="VEON — Bands instead of gridlines for the projected version" loading="lazy"></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>A table of fifty numbers needs a way to point</h3><p class="sub">One cell highlighted, in the theme’s accent.</p><div class="cbody"><p>Seven rows by eight columns is more than anybody reads. The highlight exists so a presenter or a caption can say <em>this one</em> — without bolding, colouring or otherwise reformatting the surrounding data to make it stand out.</p><p>It is a single cell state rather than a row or column, because the claim being made is almost always about one market in one quarter.</p></div><figure class="shot is-browser is-page" data-glass-in><span class="chrome" aria-hidden="true"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></span><img src="/assets/projects/veon/06.jpg?v=221" alt="VEON — A table of fifty numbers needs a way to point" loading="lazy"></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>The source line is part of the component</h3><p class="sub">Source and date sit under every chart and every table, always.</p><div class="cbody"><p>On a listed company an unsourced figure is a problem rather than an untidiness, so the attribution is built into the component instead of being left to whoever assembles the page.</p><p>It is set small and low-contrast so it never competes with the data, but it cannot be omitted — the component simply does not have a version without it. That is the most reliable way to make a rule hold across a large organisation.</p></div><figure class="shot is-browser is-page" data-glass-in><span class="chrome" aria-hidden="true"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></span><img src="/assets/projects/veon/07.jpg?v=221" alt="VEON — The source line is part of the component" loading="lazy"></figure></div>
+  </div>
+</section>
+
+<section class="csec" id="outcome">
+  <div class="wrap">
+    <div class="csec-label mono tick">Outcome</div>
+    <h2 data-chars>A figure that stays the same figure wherever it is published.</h2>
+    <div class="ctwo"><div class="body"><div class="cbody"><p>Two metrics across seven markets and eight quarters, rendered as a table and a chart, each available in four surface treatments that share one geometry and one colour key.</p><p>Because the variants differ only in surface, anybody assembling a deck or a page picks a theme rather than redrawing a chart — and the source line comes with it.</p></div></div></div>
+    <div class="callout glass" data-glass-in style="margin-top:clamp(32px,5vh,60px)"><span class="pill mono">Reflection</span><h3>What I would keep from this one</h3><p>Designing the hardest-constrained variant first is a habit worth keeping. The yellow version had the least contrast to work with, and solving it made the other three fall out almost for free — the reverse order would have produced three good charts and one compromise.</p><p>Building the source line into the component rather than documenting it as a rule is the other. Guidelines get skipped under deadline; a component that has no version without an attribution line does not.</p></div>
+  </div>
+</section>
+
+<section class="csec" style="padding-top:0">
+  <div class="wrap"><div class="csec-label mono tick">More screens</div>
+  <figure class="shot is-browser is-page" data-glass-in><span class="chrome" aria-hidden="true"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></span><img src="/assets/projects/veon/08.jpg?v=221" alt="VEON screen" loading="lazy"></figure></div>
+</section>
+
+<nav class="pager" aria-label="Project navigation">
+  <a class="glass hoverable prev" href="/work/halyk-cards/" data-trans="Halyk · Cards">
+    <span class="k mono">← Previous</span><span class="t">Halyk · Cards</span>
+  </a>
+  <a class="pager-up mono" href="/work/" data-trans="Work">All 32 projects</a>
+  <a class="glass hoverable next" href="/work/deutsche-bank/" data-trans="Deutsche Bank">
+    <span class="k mono">Next →</span><span class="t">Deutsche Bank</span>
+  </a>
+</nav>
+
+</main>
+
+<div class="peek-row" aria-hidden="true"><span class="eye pk pk--1" data-eye="d" data-reach="160" style="aspect-ratio:370/480" aria-hidden="true"></span><span class="eye pk pk--2" data-eye="c" style="aspect-ratio:425/480" aria-hidden="true"></span><span class="eye pk pk--3" data-eye="p1" data-reach="260" style="aspect-ratio:430/480" aria-hidden="true"></span><span class="eye pk pk--4" data-eye="b" style="aspect-ratio:644/480" aria-hidden="true"></span></div>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4 class="mono">Navigate</h4>
+        <ul class="mono">
+          <li><a href="/">Home</a></li>
+          <li><a href="/work/">Work</a></li>
+          <li><a href="/lab/">AI Lab</a></li>
+          <li><a href="/experience/">Experience</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Enquiry</h4>
+        <ul class="mono">
+          <li><a href="mailto:contact@khomeriki.design">contact@khomeriki.design</a></li>
+          <li><a href="tel:+99599460466">+995 99 460466</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Elsewhere</h4>
+        <ul class="mono">
+          <li><a href="https://www.linkedin.com/in/nodari-khomeriki" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="https://dribbble.com/SimpleVibes" target="_blank" rel="noopener">Dribbble ↗</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Based in</h4>
+        <ul class="mono"><li>Tbilisi, Georgia</li><li>Working globally</li><li>Open to work</li></ul>
+      </div>
+    </div>
+    <div class="fmark" aria-hidden="true">NK</div>
+    <div class="fbar mono">
+      <span>© 2026 Nodari Khomeriki</span>
+      <span>Designed &amp; built in Tbilisi</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/gsap.min.js"></script>
+<script src="/assets/js/ScrollTrigger.min.js"></script>
+<script src="/assets/js/lenis.min.js"></script>
+<script src="/assets/js/glass.js?v=221"></script>
+<script src="/assets/js/eyes.js?v=221" defer></script>
+<script src="/assets/js/nebula.js?v=221" defer></script>
+<script src="/assets/js/peek.js?v=221" defer></script>
+</body>
+</html>

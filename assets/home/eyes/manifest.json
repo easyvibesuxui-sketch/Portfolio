@@ -1,0 +1,152 @@
+{
+ "stage": {
+  "w": 1920,
+  "h": 1080
+ },
+ "creatures": [
+  {
+   "id": "p1",
+   "x": 960,
+   "y": 400,
+   "h": 560,
+   "central": true,
+   "speed": 0.9,
+   "phase": 0.11,
+   "files": {
+    "body": "p1-body.webp",
+    "iris": "p1-iris.webp",
+    "mask": "p1-mask.png",
+    "shade": "p1-shade.png",
+    "hl": "p1-hl.png"
+   },
+   "geom": {
+    "w": 1002,
+    "h": 1120,
+    "eye": {
+     "x": 235.41,
+     "y": 403.82,
+     "w": 502.51,
+     "h": 322.33
+    },
+    "iris": {
+     "cx": 497.17,
+     "cy": 565.11,
+     "r": 104.68,
+     "size": 232
+    },
+    "travel": {
+     "x": 99.45,
+     "y": 62.81
+    }
+   }
+  },
+  {
+   "id": "b",
+   "x": 1575,
+   "y": 735,
+   "h": 420,
+   "central": false,
+   "speed": 0.6,
+   "phase": 0.47,
+   "files": {
+    "body": "b-body.webp",
+    "iris": "b-iris.webp",
+    "mask": "b-mask.png",
+    "shade": "b-shade.png",
+    "hl": "b-hl.png"
+   },
+   "geom": {
+    "w": 1127,
+    "h": 840,
+    "eye": {
+     "x": 294.74,
+     "y": 245.33,
+     "w": 570.4,
+     "h": 295.6
+    },
+    "iris": {
+     "cx": 564.33,
+     "cy": 392.69,
+     "r": 126.56,
+     "size": 279
+    },
+    "travel": {
+     "x": 120.24,
+     "y": 75.94
+    }
+   }
+  },
+  {
+   "id": "c",
+   "x": 330,
+   "y": 320,
+   "h": 330,
+   "central": false,
+   "speed": 1.1,
+   "phase": 0.73,
+   "files": {
+    "body": "c-body.webp",
+    "iris": "c-iris.webp",
+    "mask": "c-mask.png",
+    "shade": "c-shade.png",
+    "hl": "c-hl.png"
+   },
+   "geom": {
+    "w": 584,
+    "h": 660,
+    "eye": {
+     "x": 113.25,
+     "y": 195.67,
+     "w": 376.87,
+     "h": 262.36
+    },
+    "iris": {
+     "cx": 351.45,
+     "cy": 336.27,
+     "r": 72.23,
+     "size": 160
+    },
+    "travel": {
+     "x": 68.62,
+     "y": 43.34
+    }
+   }
+  },
+  {
+   "id": "d",
+   "x": 1545,
+   "y": 215,
+   "h": 210,
+   "central": false,
+   "speed": 1.4,
+   "phase": 0.29,
+   "files": {
+    "body": "d-body.webp",
+    "iris": "d-iris.webp",
+    "mask": "d-mask.png",
+    "shade": "d-shade.png",
+    "hl": "d-hl.png"
+   },
+   "geom": {
+    "w": 324,
+    "h": 420,
+    "eye": {
+     "x": 50.35,
+     "y": 100.25,
+     "w": 207.13,
+     "h": 116.15
+    },
+    "iris": {
+     "cx": 159.46,
+     "cy": 160.38,
+     "r": 44.37,
+     "size": 98
+    },
+    "travel": {
+     "x": 42.15,
+     "y": 26.62
+    }
+   }
+  }
+ ]
+}

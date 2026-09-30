@@ -1,0 +1,5 @@
+# the generator and its data stay in the repo but are not served
+*.py
+tools/
+__pycache__/
+README.md
