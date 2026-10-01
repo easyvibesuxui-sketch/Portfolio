@@ -295,7 +295,7 @@ LAB = [
     added="2026-09-11",
     title="Inverse",
     kind="B2B services + platform",
-    cats=["SaaS", "Dashboard"],
+    cats=["Landing"],
     year="2026",
     blurb="A Tbilisi stocktaking firm, and the tool its own counters use. A "
           "worker photographs a shelf, the system reads the still, counts what "
