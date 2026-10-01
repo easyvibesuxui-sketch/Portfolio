@@ -44,6 +44,8 @@ python3 build.py                 # regenerate every page; prints page/byte count
 python3 -m http.server 8000      # preview locally at http://localhost:8000
 ```
 
+`build.py` itself needs `Pillow` and `numpy` (`pip install Pillow numpy`). Without them it runs without errors but writes different cover markup for some case studies, so run `git status` after a build and check that no unexpected `work/*/index.html` changed.
+
 Tools need `numpy`, `opencv-python`, `Pillow`, and `ffmpeg` for the video graders.
 
 ## Common tasks
