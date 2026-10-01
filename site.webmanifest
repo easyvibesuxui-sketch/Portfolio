@@ -4,8 +4,8 @@
   "description": "Senior product and UX designer in Tbilisi, Georgia. Fintech, SaaS, AI and mobile.",
   "start_url": "/",
   "display": "standalone",
-  "theme_color": "#150b07",
-  "background_color": "#150b07",
+  "theme_color": "#EBEBEB",
+  "background_color": "#EBEBEB",
   "icons": [
     { "src": "/assets/favicon-192.png", "sizes": "192x192", "type": "image/png" },
     { "src": "/assets/favicon-512.png", "sizes": "512x512", "type": "image/png" }
