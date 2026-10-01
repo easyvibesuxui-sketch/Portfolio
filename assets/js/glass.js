@@ -603,7 +603,7 @@
   }
 
   /* ==========================================================
-     13 · TAG BAR — filters the work rail
+     13 · TAG BAR — filters the work rail and the AI Lab grid
      Built from the data-tags on each card, so counts can never
      drift out of sync with the actual projects.
      ========================================================== */
@@ -612,8 +612,13 @@
     const track = $('[data-cards]');
     if (!host || !track) return;
 
-    const cards = $$('.wcard', track);
-    const order = ['Fintech', 'SaaS', 'Mobile', 'AI', 'Data viz', 'E-commerce', 'Brand & Web'];
+    // the work page uses the defaults; /lab/ passes its own on the bar
+    const cards = $$('[data-tags]', track);
+    const order = host.dataset.order
+      ? host.dataset.order.split('|')
+      : ['Fintech', 'SaaS', 'Mobile', 'AI', 'Data viz', 'E-commerce', 'Brand & Web'];
+    const noun = host.dataset.noun || 'project';
+    const label = host.dataset.label || 'Filter work by';
     const counts = new Map();
     cards.forEach((c) => (c.dataset.tags || '').split('|').map((s) => s.trim()).filter(Boolean)
       .forEach((t) => counts.set(t, (counts.get(t) || 0) + 1)));
@@ -632,8 +637,8 @@
       });
       $$('.tag', host).forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.tag === tag)));
       if (note) note.textContent = tag === 'All'
-        ? `Showing all ${shown} projects`
-        : `Showing ${shown} ${tag} project${shown === 1 ? '' : 's'}`;
+        ? `Showing all ${shown} ${noun}s`
+        : `Showing ${shown} ${tag} ${noun}${shown === 1 ? '' : 's'}`;
 
       // rewind the rail (home only), then let ScrollTrigger recompute
       if (track.classList.contains('rail-track')) {
@@ -649,7 +654,7 @@
       b.type = 'button';
       b.dataset.tag = t;
       b.setAttribute('aria-pressed', String(t === 'All'));
-      b.setAttribute('aria-label', t === 'All' ? 'Show all projects' : `Filter work by ${t}`);
+      b.setAttribute('aria-label', t === 'All' ? `Show all ${noun}s` : `${label} ${t}`);
       b.innerHTML =
         `<span class="fill"></span>` +
         `<span class="cnt">${t === 'All' ? cards.length : counts.get(t)}</span>` +

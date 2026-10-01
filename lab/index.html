@@ -15,13 +15,13 @@
 <meta property="og:image" content="https://khomeriki.design/assets/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
-<link rel="icon" href="/assets/favicon.svg?v=222" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=222">
+<link rel="icon" href="/assets/favicon.svg?v=223" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=223">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="/assets/css/glass.css?v=222">
+<link rel="stylesheet" href="/assets/css/glass.css?v=223">
 </head>
 
 <body data-page="lab">
@@ -79,11 +79,114 @@
 
 <section class="pane" style="padding-top:clamp(20px,3vh,40px)">
   <div class="wrap">
-    <div class="slab mono tick">21 builds</div>
-    <div class="labs">
+    <div class="slab mono tick">26 builds</div>
+    <div class="tagbar is-compact" role="group" aria-label="Filter builds by type" aria-controls="labs"
+         data-order="Landing|Website|Game|SaaS|Dashboard|E-commerce|Tools" data-noun="build" data-label="Filter builds by"></div>
+    <p class="tagbar-note mono" role="status" aria-live="polite"></p>
+    <div class="labs" id="labs" data-cards>
 
-      <article class="labcard glass" data-glass-in>
-        <div class="labshot"><img src="/assets/lab/lust-photography.jpg?v=222" alt="Lust Photography — screenshot" loading="lazy" width="1200" height="600"></div>
+      <article class="labcard glass" data-glass-in data-tags="Game">
+        <div class="labshot"><img src="/assets/lab/space-odyssey.jpg?v=223" alt="Space Odyssey — screenshot" loading="lazy" width="1200" height="600"></div>
+        <div class="labbody">
+          <div class="labtop">
+            <h2 class="h3">Space Odyssey</h2>
+          </div>
+          <div class="labmeta mono">
+            <span class="labyear">3D game</span>
+            <time datetime="2026-10-01">2026-10-01</time>
+          </div>
+          <p class="lablead">A space shooter in the browser. Fly a fighter against enemy fleets that come for your homeworld in waves, then land, walk your base on foot and spend what you earned on turrets before the next wave.</p>
+          <div class="wtags mono"><span class="wtag">Three.js</span><span class="wtag">WebGL</span><span class="wtag">Web Audio</span><span class="wtag is-sector">Claude</span><span class="wtag is-sector">Kling</span></div>
+          <details class="labmore">
+            <summary class="mono">3 notes</summary>
+            <ul class="labnotes"><li>Two games in one loop: a cockpit for the fight and a walk around the home base on foot between waves. The quiet half is what makes the loud half feel earned — rewards are unloaded by hand, turrets are placed by hand.</li><li>Every boss is a puzzle with one sentence of instruction: drones first, hangars first, shoot the glowing core, watch for the EMP. The HUD says what to do the moment it matters instead of in a manual nobody opens.</li><li>The images, the coin, the icons and the preloader video were generated with Kling, and the credits screen says so.</li></ul>
+          </details>
+          <div class="lablinks"><a class="btn mono" href="https://easyvibesuxui-sketch.github.io/Space-odyssey/" target="_blank" rel="noopener" data-mag=".26">Open it &rarr;</a></div>
+        </div>
+      </article>
+
+      <article class="labcard glass" data-glass-in data-tags="Game">
+        <div class="labshot"><img src="/assets/lab/waves-of-hell.jpg?v=223" alt="Waves of Hell — screenshot" loading="lazy" width="1200" height="600"></div>
+        <div class="labbody">
+          <div class="labtop">
+            <h2 class="h3">Waves of Hell</h2>
+          </div>
+          <div class="labmeta mono">
+            <span class="labyear">Horror shooter</span>
+            <time datetime="2026-10-01">2026-10-01</time>
+          </div>
+          <p class="lablead">A first-person wave shooter set in a dark station. Demons come in waves that never stop; between them you buy weapons and ammo at the armory, and a black dog fights beside you — if she goes down, you hold E to bring her back.</p>
+          <div class="wtags mono"><span class="wtag">Three.js</span><span class="wtag">Physics</span><span class="wtag">Web Audio</span><span class="wtag is-sector">Claude</span></div>
+          <details class="labmore">
+            <summary class="mono">3 notes</summary>
+            <ul class="labnotes"><li>The dog is the design decision. A companion you have to revive turns ‘survive the wave’ into ‘protect someone’, and that changes how a player moves through the same corridors.</li><li>Three slots — a pistol and two primaries — so a new weapon always costs you one you have. A limit is what makes a shop a choice.</li><li>Enemies are sorted into three readable classes, easy, fast and brute, and the start screen names them. You know what is coming before you are scared of it.</li></ul>
+          </details>
+          <div class="lablinks"><a class="btn mono" href="https://easyvibesuxui-sketch.github.io/Horror-game/" target="_blank" rel="noopener" data-mag=".26">Open it &rarr;</a></div>
+        </div>
+      </article>
+
+      <article class="labcard glass" data-glass-in data-tags="Game">
+        <div class="labshot"><img src="/assets/lab/sovereign.jpg?v=223" alt="Sovereign — screenshot" loading="lazy" width="1200" height="600"></div>
+        <div class="labbody">
+          <div class="labtop">
+            <h2 class="h3">Sovereign</h2>
+          </div>
+          <div class="labmeta mono">
+            <span class="labyear">Strategy game</span>
+            <time datetime="2026-10-01">2026-10-01</time>
+          </div>
+          <p class="lablead">A campaign of conquest on an old-atlas map — five realms, forty-two lands, one crown. Pick a people, place armies, attack, trade cards for reinforcements, and play against rivals at three temperaments.</p>
+          <div class="wtags mono"><span class="wtag">React</span><span class="wtag">Turn-based engine</span><span class="wtag">Local saves</span><span class="wtag is-sector">Claude</span></div>
+          <details class="labmore">
+            <summary class="mono">4 notes</summary>
+            <ul class="labnotes"><li>A board game is mostly rules, so the interface is mostly sentences. Every illegal move answers in plain words — ‘a land needs at least two armies to attack’ — rather than a disabled button that leaves you guessing.</li><li>The rivals are described by how they behave, not by a difficulty number: timid ones that strike rarely, ones that build continents, ruthless ones that hunt the leader.</li><li>The look is an old atlas — cream paper, engraved portraits, Latin sea names. It makes a forty-two-territory screen calm to read.</li><li>The campaign saves itself in the browser, so a long war can be left and picked up later.</li></ul>
+          </details>
+          <div class="lablinks"><a class="btn mono" href="https://easyvibesuxui-sketch.github.io/Game-Risk/" target="_blank" rel="noopener" data-mag=".26">Open it &rarr;</a></div>
+        </div>
+      </article>
+
+      <article class="labcard glass" data-glass-in data-tags="Game">
+        <div class="labshot"><img src="/assets/lab/boutique-raider.jpg?v=223" alt="Boutique Raider — screenshot" loading="lazy" width="1200" height="600"></div>
+        <div class="labbody">
+          <div class="labtop">
+            <h2 class="h3">Boutique Raider</h2>
+          </div>
+          <div class="labmeta mono">
+            <span class="labyear">Arcade game</span>
+            <time datetime="2026-10-01">2026-10-01</time>
+          </div>
+          <p class="lablead">A 3D runner through a luxury mall. Grab every shopping bag on the floor, dash past the Karens who want your manager, and make it to checkout — seven levels, each one adding a piece to the outfit.</p>
+          <div class="wtags mono"><span class="wtag">Three.js</span><span class="wtag">WebGL</span><span class="wtag">Keyboard controls</span><span class="wtag is-sector">Claude</span></div>
+          <details class="labmore">
+            <summary class="mono">3 notes</summary>
+            <ul class="labnotes"><li>The whole tutorial is one card: four keys and four rules. If it does not fit on that card, it is not in the game.</li><li>Progress is something you can see on the character, not a number in the corner — each cleared level adds one piece to the outfit, and the HUD lists what is still to come.</li><li>Three hearts and a dash that slips past an obstacle: one escape move, used well, is more fun than several half-used ones.</li></ul>
+          </details>
+          <div class="lablinks"><a class="btn mono" href="https://easyvibesuxui-sketch.github.io/Shoprider/" target="_blank" rel="noopener" data-mag=".26">Open it &rarr;</a></div>
+        </div>
+      </article>
+
+      <article class="labcard glass" data-glass-in data-tags="Landing">
+        <div class="labshot"><img src="/assets/lab/ibsu-applicants.jpg?v=223" alt="IBSU — Applicants — screenshot" loading="lazy" width="1200" height="600"></div>
+        <div class="labbody">
+          <div class="labtop">
+            <h2 class="h3">IBSU — Applicants</h2>
+          </div>
+          <div class="labmeta mono">
+            <span class="labyear">Landing page</span>
+            <time datetime="2026-10-01">2026-10-01</time>
+          </div>
+          <p class="lablead">An admissions landing page for International Black Sea University that opens as a story: a child grows up through the scroll, age by age, until the page arrives at the first day at university — then turns into programmes, admission steps and a grant calculator.</p>
+          <div class="wtags mono"><span class="wtag">GSAP + Lenis</span><span class="wtag">Scroll-driven frames</span><span class="wtag">Georgian / English</span><span class="wtag is-sector">Claude</span><span class="wtag is-sector">Generative imagery</span></div>
+          <details class="labmore">
+            <summary class="mono">3 notes</summary>
+            <ul class="labnotes"><li>Another answer to the IBSU brief. The story is optional — ‘Skip the story’ sits in the top bar from the first frame, because the parent checking fees should not have to sit through a film made for their child.</li><li>Admission is four steps, and the step that matters most says so: put IBSU, code 064, first at exam registration — it is what earns the 20% priority grant.</li><li>The grant calculator applies only the highest single grant, the rule the university’s own fee page states, so the figure on screen is not a best case nobody qualifies for.</li></ul>
+          </details>
+          <div class="lablinks"><a class="btn mono" href="https://easyvibesuxui-sketch.github.io/IBSU-Landing/b/" target="_blank" rel="noopener" data-mag=".26">Open it &rarr;</a></div>
+        </div>
+      </article>
+
+      <article class="labcard glass" data-glass-in data-tags="Landing">
+        <div class="labshot"><img src="/assets/lab/lust-photography.jpg?v=223" alt="Lust Photography — screenshot" loading="lazy" width="1200" height="600"></div>
         <div class="labbody">
           <div class="labtop">
             <h2 class="h3">Lust Photography<span class="labwip mono">In progress</span></h2>
@@ -102,8 +205,8 @@
         </div>
       </article>
 
-      <article class="labcard glass" data-glass-in>
-        <div class="labshot"><img src="/assets/lab/uxaudit-ai.jpg?v=222" alt="UXAudit AI — screenshot" loading="lazy" width="1200" height="600"></div>
+      <article class="labcard glass" data-glass-in data-tags="SaaS">
+        <div class="labshot"><img src="/assets/lab/uxaudit-ai.jpg?v=223" alt="UXAudit AI — screenshot" loading="lazy" width="1200" height="600"></div>
         <div class="labbody">
           <div class="labtop">
             <h2 class="h3">UXAudit AI<span class="labwip mono">In progress</span></h2>
@@ -122,8 +225,8 @@
         </div>
       </article>
 
-      <article class="labcard glass" data-glass-in>
-        <div class="labshot"><img src="/assets/lab/giftly.jpg?v=222" alt="Giftly — screenshot" loading="lazy" width="1200" height="600"></div>
+      <article class="labcard glass" data-glass-in data-tags="Tools">
+        <div class="labshot"><img src="/assets/lab/giftly.jpg?v=223" alt="Giftly — screenshot" loading="lazy" width="1200" height="600"></div>
         <div class="labbody">
           <div class="labtop">
             <h2 class="h3">Giftly<span class="labwip mono">In progress</span></h2>
@@ -142,8 +245,8 @@
         </div>
       </article>
 
-      <article class="labcard glass" data-glass-in>
-        <div class="labshot"><img src="/assets/lab/wedding-platform.jpg?v=222" alt="ორი გული — Two Hearts — screenshot" loading="lazy" width="1200" height="600"></div>
+      <article class="labcard glass" data-glass-in data-tags="SaaS">
+        <div class="labshot"><img src="/assets/lab/wedding-platform.jpg?v=223" alt="ორი გული — Two Hearts — screenshot" loading="lazy" width="1200" height="600"></div>
         <div class="labbody">
           <div class="labtop">
             <h2 class="h3">ორი გული — Two Hearts</h2>
@@ -162,8 +265,8 @@
         </div>
       </article>
 
-      <article class="labcard glass" data-glass-in>
-        <div class="labshot"><img src="/assets/lab/inverse.jpg?v=222" alt="Inverse — screenshot" loading="lazy" width="1200" height="600"></div>
+      <article class="labcard glass" data-glass-in data-tags="SaaS|Dashboard">
+        <div class="labshot"><img src="/assets/lab/inverse.jpg?v=223" alt="Inverse — screenshot" loading="lazy" width="1200" height="600"></div>
         <div class="labbody">
           <div class="labtop">
             <h2 class="h3">Inverse</h2>
@@ -182,8 +285,8 @@
         </div>
       </article>
 
-      <article class="labcard glass" data-glass-in>
-        <div class="labshot"><img src="/assets/lab/treasure-marathon.jpg?v=222" alt="საგანძურის მარათონი — Treasure Marathon — screenshot" loading="lazy" width="1200" height="600"></div>
+      <article class="labcard glass" data-glass-in data-tags="Landing">
+        <div class="labshot"><img src="/assets/lab/treasure-marathon.jpg?v=223" alt="საგანძურის მარათონი — Treasure Marathon — screenshot" loading="lazy" width="1200" height="600"></div>
         <div class="labbody">
           <div class="labtop">
             <h2 class="h3">საგანძურის მარათონი — Treasure Marathon</h2>
@@ -202,8 +305,8 @@
         </div>
       </article>
 
-      <article class="labcard glass" data-glass-in>
-        <div class="labshot"><img src="/assets/lab/maison-ondine.jpg?v=222" alt="Maison Ondine — screenshot" loading="lazy" width="1200" height="600"></div>
+      <article class="labcard glass" data-glass-in data-tags="E-commerce">
+        <div class="labshot"><img src="/assets/lab/maison-ondine.jpg?v=223" alt="Maison Ondine — screenshot" loading="lazy" width="1200" height="600"></div>
         <div class="labbody">
           <div class="labtop">
             <h2 class="h3">Maison Ondine</h2>
@@ -222,8 +325,8 @@
         </div>
       </article>
 
-      <article class="labcard glass" data-glass-in>
-        <div class="labshot"><img src="/assets/lab/terramech.jpg?v=222" alt="TerraMech — screenshot" loading="lazy" width="1200" height="600"></div>
+      <article class="labcard glass" data-glass-in data-tags="Website|Game">
+        <div class="labshot"><img src="/assets/lab/terramech.jpg?v=223" alt="TerraMech — screenshot" loading="lazy" width="1200" height="600"></div>
         <div class="labbody">
           <div class="labtop">
             <h2 class="h3">TerraMech</h2>
@@ -242,8 +345,8 @@
         </div>
       </article>
 
-      <article class="labcard glass" data-glass-in>
-        <div class="labshot"><img src="/assets/lab/nami.jpg?v=222" alt="NAMI — screenshot" loading="lazy" width="1200" height="600"></div>
+      <article class="labcard glass" data-glass-in data-tags="Landing">
+        <div class="labshot"><img src="/assets/lab/nami.jpg?v=223" alt="NAMI — screenshot" loading="lazy" width="1200" height="600"></div>
         <div class="labbody">
           <div class="labtop">
             <h2 class="h3">NAMI</h2>
@@ -262,8 +365,8 @@
         </div>
       </article>
 
-      <article class="labcard glass" data-glass-in>
-        <div class="labshot"><img src="/assets/lab/chalet.jpg?v=222" alt="Chalet — screenshot" loading="lazy" width="1200" height="600"></div>
+      <article class="labcard glass" data-glass-in data-tags="Landing">
+        <div class="labshot"><img src="/assets/lab/chalet.jpg?v=223" alt="Chalet — screenshot" loading="lazy" width="1200" height="600"></div>
         <div class="labbody">
           <div class="labtop">
             <h2 class="h3">Chalet</h2>
@@ -282,8 +385,8 @@
         </div>
       </article>
 
-      <article class="labcard glass" data-glass-in>
-        <div class="labshot"><img src="/assets/lab/ga-logistics.jpg?v=222" alt="GA Logistics — screenshot" loading="lazy" width="1200" height="600"></div>
+      <article class="labcard glass" data-glass-in data-tags="Website">
+        <div class="labshot"><img src="/assets/lab/ga-logistics.jpg?v=223" alt="GA Logistics — screenshot" loading="lazy" width="1200" height="600"></div>
         <div class="labbody">
           <div class="labtop">
             <h2 class="h3">GA Logistics</h2>
@@ -302,8 +405,8 @@
         </div>
       </article>
 
-      <article class="labcard glass" data-glass-in>
-        <div class="labshot"><img src="/assets/lab/ibsu-international.jpg?v=222" alt="IBSU — International Admission — screenshot" loading="lazy" width="1200" height="600"></div>
+      <article class="labcard glass" data-glass-in data-tags="Landing">
+        <div class="labshot"><img src="/assets/lab/ibsu-international.jpg?v=223" alt="IBSU — International Admission — screenshot" loading="lazy" width="1200" height="600"></div>
         <div class="labbody">
           <div class="labtop">
             <h2 class="h3">IBSU — International Admission</h2>
@@ -322,8 +425,8 @@
         </div>
       </article>
 
-      <article class="labcard glass" data-glass-in>
-        <div class="labshot"><img src="/assets/lab/syniotec-devices.jpg?v=222" alt="Syniotec — Devices — screenshot" loading="lazy" width="1200" height="600"></div>
+      <article class="labcard glass" data-glass-in data-tags="Website">
+        <div class="labshot"><img src="/assets/lab/syniotec-devices.jpg?v=223" alt="Syniotec — Devices — screenshot" loading="lazy" width="1200" height="600"></div>
         <div class="labbody">
           <div class="labtop">
             <h2 class="h3">Syniotec — Devices</h2>
@@ -342,8 +445,8 @@
         </div>
       </article>
 
-      <article class="labcard glass" data-glass-in>
-        <div class="labshot"><img src="/assets/lab/classygreens.jpg?v=222" alt="ClassyGreens — screenshot" loading="lazy" width="1200" height="600"></div>
+      <article class="labcard glass" data-glass-in data-tags="Website">
+        <div class="labshot"><img src="/assets/lab/classygreens.jpg?v=223" alt="ClassyGreens — screenshot" loading="lazy" width="1200" height="600"></div>
         <div class="labbody">
           <div class="labtop">
             <h2 class="h3">ClassyGreens</h2>
@@ -362,8 +465,8 @@
         </div>
       </article>
 
-      <article class="labcard glass" data-glass-in>
-        <div class="labshot"><img src="/assets/lab/ibsu-ink-gallery.jpg?v=222" alt="IBSU — The Ink Gallery — screenshot" loading="lazy" width="1200" height="600"></div>
+      <article class="labcard glass" data-glass-in data-tags="Game">
+        <div class="labshot"><img src="/assets/lab/ibsu-ink-gallery.jpg?v=223" alt="IBSU — The Ink Gallery — screenshot" loading="lazy" width="1200" height="600"></div>
         <div class="labbody">
           <div class="labtop">
             <h2 class="h3">IBSU — The Ink Gallery</h2>
@@ -382,8 +485,8 @@
         </div>
       </article>
 
-      <article class="labcard glass" data-glass-in>
-        <div class="labshot"><img src="/assets/lab/khomeriki-design.jpg?v=222" alt="khomeriki.design — screenshot" loading="lazy" width="1200" height="600"></div>
+      <article class="labcard glass" data-glass-in data-tags="Website">
+        <div class="labshot"><img src="/assets/lab/khomeriki-design.jpg?v=223" alt="khomeriki.design — screenshot" loading="lazy" width="1200" height="600"></div>
         <div class="labbody">
           <div class="labtop">
             <h2 class="h3">khomeriki.design</h2>
@@ -402,8 +505,8 @@
         </div>
       </article>
 
-      <article class="labcard glass" data-glass-in>
-        <div class="labshot"><img src="/assets/lab/ibsu-entrant.jpg?v=222" alt="IBSU — Entrant — screenshot" loading="lazy" width="1200" height="600"></div>
+      <article class="labcard glass" data-glass-in data-tags="Landing">
+        <div class="labshot"><img src="/assets/lab/ibsu-entrant.jpg?v=223" alt="IBSU — Entrant — screenshot" loading="lazy" width="1200" height="600"></div>
         <div class="labbody">
           <div class="labtop">
             <h2 class="h3">IBSU — Entrant</h2>
@@ -422,8 +525,8 @@
         </div>
       </article>
 
-      <article class="labcard glass" data-glass-in>
-        <div class="labshot"><img src="/assets/lab/ibsu-wisdom.jpg?v=222" alt="IBSU — Wisdom, carved in stone — screenshot" loading="lazy" width="1200" height="600"></div>
+      <article class="labcard glass" data-glass-in data-tags="Landing">
+        <div class="labshot"><img src="/assets/lab/ibsu-wisdom.jpg?v=223" alt="IBSU — Wisdom, carved in stone — screenshot" loading="lazy" width="1200" height="600"></div>
         <div class="labbody">
           <div class="labtop">
             <h2 class="h3">IBSU — Wisdom, carved in stone</h2>
@@ -442,8 +545,8 @@
         </div>
       </article>
 
-      <article class="labcard glass" data-glass-in>
-        <div class="labshot"><img src="/assets/lab/my-toolkits.jpg?v=222" alt="My ToolKit — screenshot" loading="lazy" width="1200" height="600"></div>
+      <article class="labcard glass" data-glass-in data-tags="Tools">
+        <div class="labshot"><img src="/assets/lab/my-toolkits.jpg?v=223" alt="My ToolKit — screenshot" loading="lazy" width="1200" height="600"></div>
         <div class="labbody">
           <div class="labtop">
             <h2 class="h3">My ToolKit</h2>
@@ -462,8 +565,8 @@
         </div>
       </article>
 
-      <article class="labcard glass" data-glass-in>
-        <div class="labshot"><img src="/assets/lab/myclacks.jpg?v=222" alt="myclacks — screenshot" loading="lazy" width="1200" height="600"></div>
+      <article class="labcard glass" data-glass-in data-tags="Tools">
+        <div class="labshot"><img src="/assets/lab/myclacks.jpg?v=223" alt="myclacks — screenshot" loading="lazy" width="1200" height="600"></div>
         <div class="labbody">
           <div class="labtop">
             <h2 class="h3">myclacks</h2>
@@ -482,8 +585,8 @@
         </div>
       </article>
 
-      <article class="labcard glass" data-glass-in>
-        <div class="labshot"><img src="/assets/lab/belly-bell.jpg?v=222" alt="Belly Bell — screenshot" loading="lazy" width="1200" height="600"></div>
+      <article class="labcard glass" data-glass-in data-tags="Tools">
+        <div class="labshot"><img src="/assets/lab/belly-bell.jpg?v=223" alt="Belly Bell — screenshot" loading="lazy" width="1200" height="600"></div>
         <div class="labbody">
           <div class="labtop">
             <h2 class="h3">Belly Bell</h2>
@@ -563,9 +666,9 @@
 <script src="/assets/js/gsap.min.js"></script>
 <script src="/assets/js/ScrollTrigger.min.js"></script>
 <script src="/assets/js/lenis.min.js"></script>
-<script src="/assets/js/glass.js?v=222"></script>
-<script src="/assets/js/eyes.js?v=222" defer></script>
-<script src="/assets/js/nebula.js?v=222" defer></script>
-<script src="/assets/js/peek.js?v=222" defer></script>
+<script src="/assets/js/glass.js?v=223"></script>
+<script src="/assets/js/eyes.js?v=223" defer></script>
+<script src="/assets/js/nebula.js?v=223" defer></script>
+<script src="/assets/js/peek.js?v=223" defer></script>
 </body>
 </html>
