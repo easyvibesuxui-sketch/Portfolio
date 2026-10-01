@@ -4032,3 +4032,43 @@ h1,h2,h3,h4,.h1,.h2,.h3,.gh1,.gh2,.gfill-h,.gpin-h,.gclients-h,.gcta-mark {
 .labshot { aspect-ratio: 2 / 1; background: #e2e2e2; }
 .labshot img { object-fit: cover; object-position: center; }
 .labshot::after { background: none; box-shadow: inset 0 -1px 0 var(--hair); }
+
+/* v224 · home ribbon on phones. The desktop rule that leaves room to
+   centre the last plate (padding-right: 50vw - card) still applied once
+   the ribbon became a column, so every plate was ~80px short, flush
+   against the left edge, with no gutter on either side. In the column the
+   plates sit inside the page gutter, and each picture keeps its own ratio
+   (covers run from 2:1 to 1.17:1) so headlines are not cut at the sides. */
+@media (max-width: 860px) {
+  .s34 .hs-track { padding-right: 0; gap: clamp(28px, 5vh, 44px); }
+  .s34 .hs-item, .s34 .hs-item:first-of-type {
+    width: auto; margin: 0 var(--gut); border-top: 0; align-self: stretch;
+  }
+  .s34 .hs-item img {
+    width: 100%; height: auto; aspect-ratio: auto !important;
+    object-fit: contain;
+  }
+  .s34 .hs-allbox { aspect-ratio: auto; min-height: 120px; }
+}
+
+/* v224 · /experience/ on phones: grid tracks sized to their content, so a
+   role's detail list pushed the 1fr column past the row and the whole
+   page scrolled sideways. Tracks may shrink; long words wrap. */
+.xrow, .xrow .xhead { grid-template-columns: minmax(0, 1fr) auto; }
+.xrow > *, .xrow .xhead > * { min-width: 0; }
+.xdetail ul { grid-template-columns: minmax(0, 1fr); }
+.xdetail li { overflow-wrap: anywhere; }
+
+/* v224 · phones: one column of cards, so a fixed frame only crops. Work
+   cards and role rows follow their content instead. */
+@media (max-width: 760px) {
+  .wshot { aspect-ratio: auto; }
+  .wshot img, .wcard:hover .wshot img { height: auto; transform: none; object-fit: contain; }
+  .xrow, .xrow .xhead { grid-template-columns: minmax(0, 1fr); }
+  .xrow .xhead { gap: 10px; }
+  .xdate { display: flex; align-items: center; justify-content: space-between; }
+  .xrole .chip { white-space: nowrap; }
+}
+@media (max-width: 520px) {
+  .s6 .scells { grid-template-columns: 1fr; }
+}
