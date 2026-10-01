@@ -12,6 +12,8 @@ Fields
     pin       "bottom" to hold an entry below the rest regardless of date
     title     what it is called
     kind      one-word category shown as a chip
+    cats      filter groups on /lab/, any of: Landing, Website, Game, SaaS,
+              Dashboard, E-commerce, Tools (the bar only shows groups in use)
     year      shown right-aligned
     blurb     one or two sentences — what it is and why it exists
     live      public URL, or None
@@ -24,11 +26,150 @@ Fields
 LAB = [
 
   dict(
+    slug="space-odyssey",
+    added="2026-10-01",
+    title="Space Odyssey",
+    kind="3D game",
+    cats=["Game"],
+    year="2026",
+    blurb="A space shooter in the browser. Fly a fighter against enemy fleets "
+          "that come for your homeworld in waves, then land, walk your base on "
+          "foot and spend what you earned on turrets before the next wave.",
+    live="https://easyvibesuxui-sketch.github.io/Space-odyssey/",
+    repo=None,
+    stack=["Three.js", "WebGL", "Web Audio"],
+    ai=["Claude", "Kling"],
+    notes=[
+      "Two games in one loop: a cockpit for the fight and a walk around "
+      "the home base on foot between waves. The quiet half is what "
+      "makes the loud half feel earned — rewards are unloaded by hand, "
+      "turrets are placed by hand.",
+      "Every boss is a puzzle with one sentence of instruction: drones "
+      "first, hangars first, shoot the glowing core, watch for the EMP. "
+      "The HUD says what to do the moment it matters instead of in a "
+      "manual nobody opens.",
+      "The images, the coin, the icons and the preloader video were "
+      "generated with Kling, and the credits screen says so.",
+    ],
+  ),
+
+  dict(
+    slug="waves-of-hell",
+    added="2026-10-01",
+    title="Waves of Hell",
+    kind="Horror shooter",
+    cats=["Game"],
+    year="2026",
+    blurb="A first-person wave shooter set in a dark station. Demons come in "
+          "waves that never stop; between them you buy weapons and ammo at "
+          "the armory, and a black dog fights beside you — if she goes down, "
+          "you hold E to bring her back.",
+    live="https://easyvibesuxui-sketch.github.io/Horror-game/",
+    repo=None,
+    stack=["Three.js", "Physics", "Web Audio"],
+    ai=["Claude"],
+    notes=[
+      "The dog is the design decision. A companion you have to revive turns "
+      "‘survive the wave’ into ‘protect someone’, and that changes how a "
+      "player moves through the same corridors.",
+      "Three slots — a pistol and two primaries — so a new weapon always "
+      "costs you one you have. A limit is what makes a shop a choice.",
+      "Enemies are sorted into three readable classes, easy, fast and "
+      "brute, and the start screen names them. You know what is coming "
+      "before you are scared of it.",
+    ],
+  ),
+
+  dict(
+    slug="sovereign",
+    added="2026-10-01",
+    title="Sovereign",
+    kind="Strategy game",
+    cats=["Game"],
+    year="2026",
+    blurb="A campaign of conquest on an old-atlas map — five realms, forty-two "
+          "lands, one crown. Pick a people, place armies, attack, trade cards "
+          "for reinforcements, and play against rivals at three temperaments.",
+    live="https://easyvibesuxui-sketch.github.io/Game-Risk/",
+    repo=None,
+    stack=["React", "Turn-based engine", "Local saves"],
+    ai=["Claude"],
+    notes=[
+      "A board game is mostly rules, so the interface is mostly sentences. "
+      "Every illegal move answers in plain words — ‘a land needs at least "
+      "two armies to attack’ — rather than a disabled button that leaves "
+      "you guessing.",
+      "The rivals are described by how they behave, not by a difficulty "
+      "number: timid ones that strike rarely, ones that build continents, "
+      "ruthless ones that hunt the leader.",
+      "The look is an old atlas — cream paper, engraved portraits, Latin "
+      "sea names. It makes a forty-two-territory screen calm to read.",
+      "The campaign saves itself in the browser, so a long war can be "
+      "left and picked up later.",
+    ],
+  ),
+
+  dict(
+    slug="boutique-raider",
+    added="2026-10-01",
+    title="Boutique Raider",
+    kind="Arcade game",
+    cats=["Game"],
+    year="2026",
+    blurb="A 3D runner through a luxury mall. Grab every shopping bag on the "
+          "floor, dash past the Karens who want your manager, and make it to "
+          "checkout — seven levels, each one adding a piece to the outfit.",
+    live="https://easyvibesuxui-sketch.github.io/Shoprider/",
+    repo=None,
+    stack=["Three.js", "WebGL", "Keyboard controls"],
+    ai=["Claude"],
+    notes=[
+      "The whole tutorial is one card: four keys and four rules. If it does "
+      "not fit on that card, it is not in the game.",
+      "Progress is something you can see on the character, not a number "
+      "in the corner — each cleared level adds one piece to the outfit, "
+      "and the HUD lists what is still to come.",
+      "Three hearts and a dash that slips past an obstacle: one escape "
+      "move, used well, is more fun than several half-used ones.",
+    ],
+  ),
+
+  dict(
+    slug="ibsu-applicants",
+    added="2026-10-01",
+    title="IBSU — Applicants",
+    kind="Landing page",
+    cats=["Landing"],
+    year="2026",
+    blurb="An admissions landing page for International Black Sea University "
+          "that opens as a story: a child grows up through the scroll, age by "
+          "age, until the page arrives at the first day at university — then "
+          "turns into programmes, admission steps and a grant calculator.",
+    live="https://easyvibesuxui-sketch.github.io/IBSU-Landing/b/",
+    repo=None,
+    stack=["GSAP + Lenis", "Scroll-driven frames", "Georgian / English"],
+    ai=["Claude", "Generative imagery"],
+    notes=[
+      "Another answer to the IBSU brief. The story is optional — ‘Skip the "
+      "story’ sits in the top bar from the first frame, because the parent "
+      "checking fees should not have to sit through a film made for their "
+      "child.",
+      "Admission is four steps, and the step that matters most says so: "
+      "put IBSU, code 064, first at exam registration — it is what earns "
+      "the 20% priority grant.",
+      "The grant calculator applies only the highest single grant, the "
+      "rule the university\u2019s own fee page states, so the figure on "
+      "screen is not a best case nobody qualifies for.",
+    ],
+  ),
+
+  dict(
     slug="lust-photography",
     added="2026-09-26",
     status="in-progress",
     title="Lust Photography",
     kind="AI studio",
+    cats=["Landing"],
     year="2026",
     blurb="An AI photography studio with a Tuscan film look \u2014 sensual reels "
           "and stills of fictional muses, AI photoshoots for brands, and a "
@@ -71,6 +212,7 @@ LAB = [
     status="in-progress",
     title="UXAudit AI",
     kind="SaaS",
+    cats=["SaaS"],
     year="2026",
     blurb="Paste a URL and get a senior-level UX and CRO audit in about "
           "thirty seconds \u2014 graded against WCAG 2.1 and Nielsen\u2019s ten "
@@ -114,6 +256,7 @@ LAB = [
     status="in-progress",
     title="Giftly",
     kind="AI search",
+    cats=["Tools"],
     year="2026",
     blurb="A gift finder you describe a person to, not a product. You write "
           "\u201cmy dad who won\u2019t stop talking about coffee\u201d the way you\u2019d text "
@@ -152,6 +295,7 @@ LAB = [
     added="2026-09-11",
     title="Inverse",
     kind="B2B services + platform",
+    cats=["SaaS", "Dashboard"],
     year="2026",
     blurb="A Tbilisi stocktaking firm, and the tool its own counters use. A "
           "worker photographs a shelf, the system reads the still, counts what "
@@ -190,6 +334,7 @@ LAB = [
     added="2026-09-23",
     title="\u10dd\u10e0\u10d8 \u10d2\u10e3\u10da\u10d8 \u2014 Two Hearts",
     kind="Product",
+    cats=["SaaS"],
     year="2026",
     blurb="A Georgian platform for digital wedding invitations. Pick a "
           "template, write your own words, send one link \u2014 and the replies "
@@ -230,6 +375,7 @@ LAB = [
     added="2026-09-03",
     title="\u10e1\u10d0\u10d2\u10d0\u10dc\u10eb\u10e3\u10e0\u10d8\u10e1 \u10db\u10d0\u10e0\u10d0\u10d7\u10dd\u10dc\u10d8 \u2014 Treasure Marathon",
     kind="Campaign concept",
+    cats=["Landing"],
     year="2026",
     blurb="A campaign concept for TBC that turns four money habits into four "
           "noble houses. A treasure shatters into coins across the kingdom, "
@@ -271,6 +417,7 @@ LAB = [
     added="2026-09-03",
     title="Maison Ondine",
     kind="Lingerie e-commerce",
+    cats=["E-commerce"],
     year="2026",
     blurb="A lingerie house where the shop mechanics are the product. "
           "Hold-to-reveal instead of an age-gate button, motion backgrounds "
@@ -308,6 +455,7 @@ LAB = [
     added="2026-08-30",
     title="TerraMech",
     kind="Brand site",
+    cats=["Website", "Game"],
     year="2026",
     blurb="A site for a fictional heavy-plant maker whose company history is "
           "locked. You run an arcade shift on the yard \u2014 catch the loads, "
@@ -339,6 +487,7 @@ LAB = [
     added="2026-08-30",
     title="NAMI",
     kind="Hospitality",
+    cats=["Landing"],
     year="2026",
     blurb="A bathhouse and mountain garden at 2,025 m on the Goderdzi Pass \u2014 "
           "twelve saunas, four waters and a ritual timetable where something "
@@ -371,6 +520,7 @@ LAB = [
     added="2026-08-25",
     title="Chalet",
     kind="Marketing site",
+    cats=["Landing"],
     year="2026",
     blurb="A landing page for a fictional alpine villa atelier, built around one "
           "idea: the hero is an ink blueprint of a chalet that draws itself in as "
@@ -403,6 +553,7 @@ LAB = [
     added="2026-08-02",
     title="khomeriki.design",
     kind="Portfolio",
+    cats=["Website"],
     year="2026",
     blurb="This site. A portfolio with no framework and no page builder — "
           "a Python script generates thirty static pages from one shell, and "
@@ -429,6 +580,7 @@ LAB = [
     added="2026-08-22",
     title="GA Logistics",
     kind="Redesign",
+    cats=["Website"],
     year="2026",
     blurb="A redesign for a New Jersey trucking carrier — 200 power units, "
           "48 states, eight services and one dispatch desk. The brief was not "
@@ -465,6 +617,7 @@ LAB = [
     added="2026-08-22",
     title="IBSU — International Admission",
     kind="Concept",
+    cats=["Landing"],
     year="2026",
     blurb="A fourth answer to the IBSU brief, this time for the students "
           "arriving from abroad: twenty-six English-taught degrees, the "
@@ -499,6 +652,7 @@ LAB = [
     added="2026-08-16",
     title="Syniotec — Devices",
     kind="Product site",
+    cats=["Website"],
     year="2026",
     blurb="A showroom for seven telematics units that go on construction "
           "machinery — wired boxes reading the CAN bus, self-powered "
@@ -541,6 +695,7 @@ LAB = [
     added="2026-08-10",
     title="My ToolKit",
     kind="AI-built · Ad-funded",
+    cats=["Tools"],
     year="2026",
     blurb="Thirty-four browser utilities — JSON formatter, HEIC converter, PDF "
           "merge, hash generator, colour and contrast checker — every one of "
@@ -580,6 +735,7 @@ LAB = [
     added="2026-08-10",
     title="myclacks",
     kind="AI-built · Ad-funded",
+    cats=["Tools"],
     year="2026",
     blurb="Financial calculators — mortgage, loan, compound interest, "
           "retirement, tax, salary, debt-to-income — in fourteen languages "
@@ -617,6 +773,7 @@ LAB = [
     added="2026-08-10",
     title="Belly Bell",
     kind="AI-built · Ad-funded",
+    cats=["Tools"],
     year="2026",
     blurb="Pregnancy and fertility calculators — due date, ovulation, fertile "
           "window, contraction timer, week-by-week tracking — in six "
@@ -655,6 +812,7 @@ LAB = [
     added="2026-08-09",
     title="ClassyGreens",
     kind="AI-operated",
+    cats=["Website"],
     year="2026",
     blurb="A visual atelier that runs itself. Every image, every film, every "
           "line of copy and the site around them are generated — and the "
@@ -702,6 +860,7 @@ LAB = [
     added="2026-08-08",
     title="IBSU — The Ink Gallery",
     kind="Playable",
+    cats=["Game"],
     year="2026",
     blurb="A university prospectus you walk through. An ink stickman crosses a "
           "hand-drawn hall lined with six doors — Programs, Fees, Admission, "
@@ -734,6 +893,7 @@ LAB = [
     added="2026-08-02",
     title="IBSU — Entrant",
     kind="Concept",
+    cats=["Landing"],
     year="2026",
     blurb="An admissions site aimed squarely at school-leavers rather than at "
           "the university. Five scroll chapters — Vision, Programs, Admission, "
@@ -759,6 +919,7 @@ LAB = [
     added="2026-08-02",
     title="IBSU — Wisdom, carved in stone",
     kind="Concept",
+    cats=["Landing"],
     year="2026",
     blurb="The same brief taken the opposite way: marble instead of night, a "
           "serif voice, and the institution's numbers doing the talking. Built "

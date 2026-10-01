@@ -681,7 +681,9 @@ a.glass:hover::before, .glass.hoverable:hover::before,
 .tag:hover .fill { height: 42%; }
 .tagbar-note { margin-top: var(--s4); color: var(--paper-faint); }
 
-.wcard.is-out { display: none; }
+.wcard.is-out, .labcard.is-out { display: none; }
+/* /lab/: same bar, shorter — it sits above cards, not beside a rail */
+@media (min-width: 761px) { .tagbar.is-compact { height: clamp(150px, 20vh, 200px); } }
 .rail-empty { padding: var(--s7) var(--gut); color: var(--paper-faint); }
 
 @media (max-width: 760px) {

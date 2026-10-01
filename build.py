@@ -15,7 +15,7 @@ from cv import ROLES as CV_ROLES, EDUCATION, CERTS, LANGUAGES
 from lab import LAB
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-V = "222"                       # cache-buster for css/js
+V = "223"                       # cache-buster for css/js
 
 SITE = "https://khomeriki.design"
 EMAIL = "contact@khomeriki.design"
@@ -746,6 +746,10 @@ def page_work():
 
 
 # ================================================================ CRAFT
+# filter order on /lab/; a group shows only once an entry in lab.py uses it
+LAB_CATS = ["Landing", "Website", "Game", "SaaS", "Dashboard", "E-commerce", "Tools"]
+
+
 def page_lab():
     if not LAB:
         entries = '''    <p class="lead" data-rise>First builds are in progress. Check back shortly.</p>'''
@@ -792,7 +796,7 @@ def page_lab():
             wip = ('<span class="labwip mono">In progress</span>'
                    if e.get("status") == "in-progress" else '')
             blocks.append(f'''
-      <article class="labcard glass" data-glass-in>
+      <article class="labcard glass" data-glass-in data-tags="{"|".join(e.get("cats", []))}">
         {shot}
         <div class="labbody">
           <div class="labtop">
@@ -828,7 +832,10 @@ def page_lab():
 <section class="pane" style="padding-top:clamp(20px,3vh,40px)">
   <div class="wrap">
     <div class="slab mono tick">{count}</div>
-    <div class="labs">
+    <div class="tagbar is-compact" role="group" aria-label="Filter builds by type" aria-controls="labs"
+         data-order="{"|".join(LAB_CATS)}" data-noun="build" data-label="Filter builds by"></div>
+    <p class="tagbar-note mono" role="status" aria-live="polite"></p>
+    <div class="labs" id="labs" data-cards>
 {entries}
     </div>
   </div>
