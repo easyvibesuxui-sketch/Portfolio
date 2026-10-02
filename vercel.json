@@ -72,6 +72,15 @@
           "value": "public, max-age=31536000, immutable"
         }
       ]
+    },
+    {
+      "source": "/assets/cv/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
     }
   ],
   "redirects": [
@@ -104,6 +113,16 @@
       "source": "/work/tichera-elearn/",
       "destination": "/work/tichera/",
       "permanent": true
+    },
+    {
+      "source": "/cv",
+      "destination": "/assets/cv/Nodari_Khomeriki_CV.pdf",
+      "permanent": false
+    },
+    {
+      "source": "/cv/",
+      "destination": "/assets/cv/Nodari_Khomeriki_CV.pdf",
+      "permanent": false
     }
   ]
 }
