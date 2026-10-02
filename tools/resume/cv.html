@@ -1,166 +1,143 @@
 <!doctype html>
-<!-- Render: node tools/resume/render.mjs tools/resume/cv.html OUT.pdf  (Playwright + Chromium) -->
+<!-- The CV served at /cv. ATS CV, v3 — the khomeriki.design system on paper.
+     Render: node tools/resume/render.mjs tools/resume/cv.html OUT.pdf
+     Kept for parsers: one column, real text, standard section names, no
+     tables or icons, ligatures off, hyphenated words never split at a line
+     end, links as real annotations. Taken from the site: Inter for text,
+     Martian Mono for labels and dates (no letter-spacing — spaced capitals
+     extract as broken words), the "── Label" section tick, one accent. -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <title>Nodari Khomeriki — Senior Product Designer (UX/UI) — CV</title>
 <meta name="author" content="Nodari Khomeriki">
-<meta name="description" content="Senior Product Designer, UX/UI. B2B SaaS, fintech, data visualisation, design systems, mobile and AI product interfaces.">
-<meta name="keywords" content="Senior Product Designer, UX Designer, UI Designer, UX/UI, Product Design, Design Systems, Figma, User Research, Usability Testing, Prototyping, Wireframing, Information Architecture, Interaction Design, Data Visualization, SaaS, B2B, Fintech, Banking, Mobile, iOS, Android, Accessibility, WCAG, AI Product Design">
+<meta name="keywords" content="Senior Product Designer, UX Designer, UI Designer, UX/UI, Product Design, Design Systems, Figma, User Research, Usability Testing, Prototyping, Information Architecture, Interaction Design, Data Visualization, SaaS, B2B, Fintech, Mobile, iOS, Android, Accessibility, WCAG, AI">
 <style>
   @font-face { font-family: "Inter CV"; font-weight: 400; src: url(fonts/Inter-400.ttf) format("truetype"); }
   @font-face { font-family: "Inter CV"; font-weight: 500; src: url(fonts/Inter-500.ttf) format("truetype"); }
   @font-face { font-family: "Inter CV"; font-weight: 600; src: url(fonts/Inter-600.ttf) format("truetype"); }
   @font-face { font-family: "Inter CV"; font-weight: 700; src: url(fonts/Inter-700.ttf) format("truetype"); }
-  /* ATS rules this file keeps on purpose:
-     one column, real text (no text in images), standard section names,
-     no tables, no header/footer regions, no icons, ligatures off so
-     "fi"/"fl" extract as letters, dates in one consistent format. */
-  @page { size: A4; margin: 12mm 14mm 11mm; }
+  @font-face { font-family: "Mono CV"; font-weight: 400; src: url(fonts/MartianMono-400.ttf) format("truetype"); }
+
+  :root { --ink: #1f1f1f; --text: #3F3F3F; --faint: #8a8a8a; --hair: #e2e2e2; --acc: #FF005C; }
+  @page { size: A4; margin: 13mm 16mm 11mm; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { font-family: "Inter CV", "Liberation Sans", Arial, sans-serif; color: #2b2b2b;
-         font-size: 9.2pt; line-height: 1.36; font-variant-ligatures: none;
-         -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  html { font-family: "Inter CV", Arial, sans-serif; color: var(--text); font-size: 9.1pt; line-height: 1.45;
+         font-variant-ligatures: none; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   a { color: inherit; text-decoration: none; }
-  h1 { font-size: 21pt; font-weight: 700; letter-spacing: -.02em; color: #1a1a1a; line-height: 1.1; }
-  .headline { font-size: 11pt; font-weight: 600; color: #FF005C; margin-top: 3px; }
-  .contact { margin-top: 6px; color: #3F3F3F; font-size: 9pt; }
-  .contact span + span::before { content: " | "; color: #9a9a9a; }
-  h2 { font-size: 10pt; font-weight: 700; letter-spacing: 0; text-transform: uppercase;
-       color: #1a1a1a; margin: 10px 0 5px; padding-bottom: 2px; border-bottom: 1.2px solid #FF005C; }
-  p { margin: 0 0 4px; }
-  .job { margin-bottom: 6px; }
-  li, .row, .org { break-inside: avoid; }
-  h2 { break-after: avoid; }
-  .row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
-  .title { font-weight: 700; font-size: 10pt; color: #1a1a1a; }
-  .dates { font-weight: 500; color: #3F3F3F; white-space: nowrap; font-size: 9pt; }
-  .org { color: #3F3F3F; font-weight: 500; }
-  ul { margin: 3px 0 0 14px; }
-  li { margin-bottom: 1px; padding-left: 2px; }
-  li::marker { color: #FF005C; }
-  .skills p { margin-bottom: 3px; }
-  .skills b, .certs b { color: #1a1a1a; font-weight: 600; }
-  .muted { color: #555; }
-  .two { margin-bottom: 4px; }
+  a.lk { color: var(--ink); border-bottom: 1px solid var(--acc); }
+  b { font-weight: 600; color: var(--ink); }
+  .nw { white-space: nowrap; }
+  .mono { font-family: "Mono CV", monospace; font-size: 7.4pt; letter-spacing: 0; text-transform: uppercase; }
+
+  /* header: name at site scale, role in the accent, one contact line */
+  h1 { font-size: 26pt; font-weight: 700; letter-spacing: -.035em; line-height: 1; color: var(--ink); }
+  .role { font-size: 11.5pt; font-weight: 600; letter-spacing: -.015em; color: var(--acc); margin-top: 6px; }
+  .contact { margin-top: 8px; color: var(--text); font-size: 8.8pt; }
+  .contact span + span::before { content: "  ·  "; color: var(--faint); white-space: pre; }
+
+  /* section label = the site's ".slab .tick": a short rule, then mono caps */
+  h2 { display: flex; align-items: center; gap: 9px; margin: 13px 0 6px;
+       font-family: "Mono CV", monospace; font-weight: 400; font-size: 7.6pt; letter-spacing: 0;
+       text-transform: uppercase; color: var(--faint); break-after: avoid; }
+  h2::before { content: ""; width: 22px; height: 1px; background: var(--acc); }
+
+  .summary { font-size: 10.2pt; line-height: 1.5; color: var(--ink); max-width: 158mm; }
+
+  .job { padding: 6px 0 7px; border-top: 1px solid var(--hair); }
+  .job:first-of-type { border-top: 0; padding-top: 2px; }
+  .row { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; break-inside: avoid; }
+  .title { font-weight: 700; font-size: 10.2pt; letter-spacing: -.01em; color: var(--ink); }
+  .title span { font-weight: 500; color: var(--text); }
+  .dates { color: var(--faint); white-space: nowrap; }
+  ul { margin: 3px 0 0 13px; }
+  li { margin-bottom: 1.5px; padding-left: 2px; break-inside: avoid; }
+  li::marker { color: var(--acc); }
+  .earlier .row + .row { margin-top: 3px; }
+
+  .skills p { display: grid; grid-template-columns: 74px 1fr; margin-bottom: 2px; }
+  .edu .row + .row { margin-top: 3px; }
+  .certs p { margin-bottom: 3px; }
 </style>
 </head>
 <body>
 
 <h1>Nodari Khomeriki</h1>
-<div class="headline">Senior Product Designer (UX/UI) · B2B SaaS, Fintech &amp; Data Visualization</div>
+<div class="role">Senior Product Designer · UX/UI</div>
 <div class="contact">
   <span>Tbilisi, Georgia · Open to remote and relocation</span>
-  <span>contact@khomeriki.design</span>
-  <span>+995 99 460466</span>
+  <span><a href="mailto:contact@khomeriki.design">contact@khomeriki.design</a></span>
+  <span><a href="tel:+99599460466">+995 99 460466</a></span>
 </div>
-<div class="contact">
-  <span>Portfolio: khomeriki.design</span>
-  <span>LinkedIn: linkedin.com/in/nodari-khomeriki</span>
-  <span>Dribbble: dribbble.com/SimpleVibes</span>
+<div class="contact" style="margin-top:3px">
+  <span><a class="lk" href="https://www.khomeriki.design">khomeriki.design</a></span>
+  <span><a class="lk" href="https://www.linkedin.com/in/nodari-khomeriki"><span class="nw">linkedin.com/in/nodari-khomeriki</span></a></span>
 </div>
 
 <h2>Summary</h2>
-<p>Senior Product Designer with 8+ years designing B2B SaaS platforms, banking products and data-heavy interfaces for teams in Bremen, London, Amsterdam, Almaty, Dubai and Tbilisi. Currently leading UX/UI for syniotec’s construction and equipment-rental platforms (web and iOS/Android) used by firms including STRABAG, Kurt König and HOCH. Owns work end to end: user research, information architecture, interaction design, prototyping, design systems and design QA with engineering. A finance background (MSc Banking &amp; Finance, ACCA F1–F3) makes fintech and analytics products familiar ground, and hands-on front-end and AI-assisted building (Claude, Claude Code) closes the gap between design and the shipped product. 32 shipped products; 45 certifications including the Google AI Professional Certificate.</p>
+<p class="summary">Senior Product Designer with 8+ years in B2B SaaS, fintech and <span class="nw">data-heavy</span> products. I lead UX/UI for syniotec’s construction and rental platforms, used by STRABAG, Kurt König and HOCH, and own the work from research to design QA. Finance background; I prototype and ship with code and AI tools.</p>
 
-<h2>Core Skills</h2>
+<h2>Experience</h2>
+
+<div class="job">
+  <div class="row"><div class="title">Senior User Experience Designer <span>· syniotec</span></div><div class="dates mono">Jul 2021 – Present</div></div>
+  <ul>
+    <li>Lead UX/UI for a B2B SaaS suite (SAM, RAM) and its iOS/Android field apps, with 2 PMs and 4 developers.</li>
+    <li>Built the design system — tokens, components, states — that unifies 6 modules and 8 object types.</li>
+    <li>Redesigned rental handover and planning: unbilled hours now bill, and machine condition is signed on site.</li>
+    <li>Ran field research with dispatchers; moved shift, transport and workshop entry from office to mobile.</li>
+    <li>Designed <span class="nw">AI-read</span> handover reports and overuse alerts.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="row"><div class="title">UX/UI Designer <span>· Freelance</span></div><div class="dates mono">Feb 2018 – Present</div></div>
+  <ul>
+    <li><b>SEU University</b> — design lead for the website, student portal and staff registry console.</li>
+    <li><b>Deutsche Bank, Barclays, VEON</b> — chart systems and dashboards for analysts.</li>
+    <li><b>IOKA, Miniso, Opla, Tichera</b> — real-estate search, <span class="nw">e-commerce</span>, delivery apps, marketplaces.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="row"><div class="title">UX Consultant <span>· Halyk Bank Georgia</span></div><div class="dates mono">Apr 2020 – Oct 2021</div></div>
+  <ul>
+    <li>Designed mobile onboarding with <span class="nw">state-registry</span> checks: a clear next step for all seven outcomes.</li>
+    <li>Designed the <span class="nw">open-banking</span> consent portal and online deposit opening.</li>
+    <li>Created the bank’s design system; ran usability tests with retail customers.</li>
+  </ul>
+</div>
+
+<div class="job earlier">
+  <div class="row"><div class="title">Senior UX Designer <span>· LTD YIC, Amsterdam — information architecture</span></div><div class="dates mono">Mar 2021 – Dec 2021</div></div>
+  <div class="row"><div class="title">User Experience Designer <span>· Mult Georgia — <span class="nw">multi-vendor</span> marketplace</span></div><div class="dates mono">Mar 2020 – Aug 2021</div></div>
+  <div class="row"><div class="title">User Experience Designer <span>· Marketcolor, London — data visualization</span></div><div class="dates mono">Feb 2020 – Nov 2020</div></div>
+  <div class="row"><div class="title">Earlier career <span>· Financial Analyst, Project Manager</span></div><div class="dates mono">2015 – 2019</div></div>
+</div>
+
+<h2>Skills</h2>
 <div class="skills">
-  <p><b>Product &amp; UX:</b> Product Design, UX Design, UI Design, Interaction Design, User Research, Usability Testing, Field Research, Personas, User Journeys, User Flows, Information Architecture, Wireframing, Prototyping, Design QA, Accessibility (WCAG)</p>
-  <p><b>Systems &amp; Data:</b> Design Systems, Design Tokens, Component Libraries, Documentation, Data Visualization, Dashboards, Complex Tables &amp; Enterprise UI, Responsive Web, Mobile (iOS, Android), Tablet</p>
-  <p><b>Domains:</b> B2B SaaS, Construction Tech, Equipment Rental, Fintech, Retail &amp; Mobile Banking, Open Banking, Onboarding &amp; KYC, EdTech, E-commerce, Marketplaces, AI Product Interfaces</p>
-  <p><b>Tools &amp; Build:</b> Figma, HTML, CSS, JavaScript, GSAP, Claude, Claude Code, Model Context Protocol (MCP), AI image and video generation (Kling)</p>
-  <p><b>Ways of working:</b> Cross-functional collaboration with PMs and developers, Stakeholder Management, Workshop Facilitation, Design Ops, Leading and reviewing UI designers</p>
-</div>
-
-<h2>Professional Experience</h2>
-
-<div class="job">
-  <div class="row"><div class="title">Senior User Experience Designer</div><div class="dates">Jul 2021 – Present</div></div>
-  <div class="org">syniotec · Full-time · Tbilisi, Georgia (product used across Germany and Europe)</div>
-  <ul>
-    <li>Lead UX/UI design for a B2B SaaS suite for construction and equipment-rental companies: SAM (asset and resource management), RAM (rental management) and their iOS/Android field apps, working with 2 product managers and 4 developers.</li>
-    <li>Built and maintain the design system (design tokens, components, documented states) that keeps 6 modules and 8 object types consistent across desktop and mobile.</li>
-    <li>Designed planning board, dispatch, workshop, invoicing and machine-handover flows for customers including STRABAG, Kurt König and HOCH; rental hours that were previously invisible became billable, and handover condition is now signed and recorded.</li>
-    <li>Designed AI-assisted features: AI-read handover reports and overuse alerts in the rental platform.</li>
-    <li>Ran field research with dispatchers and site managers; moved shift, transport and workshop data entry onto site through the mobile apps, so the platform is current when it matters instead of hours behind.</li>
-    <li>Designed data visualization for utilization, availability and scheduling (calendar, map and planning-board views).</li>
-  </ul>
-</div>
-
-<div class="job">
-  <div class="row"><div class="title">UX/UI Designer (Freelance)</div><div class="dates">Feb 2018 – Present</div></div>
-  <div class="org">Independent · Tbilisi, Georgia · Remote clients in the UK, UAE and Georgia</div>
-  <ul>
-    <li><b>SEU – Georgian National University (Design Lead, 2024–2025):</b> led the public website and designed the student portal and staff registry console, where admissions, registrar, quality assurance, HR, finance and library teams edit one shared student record through one navigation model.</li>
-    <li><b>Deutsche Bank, Barclays, VEON (data visualization):</b> designed chart systems and dashboard views for financial analysts, a self-service charting tool for bank employees, and a chart and table component set for a 7-market telecom group.</li>
-    <li><b>IOKA (Dubai real-estate portal, 2025):</b> designed search around buyer intent (off-plan, resale, rental) so one catalogue serves both home buyers and investors.</li>
-    <li><b>Mobile and e-commerce:</b> courier and in-store picking apps (Opla), Miniso Georgia, Mult Georgia marketplace, Assorti, Home Market tablet app, 11 Corners tour marketplace (1,200 tours), Tichera tutoring marketplace, Meetsland dating platform, Neuro Pilot mental-health app.</li>
-    <li>Design, build and ship AI-assisted products end to end (web apps, SaaS tools, games) with Claude and Claude Code; 26 builds documented at khomeriki.design/lab.</li>
-  </ul>
-</div>
-
-<div class="job">
-  <div class="row"><div class="title">Senior UX Designer</div><div class="dates">Mar 2021 – Dec 2021</div></div>
-  <div class="org">LTD YIC · Contract · Amsterdam, Netherlands</div>
-  <ul>
-    <li>Researched user behavior and troubleshot problem flows; planned layouts and navigation structure.</li>
-    <li>Produced mood boards, wireframes, interactive prototypes and visual mockups through to handoff.</li>
-  </ul>
-</div>
-
-<div class="job">
-  <div class="row"><div class="title">UX Consultant</div><div class="dates">Apr 2020 – Oct 2021</div></div>
-  <div class="org">Halyk Bank Georgia · Contract · Tbilisi, Georgia</div>
-  <ul>
-    <li>Designed retail banking journeys for internet and mobile banking: balances, transfers, cards, payments and online deposit opening (product comparison moved ahead of the form).</li>
-    <li>Designed mobile app onboarding integrated with state-registry and bank-record checks: three fields and an SMS for the standard case, and a named next step for each of seven outcome paths instead of error codes.</li>
-    <li>Designed the open-banking consent portal, letting customers grant third-party access by scope, account and currency.</li>
-    <li>Created the design system and documented component states for the bank’s teams; designed the Visa/Mastercard card family and self-service terminal (ATM) interfaces; ran usability testing with retail customers.</li>
-  </ul>
-</div>
-
-<div class="job">
-  <div class="row"><div class="title">User Experience Designer</div><div class="dates">Mar 2020 – Aug 2021</div></div>
-  <div class="org">LTD Mult Georgia · Full-time · Tbilisi, Georgia</div>
-  <ul>
-    <li>Designed a multi-vendor marketplace (groceries to electronics) with one filter rail, one card grammar and a product page that adapts to the category.</li>
-    <li>Wrote product specifications, built personas from research and data, defined interaction models and measured their success.</li>
-  </ul>
-</div>
-
-<div class="job">
-  <div class="row"><div class="title">User Experience Designer</div><div class="dates">Feb 2020 – Nov 2020</div></div>
-  <div class="org">LTD Marketcolor · Full-time · London, United Kingdom</div>
-  <ul>
-    <li>Data visualization, UI and interaction design, prototyping, micro-animations and web design for a technical content agency serving finance, life sciences and technology clients.</li>
-  </ul>
-</div>
-
-<div class="job">
-  <div class="row"><div class="title">Earlier Career – Finance &amp; Operations</div><div class="dates">Sep 2015 – Jan 2019</div></div>
-  <ul>
-    <li><b>Monitoring Specialist,</b> LTD “Ori Nabiji”, Tbilisi (May 2018 – Jan 2019): internal control, inventory and balance monitoring across a national retail network.</li>
-    <li><b>Financial Analyst,</b> LTD GDG, Tbilisi (Feb 2016 – Jul 2016): marketing-campaign effectiveness and strategy planning with company leadership.</li>
-    <li><b>Project Manager,</b> LTD Smartcompany, Tbilisi (Sep 2015 – Feb 2016): distribution network, salary and bonus plans, hiring and training, sales growth.</li>
-  </ul>
+  <p><b>Research</b> User research, usability testing, field research, personas, journey mapping</p>
+  <p><b>Design</b> Interaction design, information architecture, wireframing, prototyping, design systems, design tokens, data visualization, accessibility (WCAG)</p>
+  <p><b>Platforms</b> B2B SaaS, fintech, mobile (iOS, Android), responsive web, dashboards</p>
+  <p><b>Tools</b> Figma, HTML, CSS, JavaScript, Claude Code</p>
 </div>
 
 <h2>Education</h2>
-<div class="two"><div class="row"><div><b>Master’s Degree, Banking, Finance and Insurance</b> — Georgian Technical University</div><div class="dates">2010 – 2012</div></div></div>
-<div class="two"><div class="row"><div><b>Bachelor’s Degree, Banking, Finance and Insurance</b> — Georgian Technical University</div><div class="dates">2006 – 2010</div></div></div>
-<div class="two"><div class="row"><div><b>UI/UX Designer Program</b> — Academy of Digital Industries</div><div class="dates">2019</div></div></div>
+<div class="edu">
+  <div class="row"><div><b>MSc, Banking, Finance and Insurance</b> — Georgian Technical University</div><div class="dates mono">2012</div></div>
+  <div class="row"><div><b>BSc, Banking, Finance and Insurance</b> — Georgian Technical University</div><div class="dates mono">2010</div></div>
+  <div class="row"><div><b>UI/UX Designer Program</b> — Academy of Digital Industries</div><div class="dates mono">2019</div></div>
+</div>
 
 <h2>Certifications</h2>
 <div class="certs">
-  <p><b>Google AI Professional Certificate</b> (2026) and 15 Google AI track courses, including AI in UX Design and AI for App Building</p>
-  <p><b>Anthropic</b> (2026): Building with the Claude API · Model Context Protocol: Advanced Topics · Claude Code in Action · Introduction to Subagents · Introduction to Agent Skills · AI Fluency Framework &amp; Foundations</p>
-  <p><b>Interaction Design Foundation</b>: AI for Designers (Distinction, top 10%, 2026) · UX Management: Strategy and Tactics · Accessibility: How to Design for All · Data-Driven Design: Quantitative Research for UX · Mobile UI Design · Emotional Design</p>
-  <p><b>ACCA</b>: F1 Business Accounting · F2 Managerial Accounting · F3 Financial Accounting</p>
-  <p class="muted">45 certifications in total, listed at khomeriki.design/experience</p>
+  <p><b>Google</b> AI Professional Certificate · <b>Anthropic</b> Building with the Claude API, Claude Code in Action</p>
+  <p><b>IxDF</b> AI for Designers (Distinction, top 10%), UX Management, Accessibility · <b>ACCA</b> F1–F3</p>
 </div>
 
 <h2>Languages</h2>
-<p>Georgian (Native) · English (Professional working proficiency) · Russian (Professional working proficiency) · German (Elementary, A2.2)</p>
+<p>Georgian (native) · English (professional) · Russian (professional) · German (A2)</p>
 
 </body>
 </html>
