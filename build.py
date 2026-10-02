@@ -15,14 +15,14 @@ from cv import ROLES as CV_ROLES, EDUCATION, CERTS, LANGUAGES
 from lab import LAB
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-V = "225"                       # cache-buster for css/js
+V = "226"                       # cache-buster for css/js
 
 SITE = "https://khomeriki.design"
 EMAIL = "contact@khomeriki.design"
 PHONE = "+995 99 460466"
 PHONE_HREF = "+99599460466"
 # the ATS-friendly CV, generated from tools/resume/cv.html; /cv redirects here
-CV_URL = "/assets/cv/Nodari_Khomeriki_CV.pdf"
+CV_URL = "/assets/cv/Nodari_Khomeriki_Senior_Product_Designer_CV.pdf"
 
 NAV = [
     ("work",       "/work/",       "Work"),
@@ -911,8 +911,8 @@ def page_experience():
 <section class="pane" style="padding-top:clamp(40px,6vh,80px)">
   <div class="wrap">
     <div class="cvdl" data-rise>
-      <a class="btn btn--fill mono" href="{CV_URL}" download="Nodari_Khomeriki_CV.pdf">Download CV · PDF</a>
-      <span class="mono">Two pages · roles, skills, education and certifications</span>
+      <a class="btn btn--fill mono" href="{CV_URL}" download="Nodari_Khomeriki_Senior_Product_Designer_CV.pdf">Download CV · PDF</a>
+      <span class="mono">One page · experience, skills, education and certifications</span>
     </div>
 
     <div class="stats" style="margin-top:0">
@@ -1015,10 +1015,10 @@ def page_contact():
         <div class="v">SimpleVibes ↗</div>
         <div class="m mono">Explorations and shots</div>
       </a>
-      <a class="ccard glass hoverable" href="{CV_URL}" download="Nodari_Khomeriki_CV.pdf" data-glass-in>
+      <a class="ccard glass hoverable" href="{CV_URL}" download="Nodari_Khomeriki_Senior_Product_Designer_CV.pdf" data-glass-in>
         <h4 class="mono">CV</h4>
         <div class="v">Download PDF ↓</div>
-        <div class="m mono">Two pages, for recruiters</div>
+        <div class="m mono">One page, for recruiters</div>
       </a>
     </div>
   </div>

@@ -116,13 +116,18 @@
     },
     {
       "source": "/cv",
-      "destination": "/assets/cv/Nodari_Khomeriki_CV.pdf",
+      "destination": "/assets/cv/Nodari_Khomeriki_Senior_Product_Designer_CV.pdf",
       "permanent": false
     },
     {
       "source": "/cv/",
-      "destination": "/assets/cv/Nodari_Khomeriki_CV.pdf",
+      "destination": "/assets/cv/Nodari_Khomeriki_Senior_Product_Designer_CV.pdf",
       "permanent": false
+    },
+    {
+      "source": "/assets/cv/Nodari_Khomeriki_CV.pdf",
+      "destination": "/assets/cv/Nodari_Khomeriki_Senior_Product_Designer_CV.pdf",
+      "permanent": true
     }
   ]
 }
