@@ -1,0 +1,144 @@
+<!doctype html>
+<!-- One-page "designer" CV for sending straight to a hiring manager.
+     Render: node tools/resume/render.mjs tools/resume/cv-onepage.html OUT.pdf
+     Label rail on the left, content on the right — but each row puts the
+     label first in the DOM, so the PDF is still one text stream an ATS can
+     read top to bottom. One typeface, black on white, one accent. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Nodari Khomeriki — Senior Product Designer — CV (one page)</title>
+<meta name="author" content="Nodari Khomeriki">
+<style>
+  @font-face { font-family: "Inter CV"; font-weight: 400; src: url(fonts/Inter-400.ttf) format("truetype"); }
+  @font-face { font-family: "Inter CV"; font-weight: 500; src: url(fonts/Inter-500.ttf) format("truetype"); }
+  @font-face { font-family: "Inter CV"; font-weight: 600; src: url(fonts/Inter-600.ttf) format("truetype"); }
+  @font-face { font-family: "Inter CV"; font-weight: 700; src: url(fonts/Inter-700.ttf) format("truetype"); }
+  @page { size: A4; margin: 15mm 16mm 13mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-family: "Inter CV", Arial, sans-serif; color: #2b2b2b; font-size: 8.7pt; line-height: 1.42;
+         font-variant-ligatures: none; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  a { color: inherit; text-decoration: none; }
+  a.lk { color: #1a1a1a; border-bottom: 1px solid #FF005C; }
+  b { font-weight: 600; color: #1a1a1a; }
+
+  header { padding-bottom: 10px; border-bottom: 1.5px solid #1a1a1a; }
+  h1 { font-size: 25pt; font-weight: 700; letter-spacing: -.03em; line-height: 1; color: #1a1a1a; }
+  .role { font-size: 11pt; font-weight: 500; color: #FF005C; margin-top: 6px; letter-spacing: -.01em; }
+  .contact { font-size: 8.4pt; color: #3F3F3F; margin-top: 7px; }
+
+  section { display: grid; grid-template-columns: 92px 1fr; gap: 0 18px;
+            padding: 7px 0; border-bottom: 1px solid #e3e3e3; }
+  section:last-child { border-bottom: 0; }
+  h2 { font-size: 7.6pt; font-weight: 600; text-transform: uppercase; letter-spacing: 0;
+       color: #8a8a8a; padding-top: 2px; }
+  .lead { font-size: 9.6pt; line-height: 1.45; color: #1a1a1a; }
+  .job + .job { margin-top: 6px; }
+  .row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .t { font-weight: 700; font-size: 9.4pt; color: #1a1a1a; }
+  .t span { font-weight: 500; color: #3F3F3F; }
+  .d { color: #6b6b6b; white-space: nowrap; font-size: 8.2pt; }
+  ul { margin: 3px 0 0 13px; }
+  li { margin-bottom: 1.5px; }
+  li::marker { color: #FF005C; }
+  .compact .row + .row { margin-top: 3px; }
+  .work { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 18px; }
+  .work div { padding-left: 9px; border-left: 2px solid #FF005C; }
+  .work b { display: block; }
+  .work span { color: #555; font-size: 8.2pt; }
+  p + p { margin-top: 3px; }
+  .nw { white-space: nowrap; }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Nodari Khomeriki</h1>
+    <div class="role">Senior Product Designer · B2B SaaS, Fintech &amp; Data Visualization</div>
+  </div>
+  <div class="contact">
+    <div><a class="lk" href="https://www.khomeriki.design">khomeriki.design</a> · <a href="mailto:contact@khomeriki.design">contact@khomeriki.design</a></div>
+    <div><a href="tel:+99599460466">+995 99 460466</a> · <a class="lk" href="https://www.linkedin.com/in/nodari-khomeriki"><span class="nw">linkedin.com/in/nodari-khomeriki</span></a></div>
+    <div>Tbilisi, Georgia · Open to remote and relocation</div>
+  </div>
+</header>
+
+<section>
+  <h2>Profile</h2>
+  <p class="lead">Senior product designer with 8+ years on B2B SaaS platforms, banking products and <span class="nw">data-heavy</span> interfaces. I lead UX/UI for syniotec’s construction and <span class="nw">equipment-rental</span> platforms, used by STRABAG, Kurt König and HOCH, and own the work from research to design QA. A finance degree makes fintech familiar ground; building with Claude Code closes the gap between design and shipped product.</p>
+</section>
+
+<section>
+  <h2>Experience</h2>
+  <div>
+    <div class="job">
+      <div class="row"><div class="t">Senior User Experience Designer <span>· syniotec</span></div><div class="d">Jul 2021 – Present</div></div>
+      <ul>
+        <li>Lead UX/UI for a B2B SaaS suite for construction and equipment rental — SAM, RAM and their iOS/Android field apps — with 2 PMs and 4 developers.</li>
+        <li>Built the design system (tokens, components, documented states) that keeps 6 modules and 8 object types reading as one product.</li>
+        <li>Designed planning, dispatch, workshop and <span class="nw">machine-handover</span> flows: previously invisible rental hours now bill, and handover condition is signed and recorded.</li>
+        <li>Moved shift, transport and workshop entry onto site through the mobile apps after field research with dispatchers and site managers; designed <span class="nw">AI-read</span> handover reports and overuse alerts.</li>
+      </ul>
+    </div>
+    <div class="job">
+      <div class="row"><div class="t">UX Consultant <span>· Halyk Bank Georgia</span></div><div class="d">Apr 2020 – Oct 2021</div></div>
+      <ul>
+        <li>Mobile onboarding with <span class="nw">state-registry</span> checks: three fields and an SMS for the standard case, a named next step for each of seven outcome paths.</li>
+        <li><span class="nw">Open-banking</span> consent portal (access by scope, account and currency), online deposit opening, the bank’s design system and Visa/Mastercard card family.</li>
+      </ul>
+    </div>
+    <div class="job">
+      <div class="row"><div class="t">UX/UI Designer <span>· Freelance</span></div><div class="d">Feb 2018 – Present</div></div>
+      <ul>
+        <li><b>SEU University</b> (Design Lead): website, student portal and a staff registry where seven departments edit one shared student record.</li>
+        <li><b>Deutsche Bank, Barclays, VEON:</b> chart systems for analysts, a <span class="nw">self-service</span> charting tool, a chart set for a <span class="nw">7-market</span> telecom group.</li>
+      </ul>
+    </div>
+    <div class="job compact">
+      <div class="row"><div class="t">Senior UX Designer <span>· LTD YIC, Amsterdam</span></div><div class="d">Mar 2021 – Dec 2021</div></div>
+      <div class="row"><div class="t">User Experience Designer <span>· Mult Georgia</span></div><div class="d">Mar 2020 – Aug 2021</div></div>
+      <div class="row"><div class="t">User Experience Designer <span>· Marketcolor, London</span></div><div class="d">Feb 2020 – Nov 2020</div></div>
+      <div class="row"><div class="t">Finance &amp; operations roles <span>· analyst, project manager, internal control</span></div><div class="d">2015 – 2019</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Selected work</h2>
+  <div class="work">
+    <div><b><a href="https://www.khomeriki.design/work/syniotec-sam/">Syniotec SAM &amp; RAM →</a></b><span>Planning, fleet and handover for construction and rental</span></div>
+    <div><b><a href="https://www.khomeriki.design/work/seu-admin/">SEU Registry →</a></b><span>One student record, many departments editing it</span></div>
+    <div><b><a href="https://www.khomeriki.design/work/halyk-onboarding/">Halyk onboarding →</a></b><span>Seven ways to already exist, each with a next step</span></div>
+    <div><b><a href="https://www.khomeriki.design/work/deutsche-bank/">Deutsche Bank →</a></b><span>A chart language for analysts reading dozens a day</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <div>
+    <p><b>Product &amp; UX</b> — user research, usability testing, information architecture, interaction design, prototyping, accessibility (WCAG), design QA</p>
+    <p><b>Systems &amp; data</b> — design systems and tokens, data visualization, dashboards, enterprise tables, iOS/Android, responsive web</p>
+    <p><b>Tools</b> — Figma, HTML/CSS/JavaScript, Claude, Claude Code, MCP</p>
+  </div>
+</section>
+
+<section>
+  <h2>Education</h2>
+  <div>
+    <div class="row"><div><b>MSc and BSc, Banking, Finance &amp; Insurance</b> — Georgian Technical University</div><div class="d">2006 – 2012</div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Certifications</h2>
+  <p>Google AI Professional Certificate · Anthropic: Claude API, MCP, Claude Code · IxDF: AI for Designers (Distinction, top 10%), UX Management, Accessibility · ACCA F1–F3 · <a class="lk" href="https://www.khomeriki.design/experience/">45 in total</a></p>
+</section>
+
+<section>
+  <h2>Languages</h2>
+  <p>Georgian (native) · English (professional) · Russian (professional) · German (A2)</p>
+</section>
+
+</body>
+</html>
