@@ -339,7 +339,7 @@ LAB = [
     blurb="A Georgian platform for digital wedding invitations. Pick a "
           "template, write your own words, send one link \u2014 and the replies "
           "come back as a list instead of ninety separate text messages.",
-    live="https://wedding-platform-omega.vercel.app/",
+    live="https://brideinvitation.com/",
     repo=None,
     stack=["Next.js", "Multi-tenant publishing", "i18n \u00d7 3"],
     ai=["Claude"],
