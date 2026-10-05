@@ -15,7 +15,7 @@ from cv import ROLES as CV_ROLES, EDUCATION, CERTS, LANGUAGES
 from lab import LAB
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-V = "226"                       # cache-buster for css/js
+V = "227"                       # cache-buster for css/js
 
 SITE = "https://khomeriki.design"
 EMAIL = "contact@khomeriki.design"
@@ -749,7 +749,7 @@ def page_work():
 
 # ================================================================ CRAFT
 # filter order on /lab/; a group shows only once an entry in lab.py uses it
-LAB_CATS = ["Landing", "Website", "Game", "SaaS", "Dashboard", "E-commerce", "Tools"]
+LAB_CATS = ["Live business", "Landing", "Website", "Game", "SaaS", "Dashboard", "E-commerce", "Tools"]
 
 
 def page_lab():
@@ -797,8 +797,12 @@ def page_lab():
             # rather than a work in progress.
             wip = ('<span class="labwip mono">In progress</span>'
                    if e.get("status") == "in-progress" else '')
+            # a build that earns or serves real users is worth saying so —
+            # it is the difference between a concept and a product
+            if e.get("business"):
+                wip = '<span class="labbiz mono">Live business</span>' + wip
             blocks.append(f'''
-      <article class="labcard glass" data-glass-in data-tags="{"|".join(e.get("cats", []))}">
+      <article class="labcard glass" data-glass-in data-tags="{"|".join(e.get("cats", []) + (["Live business"] if e.get("business") else []))}">
         {shot}
         <div class="labbody">
           <div class="labtop">
