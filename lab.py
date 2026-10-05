@@ -135,6 +135,64 @@ LAB = [
   ),
 
   dict(
+    slug="seu-development",
+    added="2026-10-05",
+    title="SEU Development",
+    kind="Concept redesign",
+    cats=["Website"],
+    year="2026",
+    blurb="A concept redesign for a Tbilisi residential developer — five projects "
+          "from finished homes in Saburtalo to the new district in Varketili, an "
+          "apartment search that starts from the view out of the window, and a "
+          "360° look inside before anyone books a visit.",
+    live="https://easyvibesuxui-sketch.github.io/Seu-development-refresh/",
+    repo=None,
+    stack=["Next.js", "Static export", "360° interior viewer"],
+    ai=["Claude"],
+    notes=[
+      "The search opens on the view, not the floor plan: park, city, the "
+      "Tbilisi Sea, mountains — then the number of bedrooms. People know what "
+      "they want to see in the morning long before they know how many square "
+      "metres they need.",
+      "Every project card carries the same four facts — status with its date, "
+      "district, apartment range, floors — so five buildings at five different "
+      "stages compare at a glance.",
+      "With off-plan sales the developer is the product. The about section "
+      "leads with the one claim a buyer is weighing — every project funded "
+      "from day one and delivered on time — and puts the finished university "
+      "buildings right behind it as proof.",
+    ],
+  ),
+
+  dict(
+    slug="ibsu-applicants-animated",
+    added="2026-10-05",
+    title="IBSU — Applicants, animated cut",
+    kind="Landing page",
+    cats=["Landing"],
+    year="2026",
+    blurb="The same IBSU admissions landing page re-shot as an animated film: it "
+          "opens on two children reading in a library of glowing marbles, the "
+          "scroll plays the story forward age by age, and the page arrives at "
+          "programmes, admission steps and the grant calculator.",
+    live="https://easyvibesuxui-sketch.github.io/IBSU-Landing/c/",
+    repo=None,
+    stack=["GSAP + Lenis", "Scroll-scrubbed video", "Georgian / English"],
+    ai=["Claude", "AI video"],
+    notes=[
+      "Variant C of one brief. The copy, the structure and the grant rules are "
+      "identical to the holographic version — only the visual register "
+      "changes, from cool hologram to warm animated characters. Two cuts of "
+      "the same page let the school choose a tone without rewriting a word.",
+      "Animated characters speak to the actual reader — a school-leaver and "
+      "the parent sitting next to them — rather than to the institution’s "
+      "picture of itself.",
+      "‘Skip the story’ stays in the top bar from the first frame. The film "
+      "is an invitation, never a gate in front of the fees.",
+    ],
+  ),
+
+  dict(
     slug="ibsu-applicants",
     added="2026-10-01",
     title="IBSU — Applicants",
