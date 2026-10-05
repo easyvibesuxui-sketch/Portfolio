@@ -15,7 +15,7 @@ from cv import ROLES as CV_ROLES, EDUCATION, CERTS, LANGUAGES
 from lab import LAB
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-V = "227"                       # cache-buster for css/js
+V = "228"                       # cache-buster for css/js
 
 SITE = "https://khomeriki.design"
 EMAIL = "contact@khomeriki.design"
@@ -801,12 +801,22 @@ def page_lab():
             # it is the difference between a concept and a product
             if e.get("business"):
                 wip = '<span class="labbiz mono">Live business</span>' + wip
+            # Labels used to sit inline in the h2: a long title pushed the
+            # second pill onto its own line, still carrying the inline
+            # margin, so it hung out of line with the title. They now ride
+            # on the screenshot's corner, so the title keeps one clean line
+            # and every title in a row starts at the same height.
+            badges = f'<div class="labbadges">{wip}</div>' if wip else ''
+            if has_shot and badges:
+                shot = f'<div class="labshot">{img}{badges}</div>'
+                badges = ''
             blocks.append(f'''
       <article class="labcard glass" data-glass-in data-tags="{"|".join(e.get("cats", []) + (["Live business"] if e.get("business") else []))}">
         {shot}
         <div class="labbody">
+          {badges}
           <div class="labtop">
-            <h2 class="h3">{e["title"]}{wip}</h2>
+            <h2 class="h3">{e["title"]}</h2>
           </div>
           <div class="labmeta mono">
             <span class="labyear">{e["kind"]}</span>
