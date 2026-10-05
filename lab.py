@@ -10,6 +10,9 @@ Fields
     added     YYYY-MM-DD it went on the site — the list sorts on this,
               newest first, so entries can be written in any order
     pin       "bottom" to hold an entry below the rest regardless of date
+    status    "in-progress" puts an In progress label on the card
+    business  True for a build that runs as a live business (real domain,
+              real users or revenue): Live business label + filter
     title     what it is called
     kind      one-word category shown as a chip
     cats      filter groups on /lab/, any of: Landing, Website, Game, SaaS,
@@ -24,6 +27,36 @@ Fields
 """
 
 LAB = [
+
+  dict(
+    slug="postcraft-ai",
+    added="2026-10-05",
+    status="in-progress",
+    business=True,
+    title="PostCraft AI",
+    kind="AI SaaS",
+    cats=["SaaS"],
+    year="2026",
+    blurb="A social-post generator: type one topic, pick the platform, and get "
+          "four image variants, a caption and a hashtag set sized for "
+          "Instagram, TikTok, YouTube Shorts, X, Facebook or LinkedIn — with "
+          "the image turned into a short loop for Reels in one click.",
+    live="https://postcraft-ai-alpha.vercel.app/",
+    repo=None,
+    stack=["Next.js", "Gemini API", "Image to video"],
+    ai=["Claude", "Gemini"],
+    notes=[
+      "The platform is chosen first, and everything downstream follows it: "
+      "image ratio, caption length and the number of hashtags. The user "
+      "never has to know that a story is 9:16 or that X cuts captions short.",
+      "Four images instead of one. Picking from a grid is faster than "
+      "rewriting a prompt, and it turns generation into a choice the user "
+      "makes rather than a result they have to accept.",
+      "Six languages including Georgian, written natively rather than "
+      "translated after the fact — the same post in two languages should "
+      "not read like a template.",
+    ],
+  ),
 
   dict(
     slug="space-odyssey",
@@ -312,7 +345,8 @@ LAB = [
     slug="giftly",
     added="2026-09-24",
     status="in-progress",
-    title="Giftly",
+    business=True,
+    title="Gifty",
     kind="AI search",
     cats=["Tools"],
     year="2026",
@@ -320,7 +354,7 @@ LAB = [
           "\u201cmy dad who won\u2019t stop talking about coffee\u201d the way you\u2019d text "
           "a friend, and it reads the sentence for meaning rather than "
           "matching keywords.",
-    live="https://giftly-aza.pages.dev/",
+    live="https://askgifty.com/gifts/",
     repo=None,
     stack=["Vector search", "Gemini embeddings", "Cloudflare Pages"],
     ai=["Claude", "Gemini"],
@@ -390,6 +424,8 @@ LAB = [
   dict(
     slug="wedding-platform",
     added="2026-09-23",
+    status="in-progress",
+    business=True,
     title="\u10dd\u10e0\u10d8 \u10d2\u10e3\u10da\u10d8 \u2014 Two Hearts",
     kind="Product",
     cats=["SaaS"],
@@ -397,7 +433,7 @@ LAB = [
     blurb="A Georgian platform for digital wedding invitations. Pick a "
           "template, write your own words, send one link \u2014 and the replies "
           "come back as a list instead of ninety separate text messages.",
-    live="https://brideinvitation.com/",
+    live="https://www.brideinvitation.com/",
     repo=None,
     stack=["Next.js", "Multi-tenant publishing", "i18n \u00d7 3"],
     ai=["Claude"],
@@ -749,6 +785,7 @@ LAB = [
 
   dict(
     slug="my-toolkits",
+    business=True,
     pin="bottom",
     added="2026-08-10",
     title="My ToolKit",
@@ -789,6 +826,7 @@ LAB = [
 
   dict(
     slug="myclacks",
+    business=True,
     pin="bottom",
     added="2026-08-10",
     title="myclacks",
@@ -827,6 +865,7 @@ LAB = [
 
   dict(
     slug="belly-bell",
+    business=True,
     pin="bottom",
     added="2026-08-10",
     title="Belly Bell",

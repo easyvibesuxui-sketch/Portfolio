@@ -4076,3 +4076,15 @@ h1,h2,h3,h4,.h1,.h2,.h3,.gh1,.gh2,.gfill-h,.gpin-h,.gclients-h,.gcta-mark {
 /* v225 · /experience/: the CV download leads the page, above the numbers */
 .cvdl { display: flex; align-items: center; flex-wrap: wrap; gap: 14px 22px; margin-bottom: clamp(28px, 4vh, 44px); }
 .cvdl span { color: var(--paper-faint); }
+
+/* v227 · lab: a build that runs as a business gets a filled pill, so it
+   reads apart from the outlined In progress label beside it */
+.labtop .labbiz {
+  display: inline-block; vertical-align: middle;
+  margin-left: 12px; transform: translateY(-2px);
+  padding: 5px 11px 4px; border-radius: 999px;
+  background: var(--ember-fill, #e6004f); color: #fff;
+  font-size: clamp(.5rem, .62vw, .6rem); letter-spacing: .12em;
+  text-transform: uppercase; white-space: nowrap;
+}
+.labtop .labbiz + .labwip { margin-left: 6px; }
