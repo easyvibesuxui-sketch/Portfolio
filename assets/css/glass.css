@@ -4088,3 +4088,21 @@ h1,h2,h3,h4,.h1,.h2,.h3,.gh1,.gh2,.gfill-h,.gpin-h,.gclients-h,.gcta-mark {
   text-transform: uppercase; white-space: nowrap;
 }
 .labtop .labbiz + .labwip { margin-left: 6px; }
+
+/* v228 · lab labels live on the screenshot's corner, not in the title.
+   Inline in the h2 they wrapped under long titles with a stray margin.
+   On the picture they need their own ground to stay legible. */
+.labshot .labbadges {
+  position: absolute; top: 12px; left: 12px; z-index: 2;
+  display: flex; flex-wrap: wrap; gap: 6px; max-width: calc(100% - 24px);
+}
+.labbody > .labbadges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.labbadges .labbiz, .labbadges .labwip {
+  display: inline-flex; align-items: center; margin: 0; transform: none;
+  padding: 5px 11px 4px; border-radius: 999px; line-height: 1;
+  font-size: clamp(.5rem, .62vw, .6rem); letter-spacing: .12em;
+  text-transform: uppercase; white-space: nowrap;
+  box-shadow: 0 2px 10px -4px rgba(0,0,0,.35);
+}
+.labbadges .labbiz { background: var(--ember-fill, #e6004f); color: #fff; border: 1px solid transparent; }
+.labbadges .labwip { background: #fff; color: var(--ember-ink); border: 1px solid var(--ember-ink); }
