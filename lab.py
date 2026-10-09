@@ -266,7 +266,7 @@ LAB = [
           "and stills of fictional muses, AI photoshoots for brands, and a "
           "web studio that builds creators their own platforms. Three "
           "businesses, one aesthetic, one page.",
-    live="https://lust-photography.khomerik-nod.workers.dev/",
+    live="https://lustyphotography.com/",
     repo=None,
     stack=["Cloudflare Workers", "Blur-to-reveal gallery", "Lead forms"],
     ai=["Claude", "AI image + video"],
