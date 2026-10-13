@@ -29,6 +29,36 @@ Fields
 LAB = [
 
   dict(
+    slug="mypoker",
+    added="2026-10-13",
+    title="MyPoker.ge",
+    kind="E-commerce concept",
+    cats=["E-commerce"],
+    year="2026",
+    blurb="A Georgian shop for poker gear and board games — chips, cards, "
+          "tables — that opens on a numbered wall of monochrome textures "
+          "instead of a product grid, sells whole table kits for a game night, "
+          "and lets you add items straight from labels on the scene.",
+    live="https://easyvibesuxui-sketch.github.io/Mypoker/",
+    repo=None,
+    stack=["HTML + CSS", "Vanilla JS", "GSAP + Lenis"],
+    ai=["Claude", "Kling"],
+    notes=[
+      "The first screen is the catalogue as an index: fifteen numbered "
+      "close-ups — felt, chips, card backs, dice — so the shop reads as a "
+      "considered object before it reads as a price list.",
+      "Three promises answer the three doubts of buying gear online: "
+      "next-day delivery in Tbilisi and free over 80 \u20be, original brands "
+      "like Bicycle and Copag checked before dispatch, and payment on "
+      "delivery with nothing paid up front.",
+      "Kits instead of a long list. Five table set-ups let a buyer choose the "
+      "format of the night first; the labels on each scene add the parts to "
+      "the cart directly.",
+      "The product imagery was generated with Kling, and the page says so.",
+    ],
+  ),
+
+  dict(
     slug="postcraft-ai",
     added="2026-10-05",
     status="in-progress",
