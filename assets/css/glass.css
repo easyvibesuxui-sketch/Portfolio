@@ -4106,3 +4106,60 @@ h1,h2,h3,h4,.h1,.h2,.h3,.gh1,.gh2,.gfill-h,.gpin-h,.gclients-h,.gcta-mark {
 }
 .labbadges .labbiz { background: var(--ember-fill, #e6004f); color: #fff; border: 1px solid transparent; }
 .labbadges .labwip { background: #fff; color: var(--ember-ink); border: 1px solid var(--ember-ink); }
+
+/* v230 · work images in full colour. The cards used to print every cover
+   grey and darkened under a gradient, which made thirty-two different
+   products look like one murky one. The label sits below the image, so the
+   gradient protected nothing. Colour stays on; hover is a slow push-in. */
+.wshot, .selshot { background: #e2e2e2; }
+.wshot::after { background: none; box-shadow: inset 0 0 0 1px rgba(0,0,0,.06); border-radius: inherit; }
+.wshot img, .wcard:hover .wshot img,
+.selshot img, .selcard:hover .selshot img { filter: none; }
+.wshot img, .selshot img { transform: scale(1); }
+@media (hover: hover) {
+  .wcard:hover .wshot img, .selcard:hover .selshot img { transform: scale(1.035); }
+}
+
+/* v230 · case-study frames: lighter on the light ground. A near-black
+   shadow under a grey window read as a hole in the page; a soft, wide
+   shadow and a hairline edge read as an object resting on it. */
+.shot.is-browser {
+  box-shadow:
+    0 0 0 1px rgba(0,0,0,.07),
+    0 30px 60px -34px rgba(0,0,0,.38),
+    0 6px 16px -10px rgba(0,0,0,.18);
+}
+.shot.is-browser .chrome { background: #f4f4f4; border-bottom-color: rgba(0,0,0,.07); }
+.shot.is-browser .dots i:first-child { background: #ff5f57; }
+.shot.is-browser .dots i:nth-child(2) { background: #febc2e; }
+.shot.is-browser .dots i:last-child  { background: #28c840; }
+.shot.is-browser .url { background: #e6e6e6; color: #6b6b6b; }
+
+/* phone: a slimmer, darker bezel with side keys, closer to the hardware */
+.phone {
+  padding: 7px; border-radius: 46px;
+  background: #1b1b1d;
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.10),
+    inset 0 0 0 3px #2a2a2d,
+    0 36px 60px -30px rgba(0,0,0,.55),
+    0 10px 20px -12px rgba(0,0,0,.30);
+}
+.phone::before, .phone::after {
+  content: ""; position: absolute; width: 3px; border-radius: 2px; background: #2a2a2d;
+}
+.phone::before { left: -3px; top: 20%; height: 9%; box-shadow: 0 46px 0 #2a2a2d; }
+.phone::after  { right: -3px; top: 26%; height: 13%; }
+.phone img { border-radius: 39px; }
+.phone .notch { top: 15px; width: 30%; height: 22px; border-radius: 12px; background: #0d0d0e; }
+@media (max-width: 700px) {
+  .phone { padding: 6px; border-radius: 34px; }
+  .phone img { border-radius: 28px; }
+  .phone .notch { top: 11px; height: 15px; border-radius: 9px; }
+}
+
+/* v230 · a device cover on a light presentation image keeps it light:
+   the image goes soft behind the device instead of being pushed to dark. */
+.cover.is-device.is-light { background: #e2e2e2; }
+.cover.is-device.is-light .cover-bg { filter: blur(18px) saturate(.9); transform: scale(1.1); opacity: .55; }
+.cover.is-device.is-light::after { background: linear-gradient(180deg, rgba(235,235,235,.25), rgba(226,226,226,.55)); }
