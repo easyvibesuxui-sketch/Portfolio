@@ -4163,3 +4163,18 @@ h1,h2,h3,h4,.h1,.h2,.h3,.gh1,.gh2,.gfill-h,.gpin-h,.gclients-h,.gcta-mark {
 .cover.is-device.is-light { background: #e2e2e2; }
 .cover.is-device.is-light .cover-bg { filter: blur(18px) saturate(.9); transform: scale(1.1); opacity: .55; }
 .cover.is-device.is-light::after { background: linear-gradient(180deg, rgba(235,235,235,.25), rgba(226,226,226,.55)); }
+
+/* v231 · contact cards: each channel gets one of the house creatures
+   (Kling, cut out by tools/contact_icons.py). No arrows: the card itself
+   is the link. The creature leans in on hover. */
+.ccard { position: relative; }
+.ccard .cico {
+  display: block; width: 88px; height: 88px; margin: -6px 0 14px -6px;
+  filter: drop-shadow(0 10px 8px rgba(0,0,0,.16));
+  transform-origin: 50% 90%;
+  transition: transform .6s cubic-bezier(.22,1,.36,1);
+}
+@media (hover: hover) {
+  .ccard:hover .cico { transform: translateY(-4px) rotate(-4deg) scale(1.04); }
+}
+@media (max-width: 520px) { .ccard .cico { width: 72px; height: 72px; } }
