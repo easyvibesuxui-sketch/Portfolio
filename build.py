@@ -15,7 +15,7 @@ from cv import ROLES as CV_ROLES, EDUCATION, CERTS, LANGUAGES
 from lab import LAB
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-V = "230"                       # cache-buster for css/js
+V = "231"                       # cache-buster for css/js
 
 SITE = "https://khomeriki.design"
 EMAIL = "contact@khomeriki.design"
@@ -463,8 +463,8 @@ def footer(peek=True):
       <div>
         <h4 class="mono">Elsewhere</h4>
         <ul class="mono">
-          <li><a href="https://www.linkedin.com/in/nodari-khomeriki" target="_blank" rel="noopener">LinkedIn ↗</a></li>
-          <li><a href="https://dribbble.com/SimpleVibes" target="_blank" rel="noopener">Dribbble ↗</a></li>
+          <li><a href="https://www.linkedin.com/in/nodari-khomeriki" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://dribbble.com/SimpleVibes" target="_blank" rel="noopener">Dribbble</a></li>
         </ul>
       </div>
       <div>
@@ -712,8 +712,8 @@ def page_home():
       <p>Interfaces for money, data and machines. Designed in Tbilisi, shipped globally.</p>
     </div>
     <div class="s9-r">
-      <a class="s9-link" href="mailto:{EMAIL}">{EMAIL} <i>&#8599;</i></a>
-      <a class="s9-link" href="tel:{PHONE_HREF}">{PHONE} <i>&#8599;</i></a>
+      <a class="s9-link" href="mailto:{EMAIL}">{EMAIL}</a>
+      <a class="s9-link" href="tel:{PHONE_HREF}">{PHONE}</a>
       <nav class="s9-nav">
         <a href="/work/" data-trans="Work">Work</a>
         <a href="/lab/" data-trans="AI Lab">AI Lab</a>
@@ -1021,28 +1021,33 @@ def page_contact():
   <div class="wrap">
     <div class="ccards">
       <a class="ccard glass hoverable" href="mailto:{EMAIL}" data-glass-in>
+        <img class="cico" src="/assets/contact/email.webp?v={V}" alt="" width="88" height="88" loading="lazy">
         <h4 class="mono">Email</h4>
         <div class="v">{EMAIL}</div>
         <div class="m mono">Best for project enquiries</div>
       </a>
       <a class="ccard glass hoverable" href="tel:{PHONE_HREF}" data-glass-in>
+        <img class="cico" src="/assets/contact/phone.webp?v={V}" alt="" width="88" height="88" loading="lazy">
         <h4 class="mono">Phone</h4>
         <div class="v">{PHONE}</div>
         <div class="m mono">Tbilisi · GMT+4</div>
       </a>
       <a class="ccard glass hoverable" href="https://www.linkedin.com/in/nodari-khomeriki" target="_blank" rel="noopener" data-glass-in>
+        <img class="cico" src="/assets/contact/linkedin.webp?v={V}" alt="" width="88" height="88" loading="lazy">
         <h4 class="mono">LinkedIn</h4>
-        <div class="v">nodari-khomeriki ↗</div>
+        <div class="v">nodari-khomeriki</div>
         <div class="m mono">Roles and referrals</div>
       </a>
       <a class="ccard glass hoverable" href="https://dribbble.com/SimpleVibes" target="_blank" rel="noopener" data-glass-in>
+        <img class="cico" src="/assets/contact/dribbble.webp?v={V}" alt="" width="88" height="88" loading="lazy">
         <h4 class="mono">Dribbble</h4>
-        <div class="v">SimpleVibes ↗</div>
+        <div class="v">SimpleVibes</div>
         <div class="m mono">Explorations and shots</div>
       </a>
       <a class="ccard glass hoverable" href="{CV_URL}" download="Nodari_Khomeriki_Senior_Product_Designer_CV.pdf" data-glass-in>
+        <img class="cico" src="/assets/contact/cv.webp?v={V}" alt="" width="88" height="88" loading="lazy">
         <h4 class="mono">CV</h4>
-        <div class="v">Download PDF ↓</div>
+        <div class="v">Download PDF</div>
         <div class="m mono">One page, for recruiters</div>
       </a>
     </div>
