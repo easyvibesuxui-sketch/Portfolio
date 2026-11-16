@@ -51,7 +51,7 @@ Tools need `numpy`, `opencv-python`, `Pillow`, and `ffmpeg` for the video grader
 ## Common tasks
 
 - **Add/edit a project card:** `PROJECTS` in `build.py`. Its case study lives in `CASES[slug]` in `cases.py`.
-- **Add an AI Lab entry:** copy a block in `lab.py`, add `assets/lab/<slug>.jpg`. Lab cards must show a **real screenshot of the project's live site** (1200×600 JPG).
+- **Add an AI Lab entry:** copy a block in `lab.py`, add `assets/lab/<slug>.jpg`. Lab cards show a **real screenshot of the project's live site set into the laptop mockup** (1200×600 JPG): `tools/lab_mockup/shoot.mjs` then `compose.py` (see its docstring). Bump `V` when replacing an image.
 - **Rename/move a page:** add a permanent redirect in `vercel.json`, don't break old URLs.
 - **New page:** add a `page_*` function and register it in `PAGES`.
 
