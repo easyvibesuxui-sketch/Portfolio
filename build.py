@@ -15,7 +15,7 @@ from cv import ROLES as CV_ROLES, EDUCATION, CERTS, LANGUAGES
 from lab import LAB
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-V = "229"                       # cache-buster for css/js
+V = "230"                       # cache-buster for css/js
 
 SITE = "https://khomeriki.design"
 EMAIL = "contact@khomeriki.design"
@@ -174,6 +174,17 @@ def flat_edge(path):
         return None
     r, g, b = cols.mean(0).round().astype(int)
     return f"rgb({r},{g},{b})"
+
+
+def is_light(path):
+    """True when an image is mostly a light ground (a presentation on
+    #e2e2e2): darkening it behind a device turns it to mud, so such covers
+    keep their light ground. False without Pillow."""
+    try:
+        from PIL import Image, ImageStat
+        return ImageStat.Stat(Image.open(path).convert("L")).mean[0] > 175
+    except Exception:
+        return False
 
 
 def widened(slug, path):
@@ -1232,7 +1243,8 @@ def page_case(idx):
                      f'<img src="{src}" alt="{alt}"></span>'
                      f'<span class="base"><i></i></span></span>')
             kind = "laptop"
-        return (f'<figure class="cover is-device is-{kind}" data-glass-in>'
+        light = " is-light" if is_light(cover_src) else ""
+        return (f'<figure class="cover is-device is-{kind}{light}" data-glass-in>'
                 f'<img class="cover-bg" src="{cover_url}" alt="" aria-hidden="true">'
                 f'{inner}</figure>')
 
