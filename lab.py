@@ -31,6 +31,7 @@ LAB = [
   dict(
     slug="hadal-house",
     added="2026-11-25",
+    business=True,
     title="Hadal House",
     kind="Editorial site",
     cats=["Website"],
