@@ -29,6 +29,36 @@ Fields
 LAB = [
 
   dict(
+    slug="hadal-house",
+    added="2026-11-25",
+    title="Hadal House",
+    kind="Editorial site",
+    cats=["Website"],
+    year="2026",
+    blurb="A field guide to the ocean read as a descent: scroll from the "
+          "sunlit surface to the bottom of the Challenger Deep, 10,935 m down, "
+          "and meet the animals of each zone, the giants first, then the myths "
+          "sailors told about what they saw.",
+    live="https://easyvibesuxui-sketch.github.io/Test/",
+    repo=None,
+    stack=["HTML + CSS", "Vanilla JS", "WebGL", "Web Audio"],
+    ai=["Claude", "Kling"],
+    notes=[
+      "Scroll is depth. The page colour moves through five zones, from "
+      "surface foam to hadal black, and a fixed gauge reads out the depth, "
+      "light, pressure and water temperature as you go down.",
+      "39 entries: 31 real animals and 8 myths. The eight giants come first, "
+      "each with a bar drawn to scale against a 40 m siphonophore and a mark "
+      "for a 1.8 m person.",
+      "Kling footage runs under a WebGL floodlight, like an ROV camera; "
+      "without WebGL the page keeps its gauge, colour and depth rail.",
+      "A sonar ping at the bottom times its echo from the Challenger Deep, "
+      "the way ships measure depth. The illustrations and the nautilus mark "
+      "are Kling-generated, and the page says so.",
+    ],
+  ),
+
+  dict(
     slug="mypoker",
     added="2026-10-13",
     title="MyPoker.ge",
