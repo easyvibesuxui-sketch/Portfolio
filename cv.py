@@ -147,3 +147,11 @@ LANGUAGES = [
  ("Russian", "Professional working proficiency", 75),
  ("German", "Elementary proficiency · Goethe A2.2", 35),
 ]
+
+
+# ── tools ────────────────────────────────────────────────────────────────
+# (group, [tools]) — shown on /experience and in the portfolio PDF
+TOOLS = [
+ ("Design", ["Figma", "Adobe XD", "Photoshop", "Illustrator", "InDesign"]),
+ ("AI", ["Claude", "Claude Code", "Gemini", "Grok", "Midjourney", "Kling", "Higgsfield"]),
+]

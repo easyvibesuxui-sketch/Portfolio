@@ -17,6 +17,7 @@ sys.path.insert(0, ROOT)
 import build                      # noqa: E402  (PROJECTS, SERVICES, STEPS, SITE …)
 from cases import CASES           # noqa: E402
 from lab import LAB               # noqa: E402
+from cv import TOOLS              # noqa: E402
 
 OUT = os.path.abspath(sys.argv[1])
 HERO = sys.argv[2] if len(sys.argv) > 2 else None
@@ -162,6 +163,8 @@ page(f"""
       </div>
       <div class="kicker mono" style="margin-top:34px">Selected clients &amp; employers</div>
       <div class="clients">{''.join(f'<span>{c}</span>' for c in clients)}</div>
+      <div class="kicker mono" style="margin-top:26px">Tools</div>
+      <div class="clients tools">{''.join(f'<span>{t}</span>' for _, ts in TOOLS for t in ts)}</div>
     </div>
   </div>
 """)

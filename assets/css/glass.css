@@ -4192,3 +4192,9 @@ h1,h2,h3,h4,.h1,.h2,.h3,.gh1,.gh2,.gfill-h,.gpin-h,.gclients-h,.gcta-mark {
 .ccard--docs .v a:hover { color: var(--ember); border-bottom-color: currentColor; }
 /* the address breaks after the @, never mid-word */
 .ccard .v { word-break: normal; overflow-wrap: anywhere; }
+
+/* v236 · /experience tools: two groups of chips */
+.toolset { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%,320px),1fr)); gap: var(--s4); margin-top: clamp(28px,4vh,52px); }
+.toolgrp { padding: clamp(20px,2.4vw,30px); border-radius: var(--rad); }
+.toolgrp h4 { color: var(--paper-faint); font-weight: 400; margin-bottom: 14px; }
+.toolchips { display: flex; flex-wrap: wrap; gap: 8px 10px; }
