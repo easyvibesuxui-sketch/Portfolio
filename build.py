@@ -41,7 +41,7 @@ PROJECTS = [
  ("seu-admin","SEU · Registry","EdTech","SaaS|Data viz","Staff console. One student record, thirty departments editing it."),
  ("syniotec-sam","Syniotec · SAM","SaaS","SaaS|Data viz","Platform for construction companies. Equipment and people planned as one crew."),
  ("syniotec-ram","Syniotec · RAM","SaaS","SaaS|AI","Platform for rental companies. Planning board, overuse alerts and AI-read handovers."),
- ("syniotec-sam-mobile","Syniotec · SAM Mobile","Field app","Mobile|SaaS","Software Asset Manager on site. Shifts, transport, workshop and equipment."),
+ ("syniotec-sam-mobile","Syniotec · SAM Mobile","Field app","Mobile|SaaS","Smart Asset Manager on site. Shifts, transport, workshop and equipment."),
  ("syniotec-ram-mobile","Syniotec · RAM Mobile","Field app","Mobile|SaaS","Rental Asset Manager on site. Fleet, contracts, tasks and handover in four tabs."),
  ("halyk-bank","Halyk Bank Georgia","Fintech","Fintech|Brand &amp; Web","Internet bank. The deposit-opening flow, rebuilt around the choice rather than the form."),
  ("halyk-onboarding","Halyk · Onboarding","Fintech","Fintech|Mobile","Mobile app registration. Three fields, two state lookups and seven ways it can end."),
