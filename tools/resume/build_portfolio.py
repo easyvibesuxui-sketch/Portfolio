@@ -150,8 +150,8 @@ page(f"""
       <p>Today I lead UX/UI for syniotec’s construction and equipment-rental platforms, web and iOS/Android,
       used by firms including STRABAG, Kurt König and HOCH. I own work end to end: research, information
       architecture, interaction design, prototyping, design systems and design QA with engineering.</p>
-      <p>A finance degree and ACCA papers make fintech and analytics familiar ground, and I build:
-      hand-written front-end and AI-assisted products shipped with Claude and Claude Code.</p>
+      <p>A finance degree and ACCA papers make fintech and analytics familiar ground, and AI tools take my
+      ideas past the mock-up: prototypes and live products shipped with Claude and Claude Code.</p>
     </div>
     <div>
       <div class="stats">

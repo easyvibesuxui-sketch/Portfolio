@@ -76,7 +76,7 @@ SERVICES = [
  ("Fintech &amp; data visualisation","Dashboards, reporting and trading-grade density. Making high-stakes numbers readable at a glance."),
  ("AI product interfaces","Interaction patterns for models that are probabilistic — trust, transparency, correction and graceful failure."),
  ("Mobile &amp; web apps","iOS, Android and responsive web experiences built to survive real usage, not just the case study."),
- ("Brand &amp; front-end","Identity systems and hand-built front-end when the interface deserves to be executed exactly as designed."),
+ ("Web &amp; brand","Marketing sites and the visual layer around a product — card families, campaign pages — specified so engineering builds them as designed."),
 ]
 
 # (title, one-line summary, longer description)
@@ -102,7 +102,7 @@ STEPS = [
 ]
 
 CAPS = ["Figma","Design systems","Prototyping","User research","Usability testing","Information architecture",
-        "Data visualisation","Design tokens","WCAG accessibility","HTML / CSS","JavaScript","GSAP",
+        "Data visualisation","Design tokens","WCAG accessibility","Claude Code","AI prototyping",
         "Design ops","Workshop facilitation","Design QA","AI product patterns"]
 
 
@@ -855,7 +855,7 @@ def page_lab():
         "/lab/", "lab") + nav("lab") + phead(
         "AI Lab",
         "Built with AI.", "Shipped anyway.",
-        "A designer who can build changes what is worth proposing. These are the ones that made it to a URL — with the parts that fought back written down."
+        "A designer who can prototype with AI changes what is worth proposing. These are the ones that made it to a URL — with the parts that fought back written down."
     ) + f'''
 <main>
 

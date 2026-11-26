@@ -24,7 +24,7 @@ ROLES = [
  ("UX/UI Designer", "Freelance", "Independent", "Tbilisi, Georgia",
   "Feb 2018 — Present", "8 yrs 7 mos", [
     "End-to-end product and interface design for clients across fintech, retail, hospitality and media",
-    "Brand systems and hand-built front-end where the execution has to match the design exactly",
+    "Brand systems and marketing websites, specified so engineering can build them as designed",
   ]),
  ("Senior UX Designer", "Contract", "LTD YIC", "Amsterdam, Netherlands",
   "Mar 2021 — Dec 2021", "10 mos", [
