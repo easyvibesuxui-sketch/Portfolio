@@ -47,7 +47,7 @@ ROLES = [
     "Defining the right interaction model and evaluating its success",
     "Wireframes and prototypes around customer needs",
   ]),
- ("User Experience Designer", "Full-time", "LTD Marketcolor", "Greater London, United Kingdom",
+ ("User Interface Designer", "Full-time", "LTD Marketcolor", "Greater London, United Kingdom",
   "Feb 2020 — Nov 2020", "10 mos", [
     "Data visualisation, user interface and interaction design",
     "Mockups, product design and prototyping",
