@@ -310,6 +310,10 @@ CASES = {
        "VDBUM protocols on a phone, with photographs and a signature, stored as PDF.",
        ["A technical inspection is a compliance artefact that has to survive years and an auditor. Completing it on the machine, with the photographs taken there and the examiner's signature attached, is the difference between a record and a reconstruction.",
         "Filing it back into the equipment profile as a PDF means the proof lives with the asset rather than in somebody's folder."]),
+      ("One vocabulary for eight objects",
+       "The design system: tokens, components and every state, decided once.",
+       ["Six modules and eight object types were built by different people in different quarters. What keeps them reading as one product is the library underneath: a named palette with its own status colours, two typefaces with fixed roles, buttons and inputs drawn in every state, tables in three densities and one administration page layout every module is assembled into.",
+        "It is written up as its own case study \u2014 <a href=\"/work/syniotec-ds/\">the syniotec design system</a>."]),
       ("Navigation and requests, tested against each other",
        "A/B tests with construction users before the redesign shipped.",
        ["As modules were added, the sidebar had become a list of everything the product could do. I regrouped it around the four things a planner thinks in \u2014 projects, equipment, personnel and collaboration \u2014 as a compact, collapsible rail that shows either icons or module names, and tested the variants with construction users rather than choosing between them in a review.",
@@ -845,6 +849,85 @@ CASES = {
     title="What I would keep from this one",
     body=["Finding the two moments that decide the money \u2014 and designing those first \u2014 was worth more than any improvement to the ninety per cent of the rental that is uneventful.",
           "The AI in the handover is also the shape I would repeat elsewhere. It reads what is tedious and obvious, proposes it, and stops. The signature stays human, because the document only has value if somebody is accountable for it."]),
+),
+
+# ══════════════════════════════════════════════════ SYNIOTEC · DESIGN SYSTEM
+"syniotec-ds": dict(
+  headline="Forty-two pages so six modules read as one product: the syniotec design system",
+  sub="The Figma library behind SAM \u2014 colour, type, components with every state written down, and the page layouts the modules are assembled from.",
+  role="Senior UX/UI Designer", timeline="Jul 2021 \u2014 present",
+  team="2 PM, 4 developers",
+  shots="plain",
+  cover="card",
+
+  challenge=C(
+    "A platform that grows a module at a time drifts a screen at a time.",
+    ["SAM plans projects, equipment, personnel, crews, warehouses, dispatch and workshop. Each module arrived with its own deadline, and without a shared vocabulary each one would have invented its own buttons, its own tables and its own idea of what a status looks like.",
+     "The users notice that drift long before anybody in the office does. A dispatcher who learns where the filter lives on one screen should find it in the same place on the next, and a red badge has to mean the same thing in the workshop as it does in planning."],
+    ("Opportunity", "Decide things once",
+     "Every decision written into the library is a decision the next module does not have to make, argue about or get wrong.")),
+
+  discovery=None,
+  insight=dict(
+    quote="A component is not finished when it looks right. It is finished when every state it can be in is drawn.",
+    body=["Developers do not build the default state; they build all of them, and the ones nobody drew get improvised. So the library documents hover, focus, disabled and loading with the same care as the resting state, and specifies inputs down to the pixel and the colour code.",
+          "That is what lets a screen be assembled from parts instead of designed from scratch, and what lets a developer build it without coming back to ask."]),
+
+  solution=dict(
+    lead="Foundations, components and page patterns, in one Figma library.",
+    body=["The library runs to 42 pages: colour, typography and icons; inputs, dropdowns, checkboxes, switches, sliders, tabs, tooltips, toasts, popups, accordions, drawers and upload; date, time and date-time pickers; data sheets and filters; status, banners, notifications, the map and the administration page layout.",
+          "Each page shows the component and the rules for using it side by side, so the same file serves the designer choosing a part and the developer building it."],
+    decisions=[
+      ("A palette with names, roles and four grounds",
+       "One primary red, six secondary colours, neutrals and four status colours.",
+       ["Candy Apple #FF1900 is the brand red. The secondary set \u2014 Dark Sienna, Jet, Silver Chalice, Amber, Dodger Blue, Xanthous \u2014 and the neutrals from Eerie Black to Snow each carry a name and a hex value, so a colour is referred to rather than eyedropped.",
+        "Status has its own four: Vermilion for error, Honey for pending, Mantis for success and Gray X for disabled. Every pairing is shown on white, Cultured grey, Jet and Eerie Black before it is allowed into a screen."]),
+      ("Two typefaces, each with a job",
+       "ABC Favorit Expanded and Montserrat, four weights, sizes from 10 to 28 px.",
+       ["Favorit Expanded gives titles and labels the product's voice; Montserrat carries body text and data, where legibility at 12 and 14 px matters more than character.",
+        "The scale is named rather than numbered in screens \u2014 Display 1\u20132, Title 1\u20138, Body L, M and S, Captions, Body link and the button styles \u2014 so a heading is chosen by role, and changing a size is one edit."]),
+      ("Every button, in every state",
+       "Primary, outline and accent; three sizes; with no icon, one or two; six states.",
+       ["Each variant is drawn as Default, Hover, Focus, Focus hover, Disabled and Loading, in Large, Default and Small, with zero, one or two icons. The matrix is the specification: nothing a developer needs is left to guess.",
+        "Around it sit the smaller controls a dense product leans on \u2014 stretched buttons, text buttons, chips, helper and navigation buttons, and the small icon buttons used in tables."]),
+      ("Inputs specified to the pixel",
+       "An input architecture page with redlines, fonts and colour codes.",
+       ["Large, Default and Small inputs, error, phone with a country prefix, text box and number box are each drawn with spacing redlines and annotated with the Montserrat size and the colour code of every text layer.",
+        "Two border weights carry the states: the thin border for default, hover, filled and disabled, the heavier one for focused and typing. An input looks active because it is, not because somebody chose a colour that day."]),
+      ("Status is a component, not a colour",
+       "Four sizes, seven states, and a chooser.",
+       ["Construction software is mostly status: a machine requested, a transport pending, an inspection overdue. So status is one component in Big, Default, Small and Micro, each with Default, Hover, Focused, Selected, Selected hover, Selected focused and Disabled.",
+        "A status chooser with coloured dots handles the change, and a colour-usage row shows which hue belongs to which kind of state \u2014 so planning and workshop cannot drift into two meanings of green."]),
+      ("Tables in three densities",
+       "The data sheet: large rows at 56 px, a denser default and a small size.",
+       ["Most of SAM is a table. The data sheet comes with a title and count, keyword search, a filter and a settings control, sort either outside or inside the column header, and zebra stripes for long rows.",
+        "Density is a size, not a redesign: the same table steps from large to default to small, so an office screen and a dense planning view use one component."]),
+      ("Dates the way the site plans them",
+       "Date, time and date-time pickers, including calendar weeks.",
+       ["The calendar comes in default and large sizes, with one or two months, month and year views, week numbers and ranges with a hovered end date, plus action buttons and notice text when a choice needs explaining.",
+        "A KW chooser picks a calendar week directly, because German construction schedules in weeks, not dates."]),
+      ("The page itself is a pattern",
+       "One administration layout every module is assembled into.",
+       ["A collapsible icon rail, the page title, tabs, search, a secondary action and Create, the list, an empty state that says what to do next, and a count at the bottom. The language switch sits in the rail.",
+        "With the frame fixed, a new module is a question of what goes in the list, not where the search box lives."]),
+    ]),
+
+  metrics=[
+    ("42", "Pages in the library", "Foundations, components, patterns and page layouts"),
+    ("6", "States on every button", "Default, hover, focus, focus hover, disabled, loading"),
+    ("4 \u00d7 7", "Status sizes \u00d7 states", "Big to Micro, Default to Disabled"),
+  ],
+  metrics_note="Counted from the Figma library.",
+
+  outcome=dict(
+    lead="One vocabulary for six modules and eight object types.",
+    body=["SAM's modules are built from the same parts, so a dispatcher who learns one screen can read the next, and a developer building a new module starts from components that already have every state.",
+          "The library is also why the product could keep growing without a redesign: new requirements became new pages in the library, not new exceptions in the product."]),
+
+  reflection=dict(
+    title="What I would keep from this one",
+    body=["Drawing the states nobody asks for \u2014 focus hover, loading, disabled \u2014 was the least visible work and the most useful. Those are the states that get improvised when they are missing.",
+          "Writing the rules beside the component, rather than in a separate document, is what kept the library used. A rule two clicks away is a rule nobody reads."]),
 ),
 
 "barclays-bank": dict(
