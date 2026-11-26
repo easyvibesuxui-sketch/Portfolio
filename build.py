@@ -11,11 +11,11 @@ never drift apart between pages.
 """
 import os, json, re, shutil, struct, sys, glob
 from cases import CASES
-from cv import ROLES as CV_ROLES, EDUCATION, CERTS, LANGUAGES
+from cv import ROLES as CV_ROLES, EDUCATION, CERTS, LANGUAGES, TOOLS
 from lab import LAB
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-V = "235"                       # cache-buster for css/js
+V = "236"                       # cache-buster for css/js
 
 SITE = "https://khomeriki.design"
 EMAIL = "contact@khomeriki.design"
@@ -102,7 +102,7 @@ STEPS = [
 ]
 
 CAPS = ["Figma","Design systems","Prototyping","User research","Usability testing","Information architecture",
-        "Data visualisation","Design tokens","WCAG accessibility","Claude Code","AI prototyping",
+        "Data visualisation","Design tokens","WCAG accessibility","Adobe XD","Photoshop","Illustrator","InDesign","Claude Code","Midjourney","Kling",
         "Design ops","Workshop facilitation","Design QA","AI product patterns"]
 
 
@@ -993,6 +993,14 @@ def page_experience():
     <div class="certbar" role="group" aria-label="Filter certifications by issuer">{bar}</div>
     <p class="tagbar-note mono" role="status" aria-live="polite"></p>
     <div class="certs">{certs}</div>
+  </div>
+</section>
+
+<section class="pane">
+  <div class="wrap">
+    <div class="slab mono tick">Tools</div>
+    <h2 class="h2" data-chars>Design tools, and the AI around them.</h2>
+    <div class="toolset">{"".join(f'<div class="toolgrp glass" data-glass-in><h4 class="mono">{g}</h4><div class="toolchips">' + "".join(f'<span class="wtag">{t}</span>' for t in ts) + '</div></div>' for g, ts in TOOLS)}</div>
   </div>
 </section>
 

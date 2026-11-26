@@ -144,3 +144,4 @@ p { margin-bottom: 14px; }
 .labband .labgrid { gap: 16px; }
 .labband .lb b { font-size: 13px; margin-top: 6px; }
 .labband .lb span { font-size: 8.5px; }
+.clients.tools span { font-weight: 500; background: transparent; }
