@@ -712,7 +712,7 @@ LAB = [
     year="2026",
     blurb="This site. A portfolio with no framework and no page builder — "
           "a Python script generates thirty static pages from one shell, and "
-          "the motion runs on hand-written WebGL and GSAP.",
+          "the motion runs on custom WebGL and GSAP.",
     live="https://khomeriki.design",
     repo=None,
     stack=["Python generator", "Vanilla JS", "WebGL", "GSAP + Lenis", "CSS"],
