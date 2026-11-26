@@ -83,7 +83,7 @@ p { margin-bottom: 14px; }
 
 /* index */
 .tight { padding-top: 60px; }
-.index { display: grid; grid-template-columns: repeat(8, 1fr); gap: 18px 16px; }
+.index { display: grid; grid-template-columns: repeat(9, 1fr); gap: 18px 14px; }
 .ix b { display: block; font-size: 13.5px; color: var(--deep); margin-top: 7px; line-height: 1.2; letter-spacing: -.01em; }
 .ix span { color: var(--mute); font-size: 9px; }
 .ixi { aspect-ratio: 16 / 10; border-radius: 10px; overflow: hidden; background: #dedede; }

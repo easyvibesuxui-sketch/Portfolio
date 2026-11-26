@@ -25,12 +25,14 @@ os.makedirs(IMG, exist_ok=True)
 
 SITE = "khomeriki.design"
 
-# the eight that carry the story: platform depth, banking, data, consumer
+# the nine that carry the story: platform depth, banking, data, consumer
 FEATURED = [
     ("syniotec-sam", "B2B SaaS · Construction",
      ["syniotec-sam-wide.jpg", "syniotec-sam-mobile.jpg", "syniotec-sam.jpg"]),
     ("syniotec-ram", "B2B SaaS · Equipment rental",
      ["syniotec-ram-wide.jpg", "syniotec-ram-mobile.jpg", "syniotec-ram.jpg"]),
+    ("syniotec-ds", "Design system · B2B SaaS",
+     ["syniotec-ds.jpg", "syniotec-ds/05.jpg", "syniotec-ds/07.jpg"]),
     ("seu-admin", "Enterprise · Higher education", None),
     ("seu-student", "Student portal · EdTech", None),
     ("halyk-onboarding", "Fintech · Mobile onboarding", None),

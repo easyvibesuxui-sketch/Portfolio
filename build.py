@@ -15,7 +15,7 @@ from cv import ROLES as CV_ROLES, EDUCATION, CERTS, LANGUAGES
 from lab import LAB
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-V = "234"                       # cache-buster for css/js
+V = "235"                       # cache-buster for css/js
 
 SITE = "https://khomeriki.design"
 EMAIL = "contact@khomeriki.design"
@@ -39,10 +39,11 @@ PROJECTS = [
  ("seu","SEU","Education","Brand &amp; Web|SaaS","Georgian National University. Institutional site across faculties, admissions and research."),
  ("seu-student","SEU · Student","EdTech","SaaS","Student portal. Registration, credits, library and surveys behind one login."),
  ("seu-admin","SEU · Registry","EdTech","SaaS|Data viz","Staff console. One student record, thirty departments editing it."),
- ("syniotec-sam","Syniotec · SAM","SaaS","SaaS|Data viz","Platform for construction companies. Equipment and people planned as one crew."),
+ ("syniotec-sam","Syniotec · SAM","SaaS","SaaS|Data viz|Design system","Platform for construction companies. Equipment and people planned as one crew."),
  ("syniotec-ram","Syniotec · RAM","SaaS","SaaS|AI","Platform for rental companies. Planning board, overuse alerts and AI-read handovers."),
  ("syniotec-sam-mobile","Syniotec · SAM Mobile","Field app","Mobile|SaaS","Smart Asset Manager on site. Shifts, transport, workshop and equipment."),
  ("syniotec-ram-mobile","Syniotec · RAM Mobile","Field app","Mobile|SaaS","Rental Asset Manager on site. Fleet, contracts, tasks and handover in four tabs."),
+ ("syniotec-ds","Syniotec · Design System","Design system","Design system|SaaS","The Figma library behind SAM. 42 pages of foundations, components and page layouts."),
  ("halyk-bank","Halyk Bank Georgia","Fintech","Fintech|Brand &amp; Web","Internet bank. The deposit-opening flow, rebuilt around the choice rather than the form."),
  ("halyk-onboarding","Halyk · Onboarding","Fintech","Fintech|Mobile","Mobile app registration. Three fields, two state lookups and seven ways it can end."),
  ("halyk-open-banking","Halyk · Open Banking","Fintech","Fintech|Brand &amp; Web","Consent portal for inter-bank access. Permission by scope, account and currency."),
@@ -746,7 +747,8 @@ def page_work():
 <main>
 <section class="pane" style="padding-top:clamp(40px,6vh,80px)">
   <div class="wrap">
-    <div class="tagbar" role="group" aria-label="Filter work by discipline" aria-controls="wgrid"></div>
+    <div class="tagbar" role="group" aria-label="Filter work by discipline" aria-controls="wgrid"
+         data-order="Fintech|SaaS|Mobile|AI|Data viz|Design system|E-commerce|Brand &amp; Web"></div>
     <p class="tagbar-note mono" role="status" aria-live="polite"></p>
 
     <div class="wgrid" id="wgrid" data-cards>

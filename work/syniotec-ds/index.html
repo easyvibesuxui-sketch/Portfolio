@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>try{if(sessionStorage.getItem('nk-seen')==='1')document.documentElement.classList.add('pre-seen')}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Syniotec · Design System — case study | Nodari Khomeriki</title>
+<meta name="description" content="The Figma library behind SAM — colour, type, components with every state written down, and the page layouts the modules are assembled from.">
+<meta name="theme-color" content="#0a0a0b">
+<link rel="canonical" href="https://khomeriki.design/work/syniotec-ds/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://khomeriki.design/work/syniotec-ds/">
+<meta property="og:title" content="Syniotec · Design System — case study | Nodari Khomeriki">
+<meta property="og:description" content="The Figma library behind SAM — colour, type, components with every state written down, and the page layouts the modules are assembled from.">
+<meta property="og:image" content="https://khomeriki.design/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/favicon.svg?v=235" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=235">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/assets/css/glass.css?v=235">
+</head>
+
+<body data-page="work">
+
+
+<div class="aurora" aria-hidden="true"><canvas id="fieldbg" class="fieldcv"></canvas><canvas id="nebula"></canvas><i class="a1"></i><i class="a2"></i><i class="a3"></i><i class="a4"></i><i class="a5"></i></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="marks" aria-hidden="true"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></div>
+<div id="cur" aria-hidden="true"></div>
+<div id="ring" aria-hidden="true"><b></b></div>
+<div id="trans" aria-hidden="true"><span></span></div>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="/" data-trans="Home"><span class="eye eye--brand" data-eye="d" data-reach="120" style="aspect-ratio:370/480" aria-hidden="true"></span>Nodari&nbsp;<span>Khomeriki</span></a>
+    <nav class="nav-links mono" aria-label="Primary">
+      <a href="/work/" aria-current="page" class="nav-hide" data-trans="Work"><span class="swap"><span>Work</span><span>Work</span></span></a>
+      <a href="/lab/" class="nav-hide" data-trans="AI Lab"><span class="swap"><span>AI Lab</span><span>AI Lab</span></span></a>
+      <a href="/experience/" class="nav-hide" data-trans="Experience"><span class="swap"><span>Experience</span><span>Experience</span></span></a>
+      <a href="/contact/" class="nav-cta mono nav-hide" data-mag=".25" data-trans="Contact">Let's create</a>
+      <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><i></i><i></i></button>
+    </nav>
+  </div>
+</header>
+
+<div id="menu" aria-hidden="true">
+  <div class="mlinks">
+    <a href="/" data-trans="Home">Home</a>
+    <a href="/work/" aria-current="page" data-trans="Work">Work</a>
+    <a href="/lab/" data-trans="AI Lab">AI Lab</a>
+    <a href="/experience/" data-trans="Experience">Experience</a>
+    <a href="/contact/" data-trans="Contact">Contact</a>
+  </div>
+  <div class="mfoot mono">
+    <span>contact@khomeriki.design</span>
+    <span>Tbilisi, Georgia</span>
+  </div>
+</div>
+
+<main>
+
+<section class="case-hero" id="overview">
+  <canvas class="fieldcv" aria-hidden="true"></canvas>
+  <div class="scrim" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="crumb mono">
+      <a href="/" data-trans="Home">Home</a> <span>/</span>
+      <a href="/work/" data-trans="Work" class="is-back">&larr;<span>Work</span></a> <span>/</span>
+      <span>Syniotec · Design System</span>
+    </div>
+    <h1><span data-chars style="display:block">Forty-two pages so six modules read as one product: the syniotec design system</span></h1>
+    <p class="lead case-sum" data-rise=".08">The Figma library behind SAM — colour, type, components with every state written down, and the page layouts the modules are assembled from.</p>
+    <figure class="cover is-fit is-flat" data-glass-in><img class="cover-fg" src="/assets/projects/syniotec-ds-wide.jpg?v=235" alt="Syniotec · Design System — Design system"></figure>
+    <dl class="meta"><div><dt class="mono">Role</dt><dd>Senior UX/UI Designer</dd></div><div><dt class="mono">Timeline</dt><dd>Jul 2021 — present</dd></div><div><dt class="mono">Team</dt><dd>2 PM, 4 developers</dd></div></dl>
+    
+  </div>
+</section>
+
+<nav class="casenav" aria-label="Case study sections"><a href="/work/" class="mono is-back" data-trans="Work" aria-label="Back to all work">&larr;<span>Work</span></a><a href="#overview" class="mono">Case study</a><a href="#challenge" class="mono">The challenge</a><a href="#solution" class="mono">The solution</a><a href="#outcome" class="mono">Outcome</a></nav>
+
+<section class="csec" id="challenge">
+  <div class="wrap">
+    <div class="csec-label mono tick">The challenge</div>
+    <h2 data-chars>A platform that grows a module at a time drifts a screen at a time.</h2>
+    <div class="ctwo">
+      <div class="body"><div class="cbody"><p>SAM plans projects, equipment, personnel, crews, warehouses, dispatch and workshop. Each module arrived with its own deadline, and without a shared vocabulary each one would have invented its own buttons, its own tables and its own idea of what a status looks like.</p><p>The users notice that drift long before anybody in the office does. A dispatcher who learns where the filter lives on one screen should find it in the same place on the next, and a red badge has to mean the same thing in the workshop as it does in planning.</p></div></div>
+      <div class="side"><div class="callout glass" data-glass-in><span class="pill mono">Opportunity</span><h3>Decide things once</h3><p>Every decision written into the library is a decision the next module does not have to make, argue about or get wrong.</p></div></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="csec" style="padding-block:0">
+  <div class="wrap">
+    <div class="insight glass" data-glass-in>
+      <div class="csec-label mono tick">Key insight</div>
+      <blockquote>A component is not finished when it looks right. It is finished when every state it can be in is drawn.</blockquote>
+      <div class="after"><p>Developers do not build the default state; they build all of them, and the ones nobody drew get improvised. So the library documents hover, focus, disabled and loading with the same care as the resting state, and specifies inputs down to the pixel and the colour code.</p><p>That is what lets a screen be assembled from parts instead of designed from scratch, and what lets a developer build it without coming back to ask.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="csec" id="solution">
+  <div class="wrap">
+    <div class="csec-label mono tick">The solution</div>
+    <h2 data-chars>Foundations, components and page patterns, in one Figma library.</h2>
+    <div class="ctwo"><div class="body"><div class="cbody"><p>The library runs to 42 pages: colour, typography and icons; inputs, dropdowns, checkboxes, switches, sliders, tabs, tooltips, toasts, popups, accordions, drawers and upload; date, time and date-time pickers; data sheets and filters; status, banners, notifications, the map and the administration page layout.</p><p>Each page shows the component and the rules for using it side by side, so the same file serves the designer choosing a part and the developer building it.</p></div></div></div>
+    <div class="decision" data-rise><span class="pill mono">Design decision</span><h3>A palette with names, roles and four grounds</h3><p class="sub">One primary red, six secondary colours, neutrals and four status colours.</p><div class="cbody"><p>Candy Apple #FF1900 is the brand red. The secondary set — Dark Sienna, Jet, Silver Chalice, Amber, Dodger Blue, Xanthous — and the neutrals from Eerie Black to Snow each carry a name and a hex value, so a colour is referred to rather than eyedropped.</p><p>Status has its own four: Vermilion for error, Honey for pending, Mantis for success and Gray X for disabled. Every pairing is shown on white, Cultured grey, Jet and Eerie Black before it is allowed into a screen.</p></div><figure class="shot is-plain" data-glass-in><img src="/assets/projects/syniotec-ds/01.jpg?v=235" alt="Syniotec · Design System — A palette with names, roles and four grounds" loading="lazy"></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>Two typefaces, each with a job</h3><p class="sub">ABC Favorit Expanded and Montserrat, four weights, sizes from 10 to 28 px.</p><div class="cbody"><p>Favorit Expanded gives titles and labels the product's voice; Montserrat carries body text and data, where legibility at 12 and 14 px matters more than character.</p><p>The scale is named rather than numbered in screens — Display 1–2, Title 1–8, Body L, M and S, Captions, Body link and the button styles — so a heading is chosen by role, and changing a size is one edit.</p></div><figure class="shot is-plain" data-glass-in><img src="/assets/projects/syniotec-ds/02.jpg?v=235" alt="Syniotec · Design System — Two typefaces, each with a job" loading="lazy"></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>Every button, in every state</h3><p class="sub">Primary, outline and accent; three sizes; with no icon, one or two; six states.</p><div class="cbody"><p>Each variant is drawn as Default, Hover, Focus, Focus hover, Disabled and Loading, in Large, Default and Small, with zero, one or two icons. The matrix is the specification: nothing a developer needs is left to guess.</p><p>Around it sit the smaller controls a dense product leans on — stretched buttons, text buttons, chips, helper and navigation buttons, and the small icon buttons used in tables.</p></div><figure class="shot is-plain" data-glass-in><img src="/assets/projects/syniotec-ds/03.jpg?v=235" alt="Syniotec · Design System — Every button, in every state" loading="lazy"></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>Inputs specified to the pixel</h3><p class="sub">An input architecture page with redlines, fonts and colour codes.</p><div class="cbody"><p>Large, Default and Small inputs, error, phone with a country prefix, text box and number box are each drawn with spacing redlines and annotated with the Montserrat size and the colour code of every text layer.</p><p>Two border weights carry the states: the thin border for default, hover, filled and disabled, the heavier one for focused and typing. An input looks active because it is, not because somebody chose a colour that day.</p></div><figure class="shot is-plain" data-glass-in><img src="/assets/projects/syniotec-ds/04.jpg?v=235" alt="Syniotec · Design System — Inputs specified to the pixel" loading="lazy"></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>Status is a component, not a colour</h3><p class="sub">Four sizes, seven states, and a chooser.</p><div class="cbody"><p>Construction software is mostly status: a machine requested, a transport pending, an inspection overdue. So status is one component in Big, Default, Small and Micro, each with Default, Hover, Focused, Selected, Selected hover, Selected focused and Disabled.</p><p>A status chooser with coloured dots handles the change, and a colour-usage row shows which hue belongs to which kind of state — so planning and workshop cannot drift into two meanings of green.</p></div><figure class="shot is-plain" data-glass-in><img src="/assets/projects/syniotec-ds/05.jpg?v=235" alt="Syniotec · Design System — Status is a component, not a colour" loading="lazy"></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>Tables in three densities</h3><p class="sub">The data sheet: large rows at 56 px, a denser default and a small size.</p><div class="cbody"><p>Most of SAM is a table. The data sheet comes with a title and count, keyword search, a filter and a settings control, sort either outside or inside the column header, and zebra stripes for long rows.</p><p>Density is a size, not a redesign: the same table steps from large to default to small, so an office screen and a dense planning view use one component.</p></div><figure class="shot is-plain" data-glass-in><img src="/assets/projects/syniotec-ds/06.jpg?v=235" alt="Syniotec · Design System — Tables in three densities" loading="lazy"></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>Dates the way the site plans them</h3><p class="sub">Date, time and date-time pickers, including calendar weeks.</p><div class="cbody"><p>The calendar comes in default and large sizes, with one or two months, month and year views, week numbers and ranges with a hovered end date, plus action buttons and notice text when a choice needs explaining.</p><p>A KW chooser picks a calendar week directly, because German construction schedules in weeks, not dates.</p></div><figure class="shot is-plain" data-glass-in><img src="/assets/projects/syniotec-ds/07.jpg?v=235" alt="Syniotec · Design System — Dates the way the site plans them" loading="lazy"></figure></div><div class="decision" data-rise><span class="pill mono">Design decision</span><h3>The page itself is a pattern</h3><p class="sub">One administration layout every module is assembled into.</p><div class="cbody"><p>A collapsible icon rail, the page title, tabs, search, a secondary action and Create, the list, an empty state that says what to do next, and a count at the bottom. The language switch sits in the rail.</p><p>With the frame fixed, a new module is a question of what goes in the list, not where the search box lives.</p></div><figure class="shot is-plain" data-glass-in><img src="/assets/projects/syniotec-ds/08.jpg?v=235" alt="Syniotec · Design System — The page itself is a pattern" loading="lazy"></figure></div>
+  </div>
+</section>
+
+<section class="csec" id="outcome">
+  <div class="wrap">
+    <div class="csec-label mono tick">Outcome</div>
+    <h2 data-chars>One vocabulary for six modules and eight object types.</h2>
+    <div class="ctwo"><div class="body"><div class="cbody"><p>SAM's modules are built from the same parts, so a dispatcher who learns one screen can read the next, and a developer building a new module starts from components that already have every state.</p><p>The library is also why the product could keep growing without a redesign: new requirements became new pages in the library, not new exceptions in the product.</p></div></div></div>
+    <div class="stats cmetrics"><div class="stat glass" data-glass-in><div class="n">42</div><div class="k mono">Pages in the library</div><p class="src">Foundations, components, patterns and page layouts</p></div><div class="stat glass" data-glass-in><div class="n">6</div><div class="k mono">States on every button</div><p class="src">Default, hover, focus, focus hover, disabled, loading</p></div><div class="stat glass" data-glass-in><div class="n">4 × 7</div><div class="k mono">Status sizes × states</div><p class="src">Big to Micro, Default to Disabled</p></div></div><p class="cmetrics-note mono">Counted from the Figma library.</p>
+    <div class="callout glass" data-glass-in style="margin-top:clamp(32px,5vh,60px)"><span class="pill mono">Reflection</span><h3>What I would keep from this one</h3><p>Drawing the states nobody asks for — focus hover, loading, disabled — was the least visible work and the most useful. Those are the states that get improvised when they are missing.</p><p>Writing the rules beside the component, rather than in a separate document, is what kept the library used. A rule two clicks away is a rule nobody reads.</p></div>
+  </div>
+</section>
+
+
+<nav class="pager" aria-label="Project navigation">
+  <a class="glass hoverable prev" href="/work/syniotec-ram-mobile/" data-trans="Syniotec · RAM Mobile">
+    <span class="k mono">← Previous</span><span class="t">Syniotec · RAM Mobile</span>
+  </a>
+  <a class="pager-up mono" href="/work/" data-trans="Work">All 33 projects</a>
+  <a class="glass hoverable next" href="/work/halyk-bank/" data-trans="Halyk Bank Georgia">
+    <span class="k mono">Next →</span><span class="t">Halyk Bank Georgia</span>
+  </a>
+</nav>
+
+</main>
+
+<div class="peek-row" aria-hidden="true"><span class="eye pk pk--1" data-eye="d" data-reach="160" style="aspect-ratio:370/480" aria-hidden="true"></span><span class="eye pk pk--2" data-eye="c" style="aspect-ratio:425/480" aria-hidden="true"></span><span class="eye pk pk--3" data-eye="p1" data-reach="260" style="aspect-ratio:430/480" aria-hidden="true"></span><span class="eye pk pk--4" data-eye="b" style="aspect-ratio:644/480" aria-hidden="true"></span></div>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4 class="mono">Navigate</h4>
+        <ul class="mono">
+          <li><a href="/">Home</a></li>
+          <li><a href="/work/">Work</a></li>
+          <li><a href="/lab/">AI Lab</a></li>
+          <li><a href="/experience/">Experience</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Enquiry</h4>
+        <ul class="mono">
+          <li><a href="mailto:contact@khomeriki.design">contact@khomeriki.design</a></li>
+          <li><a href="tel:+99599460466">+995 99 460466</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Elsewhere</h4>
+        <ul class="mono">
+          <li><a href="https://www.linkedin.com/in/nodari-khomeriki" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://dribbble.com/SimpleVibes" target="_blank" rel="noopener">Dribbble</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Based in</h4>
+        <ul class="mono"><li>Tbilisi, Georgia</li><li>Working globally</li><li>Open to work</li></ul>
+      </div>
+    </div>
+    <div class="fmark" aria-hidden="true">NK</div>
+    <div class="fbar mono">
+      <span>© 2026 Nodari Khomeriki</span>
+      <span>Designed &amp; built in Tbilisi</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/gsap.min.js"></script>
+<script src="/assets/js/ScrollTrigger.min.js"></script>
+<script src="/assets/js/lenis.min.js"></script>
+<script src="/assets/js/glass.js?v=235"></script>
+<script src="/assets/js/eyes.js?v=235" defer></script>
+<script src="/assets/js/nebula.js?v=235" defer></script>
+<script src="/assets/js/peek.js?v=235" defer></script>
+</body>
+</html>
