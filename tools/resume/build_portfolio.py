@@ -106,22 +106,31 @@ def page(body, cls="", n=True):
 
 
 # 1 · cover
+# One small creature, not a crowd: the brand is a wink here, the work is the
+# subject. The right half shows three real projects so the first page
+# already reads as a portfolio.
 hero = ""
+EYE = None
 if HERO and os.path.exists(HERO):
-    im = Image.open(HERO).convert("RGB")
-    # keep the central creature and the two on the right; the left one
-    # would sit under the name
-    im = im.crop((560, 0, 1920, 1080))
-    im.save(os.path.join(IMG, "hero.jpg"), quality=86, optimize=True)
-    hero = '<img class="cover-hero" src="img/hero.jpg" alt="">'
+    im = Image.open(HERO).convert("RGB")      # the home-page stage frame, #EBEBEB ground
+    im.crop((1440, 95, 1650, 335)).save(os.path.join(IMG, "eye-a.png"))
+    im.crop((180, 160, 480, 500)).save(os.path.join(IMG, "eye-b.png"))
+    EYE = True
+shots = [img(f"projects/{f}", w=1100, q=80) for f in
+         ("syniotec-sam-wide.jpg", "halyk-onboarding.jpg", "deutsche-bank.jpg")]
 page(f"""
-  {hero}
   <div class="cover-top mono"><span>Portfolio 2026</span><span>{SITE}</span></div>
+  <div class="cover-work">
+    <div class="cw cw1"><img src="{shots[0]}" alt=""></div>
+    <div class="cw cw2"><img src="{shots[1]}" alt=""></div>
+    <div class="cw cw3"><img src="{shots[2]}" alt=""></div>
+  </div>
   <div class="cover-text">
+    {'<img class="cover-eye" src="img/eye-a.png" alt="">' if EYE else ''}
     <div class="eyebrow mono">Everyone’s watching</div>
-    <h1>Nodari Khomeriki</h1>
+    <h1>Nodari<br>Khomeriki</h1>
     <p class="cover-role">Senior Product Designer — UX/UI</p>
-    <p class="cover-sub">B2B SaaS, fintech and data-heavy interfaces.<br>Design systems, research and shipped product.</p>
+    <p class="cover-sub">Enterprise B2B SaaS, fintech and data-heavy interfaces.<br>Design systems, research and shipped product.</p>
   </div>
   <div class="cover-foot mono"><span>Tbilisi, Georgia · Remote worldwide</span><span>contact@khomeriki.design</span><span>+995 99 460466</span></div>
 """, "cover", n=False)
@@ -223,24 +232,16 @@ page(f"""
   <div class="index">{''.join(cells)}</div>
 """, "tight")
 
-# AI lab
-lab = sorted(LAB, key=lambda e: e.get("added", ""), reverse=True)[:15]
-lcells = []
-for e in lab:
-    t = img(f"lab/{e['slug']}.jpg", w=560, q=74)
-    lcells.append(f'<a class="lb" href="{html.escape(e.get("live") or "")}"><div class="lbi"><img src="{t}" alt=""></div>'
-                  f'<b>{e["title"]}</b><span class="mono">{e["kind"]}</span></a>')
+# closing, with the AI Lab as a short coda rather than a chapter
+lab = sorted(LAB, key=lambda e: e.get("added", ""), reverse=True)[:5]
+lcells = "".join(
+    f'<a class="lb" href="{html.escape(e.get("live") or "")}"><div class="lbi">'
+    f'<img src="{img(f"lab/{e['slug']}.jpg", w=560, q=74)}" alt=""></div>'
+    f'<b>{e["title"]}</b><span class="mono">{e["kind"]}</span></a>'
+    for e in lab)
 page(f"""
-  <div class="kicker mono">AI Lab · Built with AI, shipped anyway</div>
-  <p class="lab-lead">A designer who can build changes what is worth proposing. {len(LAB)} interfaces, tools,
-  games and sites taken from idea to a live URL with Claude and Claude Code — written up at {SITE}/lab.</p>
-  <div class="labgrid">{''.join(lcells)}</div>
-""", "tight")
-
-# closing
-page(f"""
-  {hero}
   <div class="close-text">
+    {'<img class="close-eye" src="img/eye-b.png" alt="">' if EYE else ''}
     <div class="eyebrow mono">Everyone’s watching</div>
     <h2 class="big">They decide in a glance.<br><em>Let’s give them something worth seeing.</em></h2>
     <div class="contacts mono">
@@ -250,6 +251,14 @@ page(f"""
       <a href="https://www.linkedin.com/in/nodari-khomeriki">linkedin.com/in/nodari-khomeriki</a>
       <a href="https://dribbble.com/SimpleVibes">dribbble.com/SimpleVibes</a>
     </div>
+  </div>
+  <div class="labband">
+    <div class="labhead">
+      <div><div class="kicker mono">AI Lab · Built with AI, shipped anyway</div>
+      <p>{len(LAB)} interfaces, tools, games and sites taken from idea to a live URL with Claude and Claude Code.</p></div>
+      <a class="labmore mono" href="https://www.{SITE}/lab/">See all at {SITE}/lab →</a>
+    </div>
+    <div class="labgrid">{lcells}</div>
   </div>
 """, "closing", n=False)
 

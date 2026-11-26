@@ -118,3 +118,29 @@ p { margin-bottom: 14px; }
 .mets div { background: #f4f4f4; border: 1px solid var(--hair); border-radius: 12px; padding: 10px 12px; }
 .mets b { display: block; font-size: 24px; line-height: 1; letter-spacing: -.03em; color: var(--deep); margin-bottom: 5px; }
 .mets span { display: block; font-size: 11.5px; line-height: 1.3; color: var(--mute); }
+
+/* ── v2 cover: three real projects on the right, one small creature ── */
+.cover-text { width: 640px; }
+.cover-eye { display: block; width: 74px; height: auto; margin: 0 0 18px -6px; mix-blend-mode: darken; }
+.cover-work { position: absolute; right: 80px; top: 118px; width: 760px; height: 640px; }
+.cw { position: absolute; border-radius: 18px; overflow: hidden; background: #dedede;
+      box-shadow: 0 1px 0 rgba(0,0,0,.04), 0 30px 60px -30px rgba(0,0,0,.35), 0 0 0 1px var(--hair); }
+.cw img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cw1 { left: 0; top: 0; width: 760px; height: 400px; }
+.cw2 { left: 0; top: 424px; width: 368px; height: 216px; }
+.cw3 { right: 0; top: 424px; width: 368px; height: 216px; }
+
+/* ── v2 closing: contact first, the AI Lab as a short coda ── */
+.closing { padding: 0; }
+.closing .close-text { position: absolute; left: 96px; top: 96px; bottom: auto; width: 1000px; }
+.close-eye { position: absolute; right: -150px; top: -10px; width: 96px; height: auto; mix-blend-mode: darken; }
+.closing .big { font-size: 58px; }
+.closing .contacts { color: var(--deep); border-top: 1px solid var(--hair); }
+.labband { position: absolute; left: 96px; right: 96px; bottom: 64px; padding-top: 22px; border-top: 1px solid var(--hair); }
+.labhead { display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; margin-bottom: 16px; }
+.labhead .kicker { margin-bottom: 6px; }
+.labhead p { margin: 0; font-size: 16px; color: var(--deep); }
+.labmore { color: var(--acc); white-space: nowrap; }
+.labband .labgrid { gap: 16px; }
+.labband .lb b { font-size: 13px; margin-top: 6px; }
+.labband .lb span { font-size: 8.5px; }
