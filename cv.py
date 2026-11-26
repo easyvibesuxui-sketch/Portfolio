@@ -14,7 +14,9 @@ cross-check. Two things to confirm and edit:
 ROLES = [
  ("Senior User Experience Designer", "Full-time", "syniotec", "Tbilisi, Georgia · On-site",
   "Jul 2021 — Present", "5 yrs 2 mos", [
-    "Product design across the SAM asset-management and RAM rental platforms",
+    "Product design across the SAM asset-management and RAM rental platforms, ERP-integrated B2B SaaS used by STRABAG (12,000+ employees) and HOCH (8,000+ rental assets)",
+    "Redesigned SAM's navigation, project profile and equipment requests, validated by A/B tests with construction users",
+    "Designed RAM's rental model: 5 contract types, 4 product types, tiered pricing, off-hire and partial returns",
     "Design system: tokens, components and documented states",
     "Data visualisation for utilisation, availability and scheduling",
     "Field research with dispatchers and site managers",

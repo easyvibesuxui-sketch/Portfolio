@@ -15,7 +15,7 @@ from cv import ROLES as CV_ROLES, EDUCATION, CERTS, LANGUAGES
 from lab import LAB
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-V = "232"                       # cache-buster for css/js
+V = "233"                       # cache-buster for css/js
 
 SITE = "https://khomeriki.design"
 EMAIL = "contact@khomeriki.design"
@@ -1413,12 +1413,24 @@ def page_case(idx):
         refl = (f'<div class="callout glass" data-glass-in style="margin-top:clamp(32px,5vh,60px)">'
                 f'<span class="pill mono">Reflection</span><h3>{r["title"]}</h3>'
                 + "".join(f"<p>{p}</p>" for p in r["body"]) + '</div>')
+    # real figures only (see the note at the top of cases.py); each one is
+    # (value, what it counts, where it comes from)
+    band = ""
+    if c.get("metrics"):
+        cells = "".join(
+            f'<div class="stat glass" data-glass-in><div class="n">{n}</div>'
+            f'<div class="k mono">{k}</div><p class="src">{src}</p></div>'
+            for n, k, src in c["metrics"])
+        note = c.get("metrics_note")
+        band = (f'<div class="stats cmetrics">{cells}</div>'
+                + (f'<p class="cmetrics-note mono">{note}</p>' if note else ""))
     outcome = f'''
 <section class="csec" id="outcome">
   <div class="wrap">
     <div class="csec-label mono tick">Outcome</div>
     <h2 data-chars>{out["lead"]}</h2>
     <div class="ctwo"><div class="body">{paras(out["body"])}</div></div>
+    {band}
     {refl}
   </div>
 </section>'''
