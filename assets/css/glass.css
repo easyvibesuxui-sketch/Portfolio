@@ -4185,3 +4185,10 @@ h1,h2,h3,h4,.h1,.h2,.h3,.gh1,.gh2,.gfill-h,.gpin-h,.gclients-h,.gcta-mark {
 .cmetrics .stat .k { color: var(--paper); letter-spacing: .08em; }
 .cmetrics .stat .src { margin: 10px 0 0; font-size: .92rem; line-height: 1.45; color: var(--paper-mute); }
 .cmetrics-note { margin-top: 14px; color: var(--paper-faint); font-size: .62rem; letter-spacing: .08em; }
+
+/* v234 · CV & portfolio card holds two downloads, each its own link */
+.ccard--docs .v + .v { margin-top: 4px; }
+.ccard--docs .v a { border-bottom: 1px solid transparent; transition: border-color .3s var(--ease), color .3s var(--ease); }
+.ccard--docs .v a:hover { color: var(--ember); border-bottom-color: currentColor; }
+/* the address breaks after the @, never mid-word */
+.ccard .v { word-break: normal; overflow-wrap: anywhere; }

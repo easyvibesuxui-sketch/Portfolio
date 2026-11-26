@@ -15,7 +15,7 @@ from cv import ROLES as CV_ROLES, EDUCATION, CERTS, LANGUAGES
 from lab import LAB
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-V = "233"                       # cache-buster for css/js
+V = "234"                       # cache-buster for css/js
 
 SITE = "https://khomeriki.design"
 EMAIL = "contact@khomeriki.design"
@@ -23,6 +23,7 @@ PHONE = "+995 99 460466"
 PHONE_HREF = "+99599460466"
 # the ATS-friendly CV, generated from tools/resume/cv.html; /cv redirects here
 CV_URL = "/assets/cv/Nodari_Khomeriki_Senior_Product_Designer_CV.pdf"
+PORTFOLIO_URL = "/assets/cv/Nodari_Khomeriki_Portfolio.pdf"
 
 NAV = [
     ("work",       "/work/",       "Work"),
@@ -873,6 +874,23 @@ def page_lab():
 
 
 # ================================================================ EXPERIENCE
+def live_span(dates, span):
+    """A role still running gets its length counted to the build date, the
+    way LinkedIn counts it (both end months included), so the page never
+    shows a figure from the day it was transcribed."""
+    import datetime
+    m = re.match(r"([A-Z][a-z]{2}) (\d{4}) \u2014 Present", dates)
+    if not m:
+        return span
+    months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+    start = int(m.group(2)) * 12 + months.index(m.group(1))
+    today = datetime.date.today()
+    n = today.year * 12 + today.month - 1 - start + 1
+    y, mo = divmod(n, 12)
+    parts = ([f"{y} yr" + ("s" if y > 1 else "")] if y else []) + ([f"{mo} mo" + ("s" if mo > 1 else "")] if mo else [])
+    return " ".join(parts) or span
+
+
 def page_experience():
     rows = ""
     for i, (title, kind, co, place, dates, span, bullets) in enumerate(CV_ROLES):
@@ -889,7 +907,7 @@ def page_experience():
           <div>
             <div class="xrole">{title}<span class="chip mono">{kind}</span></div>
             <div class="xco mono">{co}</div>
-            <div class="xmeta mono"><span>{place}</span><span>·</span><span>{span}</span></div>
+            <div class="xmeta mono"><span>{place}</span><span>·</span><span>{live_span(dates, span)}</span></div>
           </div>
           <div class="xdate mono">{dates}{toggle}</div>
         </div>
@@ -937,7 +955,8 @@ def page_experience():
   <div class="wrap">
     <div class="cvdl" data-rise>
       <a class="btn btn--fill mono" href="{CV_URL}" download="Nodari_Khomeriki_Senior_Product_Designer_CV.pdf">Download CV · PDF</a>
-      <span class="mono">One page · experience, skills, education and certifications</span>
+      <a class="btn mono" href="{PORTFOLIO_URL}" download="Nodari_Khomeriki_Portfolio.pdf">Download portfolio · PDF</a>
+      <span class="mono">CV on one page · portfolio in 13 slides, eight case studies</span>
     </div>
 
     <div class="stats" style="margin-top:0">
@@ -1013,7 +1032,7 @@ def page_contact():
         "/contact/", "contact") + nav("contact") + phead(
         "Contact",
         "Let's build", "something real.",
-        "Available for projects from Q3 2026. Tell me what you're building and what's currently in the way — I usually reply within a day."
+        "Open to new projects and roles. Tell me what you're building and what's currently in the way — I usually reply within a day."
     ) + f'''
 <main>
 
@@ -1023,7 +1042,7 @@ def page_contact():
       <a class="ccard glass hoverable" href="mailto:{EMAIL}" data-glass-in>
         <img class="cico" src="/assets/contact/email.webp?v={V}" alt="" width="88" height="88" loading="lazy">
         <h4 class="mono">Email</h4>
-        <div class="v">{EMAIL}</div>
+        <div class="v">{EMAIL.replace("@", "@<wbr>")}</div>
         <div class="m mono">Best for project enquiries</div>
       </a>
       <a class="ccard glass hoverable" href="tel:{PHONE_HREF}" data-glass-in>
@@ -1044,12 +1063,13 @@ def page_contact():
         <div class="v">SimpleVibes</div>
         <div class="m mono">Explorations and shots</div>
       </a>
-      <a class="ccard glass hoverable" href="{CV_URL}" download="Nodari_Khomeriki_Senior_Product_Designer_CV.pdf" data-glass-in>
+      <div class="ccard glass hoverable ccard--docs" data-glass-in>
         <img class="cico" src="/assets/contact/cv.webp?v={V}" alt="" width="88" height="88" loading="lazy">
-        <h4 class="mono">CV</h4>
-        <div class="v">Download PDF</div>
-        <div class="m mono">One page, for recruiters</div>
-      </a>
+        <h4 class="mono">CV &amp; portfolio</h4>
+        <div class="v"><a href="{CV_URL}" download="Nodari_Khomeriki_Senior_Product_Designer_CV.pdf">CV · PDF</a></div>
+        <div class="v"><a href="{PORTFOLIO_URL}" download="Nodari_Khomeriki_Portfolio.pdf">Portfolio · PDF</a></div>
+        <div class="m mono">For recruiters and hiring teams</div>
+      </div>
     </div>
   </div>
 </section>
