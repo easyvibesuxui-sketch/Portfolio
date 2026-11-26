@@ -497,7 +497,7 @@ CASES = {
 "halyk-open-banking": dict(
   headline="Letting a rival bank read your accounts: Halyk Open Banking",
   sub="The consent portal where a Halyk customer grants another bank access to their own data \u2014 by scope, by account and by currency.",
-  role="UX/UI Designer", timeline="2022", team="Bank product team, compliance, engineering",
+  role="UX/UI Designer", timeline="2021", team="Bank product team, compliance, engineering",
 
   challenge=C(
     "Open banking asks an ordinary person to make a permissions decision that IT departments find difficult.",
@@ -667,7 +667,7 @@ CASES = {
 # ══════════════════════════════════════════════════════ (remaining)
 "syniotec-sam-mobile": dict(
   headline="A worker's day, not a fleet's database: SAM on mobile",
-  sub="Syniotec's Software Asset Manager for the site — where the app has to start a shift, drive a delivery and book a machine into the workshop.",
+  sub="Syniotec's Smart Asset Manager for the site — where the app has to start a shift, drive a delivery and book a machine into the workshop.",
   role="Senior UX/UI Designer", timeline="2022 — present",
   team="2 PM, 4 developers, field ops",
 
