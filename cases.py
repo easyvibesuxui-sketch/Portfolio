@@ -12,7 +12,7 @@ STRUCTURE (mirrors the reference case study, in the NK visual system)
 
 DELIBERATELY NO METRICS. Every number on a portfolio should be one you
 can defend in an interview, so none are invented here. When you have
-real figures, add a `metrics=[("13s", "Order processing", "2-3x faster")]`
+real figures, add a `metrics=[("13s", "Order processing", "where it comes from")]`
 key to any entry and the band will render itself.
 
 IMAGES. Each `decisions[]` entry gets an image slot, and any files you
@@ -310,12 +310,24 @@ CASES = {
        "VDBUM protocols on a phone, with photographs and a signature, stored as PDF.",
        ["A technical inspection is a compliance artefact that has to survive years and an auditor. Completing it on the machine, with the photographs taken there and the examiner's signature attached, is the difference between a record and a reconstruction.",
         "Filing it back into the equipment profile as a PDF means the proof lives with the asset rather than in somebody's folder."]),
+      ("Navigation and requests, tested against each other",
+       "A/B tests with construction users before the redesign shipped.",
+       ["As modules were added, the sidebar had become a list of everything the product could do. I regrouped it around the four things a planner thinks in \u2014 projects, equipment, personnel and collaboration \u2014 as a compact, collapsible rail that shows either icons or module names, and tested the variants with construction users rather than choosing between them in a review.",
+        "The same round rebuilt the project profile and the request. Resources and open requests now sit in one table with a status bar, filters and sorting; project information and its requests are one interface instead of two. A request starts from a pre-filled form with a map for the delivery point, and goes out on its own or joins a bulk request \u2014 so a dispatcher or foreman answers fewer questions the system already knew."]),
     ]),
+
+  metrics=[
+    ("12,000+", "Employees managed in SAM at STRABAG", "Rolling out to all 13 German directorates"),
+    ("6 yrs", "STRABAG contract", "Signed after almost three years as a partner"),
+    ("45%", "Less time on technical inspections", "Reported by Stehnle for yearly inspection paperwork"),
+  ],
+  metrics_note="Figures published by syniotec and its customers; they describe the product the team built, not design work alone.",
 
   outcome=dict(
     lead="One platform where the plan includes the people.",
     body=["SAM runs projects, equipment, personnel, crews, warehouses, dispatch and workshop for construction firms from Bremen outwards \u2014 including operations at the scale of STRABAG \u2014 with a mobile client for the half of the workforce that is never at a desk.",
-          "The design system built alongside it is why six modules and eight object types still read as one product: states, density and the calendar-and-map pairing were decided once and inherited everywhere."]),
+          "The design system built alongside it is why six modules and eight object types still read as one product: states, density and the calendar-and-map pairing were decided once and inherited everywhere.",
+          "STRABAG signed a six-year contract and is rolling SAM out to all thirteen of its German directorates. Its divisional planning put the effect of the request flow plainly: \u201cSAM suggests suitable devices for the machine inquiries. That saves a lot of time and phone calls.\u201d"]),
 
   reflection=dict(
     title="What I would keep from this one",
@@ -809,13 +821,25 @@ CASES = {
       ("The invoice is a consequence",
        "Rental period and rates generate the billing information; ERP takes it from there.",
        ["Every hour retyped between the planner and the accounting system is an hour that can be typed wrong. Generating billing data from the rental itself removes the transcription rather than speeding it up.",
-        "Open interfaces and AEMP 2.0 mean the figures land in whatever ERP the customer already runs, which is the only version of this that a twenty-year-old rental business will accept."]),
+        "Open interfaces and AEMP 2.0 mean the figures land in whatever ERP the customer already runs, which is the only version of this that a twenty-year-old rental business will accept. Invoices sync to the accounting system and are marked as managed there, so nobody edits the same document in two places."]),
+      ("One rental model under every contract",
+       "Five contract types, four kinds of product, tiered prices, attachments, off-hire and partial returns.",
+       ["A rental is rarely just a machine for a period. It can be a plain rent, rent-to-own, a sub-rental from another company, a machine with its operator, or an internal hire between a group's own firms. The booked thing can be equipment, a person, a service or bulk inventory such as fences. I designed one model that holds all of these rather than a screen per case.",
+        "Price lists come in tiers by rental length, with a client's own list on top. A bucket can ride on an excavator's booking with its own price, a machine can go off-hire for a few days without ending the contract, and half a delivery of fencing can come back while the rest stays on site. Every one of those is a state the planner, the yard and the invoice have to agree on."]),
     ]),
+
+  metrics=[
+    ("8,000+", "Rental assets managed in RAM at HOCH", "Fleet and contracts in one place"),
+    ("5", "Contract types in one rental model", "Rent, rent-to-own, sub-rental, with operator, internal"),
+    ("4", "Kinds of bookable product", "Equipment, personnel, services and inventory"),
+  ],
+  metrics_note="The asset figure is published by syniotec and HOCH; the counts describe the rental model as designed.",
 
   outcome=dict(
     lead="A rental fleet that reports what it earned and proves what condition it was in.",
     body=["RAM runs bookings, planning, fleet, items, handovers and invoicing for rental companies including Kurt K\u00f6nig and HOCH, with a mobile client for the yard \u2014 where the handovers actually happen.",
-          "The two edges are where the design paid: hours that were previously invisible now bill, and condition that was previously argued now has a signature on it."]),
+          "The two edges are where the design paid: hours that were previously invisible now bill, and condition that was previously argued now has a signature on it.",
+          "HOCH runs more than 8,000 rental assets in RAM. Fabio Hoch, its authorised signatory: \u201cIn RAM we can see all the important information about rental contracts and our fleet in a completely transparent way\u201d \u2014 and connecting it to their ERP \u201cwent quickly and smoothly\u201d."]),
 
   reflection=dict(
     title="What I would keep from this one",

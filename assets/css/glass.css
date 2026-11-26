@@ -4178,3 +4178,10 @@ h1,h2,h3,h4,.h1,.h2,.h3,.gh1,.gh2,.gfill-h,.gpin-h,.gclients-h,.gcta-mark {
   .ccard:hover .cico { transform: translateY(-4px) rotate(-4deg) scale(1.04); }
 }
 @media (max-width: 520px) { .ccard .cico { width: 72px; height: 72px; } }
+
+/* v233 · case-study figures: published numbers only, each with its source */
+.cmetrics { background: none !important; margin-top: clamp(32px,5vh,56px); grid-template-columns: repeat(auto-fit, minmax(min(100%,240px),1fr)); }
+.cmetrics .stat .n { font-size: clamp(2.2rem,4.2vw,3.4rem); color: var(--paper); }
+.cmetrics .stat .k { color: var(--paper); letter-spacing: .08em; }
+.cmetrics .stat .src { margin: 10px 0 0; font-size: .92rem; line-height: 1.45; color: var(--paper-mute); }
+.cmetrics-note { margin-top: 14px; color: var(--paper-faint); font-size: .62rem; letter-spacing: .08em; }
