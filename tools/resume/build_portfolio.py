@@ -80,6 +80,15 @@ def first_sentence(body):
     return m.group(1) if m else t
 
 
+def metrics_html(c):
+    """Published figures from cases.py, if the case has any."""
+    m = c.get("metrics")
+    if not m:
+        return ""
+    cells = "".join(f'<div><b>{n}</b><span>{k}</span></div>' for n, k, _ in m)
+    return f'<div class="mets">{cells}</div>'
+
+
 def project_title(slug):
     for p in build.PROJECTS:
         if p[0] == slug:
@@ -136,9 +145,9 @@ page(f"""
     <div>
       <div class="stats">
         <div><b>8+</b><span class="mono">Years in design</span></div>
-        <div><b>32</b><span class="mono">Products shipped</span></div>
+        <div><b>{len(build.PROJECTS)}</b><span class="mono">Products shipped</span></div>
         <div><b>45</b><span class="mono">Certifications</span></div>
-        <div><b>26</b><span class="mono">AI Lab builds</span></div>
+        <div><b>{len(LAB)}</b><span class="mono">AI Lab builds</span></div>
       </div>
       <div class="kicker mono" style="margin-top:34px">Selected clients &amp; employers</div>
       <div class="clients">{''.join(f'<span>{c}</span>' for c in clients)}</div>
@@ -171,7 +180,12 @@ for i, (slug, label, explicit) in enumerate(FEATURED):
     ims = case_images(slug, explicit)
     main = ims[0] if ims else None
     thumbs = ims[1:3]
-    decisions = c["solution"].get("decisions", [])[:3]
+    alld = c["solution"].get("decisions", [])
+    decisions = alld[:3]
+    # a tested decision says more than a third assertion: bring it forward
+    tested = [d for d in alld[3:] if "A/B" in d[1]]
+    if tested:
+        decisions = alld[:2] + tested[:1]
     dec = "".join(f"<li>{plain(d[0])}</li>" for d in decisions)
     thumb_html = "".join(f'<div class="th"><img src="{t}" alt=""></div>' for t in thumbs)
     page(f"""
@@ -187,7 +201,8 @@ for i, (slug, label, explicit) in enumerate(FEATURED):
       </dl>
       <h4 class="mono">Challenge</h4><p>{plain(c['challenge']['lead'])}</p>
       <h4 class="mono">Key decisions</h4><ul class="dec">{dec}</ul>
-      <h4 class="mono">Outcome</h4><p><b>{plain(c['outcome']['lead'])}</b> {first_sentence(c['outcome']['body'])}</p>
+      <h4 class="mono">Outcome</h4><p><b>{plain(c['outcome']['lead'])}</b> {'' if c.get('metrics') else first_sentence(c['outcome']['body'])}</p>
+      {metrics_html(c)}
       <a class="more mono" href="https://www.{SITE}/work/{slug}/">Full case study → {SITE}/work/{slug}</a>
     </div>
     <div class="case-media">
